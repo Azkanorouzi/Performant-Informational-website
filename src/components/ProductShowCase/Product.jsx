@@ -1,14 +1,15 @@
 import case1 from '../../assets/cases1.png'
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 
 export default function Product({ title, description, children }) {
   const [hovered, setHovered] = useState(false)
 
   return (
     <figure
-      class={` relative cursor-pointer overflow-hidden scale-95 transition-transform ${
+      class={` relative cursor-pointer overflow-hidden scale-95 transition-transform product ${
         hovered && 'scale-100'
       }`}
+      style={{ filter: hovered && 'blur(0px) !important;' }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -18,15 +19,18 @@ export default function Product({ title, description, children }) {
           <div class="py-4">
             <div class="flex gap-4 flex-col">
               <h3
-                class={`text-5xl translate-y-10 opacity-70  ${
+                class={`text-5xl translate-y-10 opacity-70 px-[78px] ${
                   hovered && 'opacity-100 translate-y-0'
                 }`}
-                style={{ transition: '.5s' }}
+                style={{
+                  transition: '.5s',
+                  letterSpacing: hovered ? '10px' : '0',
+                }}
               >
                 {title}
               </h3>
               <p
-                class={`text-3xl font-TekoLight translate-x-[100%]  ${
+                class={`text-2xl px-14 font-TekoLight translate-x-[100%]   ${
                   hovered && 'translate-x-0 '
                 }`}
                 style={{ transition: '.5s' }}
@@ -35,7 +39,9 @@ export default function Product({ title, description, children }) {
               </p>
             </div>
             <button
-              class={`text-tertiary bg-red -translate-x-[200%]`}
+              class={`text-tertiary bg-red -translate-x-[200%] hover:text-primary rotate hover:scale-110  ${
+                hovered && ' -translate-x-[0]'
+              }`}
               onClick={() => alert('hi')}
               style={{ transition: '.5s' }}
             >
