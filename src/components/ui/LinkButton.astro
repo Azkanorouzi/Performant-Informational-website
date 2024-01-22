@@ -1,0 +1,6 @@
+---
+const {text, icon, to, customStyle} = Astro.props;
+---
+<a class=`bg-red text-2xl p-3 px-14 text-secondary bg-primary justify-center items-center ${customStyle}` role="button" href={to}>
+    <slot/>
+</a>

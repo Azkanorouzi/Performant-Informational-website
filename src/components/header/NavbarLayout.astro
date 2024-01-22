@@ -1,0 +1,21 @@
+---
+import Logo from '../ui/Logo.astro'
+import NavToggleBtn from './NavToggleBtn'
+import NavBtn from './NavToggleBtn'
+import Navbar from './Navbar'
+import NavbarLinks from './NavbarLinks.astro'
+---
+<Navbar client:load>
+    <section class="flex justify-center items-center border-r-2 pr-32 gap-4 ">
+        <Logo />
+    </section>
+    <section class="flex-1 justify-center flex"> 
+        <NavbarLinks/>
+        
+    </section>
+</Navbar>
+<style>
+.shadowed-element {
+    box-shadow: inset 0px 15px 30px -15px theme('colors.tertiary');
+}
+</style>

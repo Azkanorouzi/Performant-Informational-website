@@ -1,0 +1,52 @@
+---
+import Creation from './Creation.jsx'
+import Product from './Product'
+---
+<section class="bg-forth py-24 px-20 border-t-secondary border-t-2">
+    <div class="text-4xl flex-col flex gap-10">
+        <div class="flex gap-5 flex-col justify-center items-center text-center">
+          <h2 class=" text-primary text-3xl font-TekoLight">WHAT WE OFFER</h2>
+          <hr class="w-44 text-primary"></hr>
+          <p class="font-TekoMedium px-60">
+            WE HAVE BEEN PROCESSING STEEL FOR OVER 25 YEARS
+          </p>
+        </div>
+        <section class="flex  justify-center gap-10 width-4xl transition-transform overflow-scroll">
+            <div class="flex gap-10 flex-row">
+                <Product title={'MACHINING STEEL'} description={'Metal elements that need to be shaped must be machined in an adquate way'} client:load>
+                    <div class="img1"></div>
+                </Product>
+                <Product title={'MANFACTURING TECHNOLOGY'} description={'Through our years of experience, we have also learned that while each chanel has'} client:load>
+                    <div class="img2"></div>
+                </Product>
+                </div>
+                <div class="flex gap-10 flex-row">
+                <Product title={'METALS AND MATERIALS'} description={'On our way to cooporate with the customer we offer int field of building a product'} client:load>
+                    <div class="img3"></div>
+                </Product>
+                </div>
+          </section>
+        </div>
+        <div class="flex"></div> 
+</section>
+
+<!-- <div class="text-4xl flex-col flex gap-10">
+    <div class="flex gap-5 flex-col justify-center items-center text-center">
+      <h2 class=" text-primary text-3xl font-TekoLight">WHAT WE OFFER</h2>
+      <hr class="w-44 text-primary"></hr>
+      <p class="font-TekoMedium px-60">
+        WE HAVE BEEN PROCESSING STEEL FOR OVER 25 YEARS
+      </p>
+    </div>
+    {/* Products */}
+    <section class="flex  justify-center gap-10 width-4xl transition-transform overflow-scroll">
+      {children}
+    </section>
+  </div>
+  <div class="flex"></div> -->
+<style>
+    .img1 {width: 400px; height: 400px; background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(0, 0, 0, 0.866)), url('../../assets/cases1.png');}
+    .img2 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(0, 0, 0, 0.866)), url('../../assets/cases_2.png');}
+    .img3 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(0, 0, 0, 0.866)), url('../../assets/cases_4.png');}
+    .img4 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(0, 0, 0, 0.866)), url('../../assets/cases_3.jpg');}
+</style>

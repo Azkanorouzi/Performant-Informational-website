@@ -1,0 +1,24 @@
+---
+import LinkButton from "../ui/LinkButton.astro";
+import Title from "../ui/Title.astro";
+import Info from '../ui/Info.astro'
+
+
+---
+<section class="w-screen h-full flex ">
+    <section class=" bg-opacity-5 h-full w-[297px] border-r-2 border-secondary backdrop-blur-md flex justify-center gap-8 flex-col pl-5 pt-32 ">
+        <Info  text="We are here" secondaryText="25 Division st, Ny 10002 USA" icon="bi bi-geo-alt"/>
+        <Info  text="Get in touch" secondaryText="EmailTest@gmail.com" icon="bi bi-envelope"/>
+    </section>
+    <section class=" flex-1 p-24 pt-60">
+        <div class="pr-20">
+            <Title level="1" >
+                POWERING AUTOMATION SOLUTIONS
+            </Title>
+        </div>
+        <LinkButton to="#" customStyle="">
+            <span> Explore more </span>
+            <i class="bi bi-arrow-right"></i>
+        </LinkButton>
+    </section>
+</section>

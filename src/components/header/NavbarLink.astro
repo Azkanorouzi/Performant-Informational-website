@@ -1,0 +1,12 @@
+---
+const {text, logo} = Astro.props;
+const link = text === 'Home' ? '/' : `/${text}`
+---
+<li class="text-secondary hover:text-primary transition-colors">
+    <a href={link} class="flex gap-2 ">
+        <i class={logo}></i>
+        <span>
+        {text}
+    </span>
+    </a>
+</li>

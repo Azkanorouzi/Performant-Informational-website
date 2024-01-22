@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: theme(colors.secondary); /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: theme(colors.tertiary); /* color of the scroll thumb */
+  /* roundness of the scroll thumb */
+  border: 3px solid theme(colors.tertiary); /* creates padding around scroll thumb */
+}
+@font-face {
+  font-family: 'Teko-light';
+  src: url('./assets/Teko-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Teko-regular';
+  src: url('./assets/Teko-regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Teko-medium';
+  src: url('path/to/font/Teko-SemiBold.ttf') format('truetype');
+  font-weight: 500; /* semi-bold is often represented by font-weight 600 */
+}

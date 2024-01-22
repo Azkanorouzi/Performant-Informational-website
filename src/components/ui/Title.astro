@@ -1,0 +1,13 @@
+---
+const { level, customStyle } = Astro.props;
+let customTitle = 'h1';
+if (level === 1) customTitle = 'h1';
+if (level === 2) customTitle = 'h2';
+if (level === 3) customTitle = 'h3';
+if (level === 4) customTitle = 'h4';
+if (level === 5) customTitle = 'h5';
+if (level === 6) customTitle = 'h6';
+---
+<customTitle class=`text-9xl text-secondary pr-96 pb-6 ${customStyle}`>
+    <slot />
+</customTitle>
