@@ -9,7 +9,7 @@ export default {
         tertiary: '#aa0000',
         forth: '#0F172A',
         fifth: '#880000',
-        green: '#13ce66',
+        sixth: '#0C0C0C',
         yellow: '#ffc82c',
         'gray-dark': '#273444',
         gray: '#8492a6',

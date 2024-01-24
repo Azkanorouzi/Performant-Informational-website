@@ -1,0 +1,25 @@
+---
+import SocialMediaLinks from "../ui/SocialMediaLinks";
+import StaticMap from '../../components/ui/StaticMap'
+---
+
+<footer class="bg-sixth py-[5.5rem] px-20 border-t-secondary  border-b-secondary border-b-2 flex justify-center  gap-5 ">
+
+    <strong class="text-8xl border-l-2 border-red-600 pl-4 mr-5" style={{letterSpacing: '10px'}}> <span >LAN </span> <br />
+       <span > TAN </span></strong>
+    <div class="flex flex-col gap-2 px-5 text-xl  font-TekoLight w-60">
+        <strong class="text-2xl text-primary">WE ARE HERE</strong>
+        <p >4517 Washington Ave. Manchester, Kentucky 39495</p>
+        <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+    </div>
+    <div class="flex flex-col gap-2 px-5 text-xl  font-TekoLight w-60">
+        <strong class="text-2xl text-primary">OUR CONTACT</strong>
+        <p >+1 800 123 456 789</p>
+        <p>Lantan@gmail.com</p>
+        <div class="flex gap-3">
+            <SocialMediaLinks />
+        </div>
+
+    </div>
+    <StaticMap />
+</footer>

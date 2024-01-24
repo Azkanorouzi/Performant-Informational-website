@@ -1,6 +1,6 @@
 ---
-import NavBtn from '../components/header/NavToggleBtn';
 import Navbar from '../components/header/NavbarLayout.astro';
+import Footer from '../components/Footer/Footer.astro';
 import '../index.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 interface Props {
@@ -30,6 +30,8 @@ const { title } = Astro.props;
 			<slot name="popularityShowCase" />
 			<slot name="reviewShowCase" />
 		</main>
+
+		<Footer />
 	</body>
 </html>
 
