@@ -8,7 +8,7 @@ export default {
         secondary: '#eeeeee',
         tertiary: '#aa0000',
         forth: '#0F172A',
-        orange: '#ff7849',
+        fifth: '#880000',
         green: '#13ce66',
         yellow: '#ffc82c',
         'gray-dark': '#273444',

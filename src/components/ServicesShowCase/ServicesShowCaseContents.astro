@@ -1,0 +1,31 @@
+---
+import DecorImg from "../ui/DecorImg.astro";
+import ServiceLink from "../ui/ServiceLink.astro";
+
+
+---
+<section class="bg-forth py-[5.5rem] px-20 border-t-secondary  border-b-secondary border-b-2 flex justify-center gap-11">
+    <div class="flex flex-col justify-end gap-6 py-10 w-[30rem]"> 
+        <h2 class=" text-primary text-3xl font-TekoLight">OUR SERVICES</h2>
+        <hr class="w-44 text-primary"></hr>
+        <p class="font-TekoMedium text-3xl">
+            OUR INDUSTRY COMPETENCE
+          </p>
+          <p class="font-TekoMedium">The input material for the recovery process consists of sintered hard tungsten carbide scrap, as well as soft scrap such as powders.</p>
+          <div class="flex gap-3 font-TekoLight border-l-2 border-primary">
+            <div class="flex-col">
+                <ServiceLink text="Electronics"/>
+                <ServiceLink text="Mentals Materials"/>
+                <ServiceLink text="Hard Coating"/>
+            </div>
+            <div class="flex-col">
+                <ServiceLink text="Health Care"/>
+                <ServiceLink text="Lighting Indurstry"/>
+                <ServiceLink text="Welding Industry"/>
+            </div>
+          </div>
+    </div>
+    <div>
+    <DecorImg />
+</div>
+</section>

@@ -35,3 +35,17 @@ body::-webkit-scrollbar-thumb {
   src: url('path/to/font/Teko-SemiBold.ttf') format('truetype');
   font-weight: 500; /* semi-bold is often represented by font-weight 600 */
 }
+.unBlur {
+  animation: unBlur 0.6s;
+}
+
+@keyframes unBlur {
+  from {
+    filter: blur(10px);
+    opacity: 0.5;
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

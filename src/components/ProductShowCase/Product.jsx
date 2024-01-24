@@ -6,12 +6,10 @@ export default function Product({ title, description, children }) {
 
   return (
     <figure
-      class={` relative cursor-pointer overflow-hidden scale-95 transition-transform product ${
-        hovered && 'scale-100'
-      }`}
-      style={{ filter: hovered && 'blur(0px) !important;' }}
+      class={` relative cursor-pointer overflow-hidden scale-95 transition-transform product $`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      style={{ transform: hovered ? 'scale(1)' : '' }}
     >
       {children}
       <figcaption class="flex flex-col ">
@@ -19,31 +17,33 @@ export default function Product({ title, description, children }) {
           <div class="py-4">
             <div class="flex gap-4 flex-col">
               <h3
-                class={`text-5xl translate-y-10 opacity-70 px-[78px] ${
-                  hovered && 'opacity-100 translate-y-0'
-                }`}
+                class={`text-5xl translate-y-10 opacity-70 px-[78px] `}
                 style={{
                   transition: '.5s',
+                  opacity: hovered ? '1' : '.5',
+                  transform: hovered ? 'translateY(0)' : '',
                   letterSpacing: hovered ? '10px' : '0',
                 }}
               >
                 {title}
               </h3>
               <p
-                class={`text-2xl px-14 font-TekoLight translate-x-[100%]   ${
-                  hovered && 'translate-x-0 '
-                }`}
-                style={{ transition: '.5s' }}
+                class={`text-2xl px-10 font-TekoLight translate-x-[100%]`}
+                style={{
+                  transition: '.5s',
+                  transform: hovered ? 'translatex(0)' : '',
+                }}
               >
                 {description}
               </p>
             </div>
             <button
-              class={`text-tertiary bg-red -translate-x-[200%] hover:text-primary rotate hover:scale-110  ${
-                hovered && ' -translate-x-[0]'
-              }`}
+              class={`text-tertiary bg-red -translate-x-[200%] hover:text-primary rotate hover:scale-110 `}
               onClick={() => alert('hi')}
-              style={{ transition: '.5s' }}
+              style={{
+                transition: '.5s',
+                transform: hovered ? 'translatex(0)' : '',
+              }}
             >
               <span>Learn More</span> <span> &rarr; </span>
             </button>

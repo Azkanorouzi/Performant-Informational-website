@@ -4,17 +4,33 @@ import homePage from '../assets/hompage.jpg'
 import Navbar from '../components/header/NavbarLayout.astro'
 import HeaderContent from '../components/header/HeaderContent.astro';
 import ProductShowCaseContents from '../components/ProductShowCase/ProductShowCaseContents.astro'
+import AuthorityShowCaseContents from '../components/AuthorityShowCase/AuthorityShowCaseContents.astro'
+import ServicesShowCaseContents from '../components/ServicesShowCase/ServicesShowCaseContents.astro'
+import PopularityShowCaseContents from '../components/PopularityShowCase/PopularityShowCaseContents.astro';
+import ReviewShowCaseContents from '../components/ReviewShowCase/ReviewShowCaseContents.astro';
 ---
 
 <MainLayout title="Lantan">
 	
 	<header class="h-screen text-xl flex flex-col" slot="header">
-
 		<HeaderContent />
 	</header>
 	
 	<section slot="productsShowCase">
 		<ProductShowCaseContents />
+	</section>
+
+	<section slot="authorityShowCase">
+		<AuthorityShowCaseContents />
+	</section>
+	<section slot="servicesShowCase">
+		<ServicesShowCaseContents />
+	</section>
+	<section slot="popularityShowCase">
+		<PopularityShowCaseContents />
+	</section>
+	<section slot="popularityShowCase">
+		<ReviewShowCaseContents />
 	</section>
 </MainLayout>
 
