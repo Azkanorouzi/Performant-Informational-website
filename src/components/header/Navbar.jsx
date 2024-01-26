@@ -29,7 +29,7 @@ export default function StickyNavbar({ children }) {
 
   return (
     <nav
-      class="pl-6 bg-opacity-30 bg-black backdrop-blur-lg border-b-2 border-secondary text-secondary flex justify-between"
+      class="pl-6 bg-opacity-30 bg-black backdrop-blur-lg border-b-2 border-secondary text-primary flex justify-between"
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >
       {children}

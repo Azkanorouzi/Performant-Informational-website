@@ -6,7 +6,7 @@ export default function AuthorityShowCase() {
     <article class="flex justify-center items-center gap-24">
       <div class="flex gap-3 flex-col text-forth border-l-primary">
         <strong
-          class={`text-7xl -skew-x-12 hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
             textIndex === 0
               ? 'border-l-primary text-secondary -translate-x-10 '
               : ''
@@ -18,7 +18,7 @@ export default function AuthorityShowCase() {
           01 CONTROL
         </strong>
         <strong
-          class={`text-7xl -skew-x-12 hover:text-secondary border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-secondary border-l-4 border-transparent pl-5 ${
             textIndex === 1
               ? 'border-l-primary text-secondary -translate-x-10'
               : ''
@@ -30,7 +30,7 @@ export default function AuthorityShowCase() {
           02 MANAGEMENT
         </strong>
         <strong
-          class={`text-7xl -skew-x-12 hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
             textIndex === 2
               ? 'border-l-primary text-secondary -translate-x-10'
               : ''
@@ -42,7 +42,7 @@ export default function AuthorityShowCase() {
           03 PROTECT
         </strong>
         <strong
-          class={`text-7xl -skew-x-12 hover:text-secondary border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-secondary border-l-4 border-transparent pl-5 ${
             textIndex === 3
               ? 'border-l-primary text-secondary -translate-x-10'
               : ''
@@ -54,7 +54,7 @@ export default function AuthorityShowCase() {
           04 INNOVATION
         </strong>
         <strong
-          class={`text-7xl -skew-x-12 hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
             textIndex === 4
               ? 'border-l-primary text-secondary -translate-x-10'
               : ''
