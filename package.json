@@ -12,10 +12,12 @@
   "dependencies": {
     "@astrojs/preact": "^3.1.0",
     "@preact/compat": "^17.1.2",
+    "@types/lodash": "^4.14.202",
     "astro": "^4.2.1",
     "bootstrap-icons": "^1.11.3",
     "daisyui": "^4.6.0",
     "framer-motion": "^10.18.0",
+    "lodash": "^4.17.21",
     "preact": "^10.19.3",
     "preact-motion": "^1.2.0"
   },

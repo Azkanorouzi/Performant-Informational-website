@@ -12,18 +12,20 @@ import ReviewShowCaseContents from '../components/ReviewShowCase/ReviewShowCaseC
 
 <MainLayout title="Lantan">
 	
-	<header class="h-screen text-xl flex flex-col" slot="header">
+	<header class="h-[90vh] text-xl flex flex-col" slot="header">
 		<HeaderContent />
 	</header>
 	
-	<section slot="productsShowCase">
+	<section slot="productsShowCase" class="relative">
 		<ProductShowCaseContents />
+		<div class="w-full h-48 bottom-0 bg-secondary absolute" style={{zIndex: '0'}}></div>
 	</section>
 
 	<section slot="authorityShowCase">
 		<AuthorityShowCaseContents />
 	</section>
-	<section slot="servicesShowCase">
+	<section slot="servicesShowCase" class="relative">
+		
 		<ServicesShowCaseContents />
 	</section>
 	<section slot="popularityShowCase">

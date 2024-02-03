@@ -6,16 +6,20 @@ export default function Product({ title, description, children }) {
 
   return (
     <figure
-      class={` relative cursor-pointer overflow-hidden scale-95 transition-transform product $`}
+      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={{ transform: hovered ? 'scale(1)' : '' }}
+      style={{ transform: hovered ? 'scale(1)' : '', zIndex: '1' }}
     >
       {children}
       <figcaption class="flex flex-col ">
-        <div class="absolute text-center flex justify-center items-center bottom-0 top-0 right-0 left-0 ">
-          <div class="py-4">
-            <div class="flex gap-4 flex-col">
+        <div
+          class={`absolute text-center flex justify-center items-center bottom-0 top-0 right-0 left-0 transition-colors bg-opacity-50 ${
+            hovered ? 'bg-forth' : ''
+          }`}
+        >
+          <div class="py-4 h-full flex flex-col justify-center">
+            <div class="flex gap-4 flex-col ">
               <h3
                 class={`text-5xl translate-y-10 opacity-70 px-[78px] `}
                 style={{
@@ -38,7 +42,7 @@ export default function Product({ title, description, children }) {
               </p>
             </div>
             <button
-              class={`text-tertiary bg-red -translate-x-[200%] hover:text-primary rotate hover:scale-110 `}
+              class={`text-primary bg-red -translate-x-[200%] hover:text-secondary rotate hover:scale-110 `}
               onClick={() => alert('hi')}
               style={{
                 transition: '.5s',

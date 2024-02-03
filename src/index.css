@@ -14,7 +14,7 @@ body::-webkit-scrollbar-track {
   background: theme(colors.secondary); /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: theme(colors.tertiary); /* color of the scroll thumb */
+  background-color: theme(colors.primary); /* color of the scroll thumb */
   /* roundness of the scroll thumb */
   border: 3px solid theme(colors.tertiary); /* creates padding around scroll thumb */
 }
@@ -47,5 +47,25 @@ body::-webkit-scrollbar-thumb {
   to {
     filter: blur(0px);
     opacity: 1;
+  }
+}
+.fade-in {
+  animation: 10s fadeIn forwards;
+}
+.fade-out {
+  animation: 0.3s fadeIn backwards;
+}
+@keyframes fadeIn {
+  10% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  80% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(10px);
+    opacity: 0.3;
   }
 }

@@ -5,14 +5,12 @@ import NavBtn from './NavToggleBtn'
 import Navbar from './Navbar'
 import NavbarLinks from './NavbarLinks.astro'
 ---
-<Navbar client:load>
-    <section class="flex justify-center items-center border-r-2 pr-32 gap-4 ">
+<Navbar client:load client:only>
+    <section class="flex justify-center items-center  pr-32 gap-4  pl-5 ">
         <Logo />
-    </section>
-    <section class="flex-1 justify-center flex"> 
         <NavbarLinks/>
-        
     </section>
+    <div class="flex-1"></div>
 </Navbar>
 <style>
 .shadowed-element {

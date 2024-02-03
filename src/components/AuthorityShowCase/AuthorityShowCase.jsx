@@ -6,9 +6,9 @@ export default function AuthorityShowCase() {
     <article class="flex justify-center items-center gap-24">
       <div class="flex gap-3 flex-col text-forth border-l-primary">
         <strong
-          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
             textIndex === 0
-              ? 'border-l-primary text-secondary -translate-x-10 '
+              ? 'border-l-primary text-primary -translate-x-10 '
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -18,9 +18,9 @@ export default function AuthorityShowCase() {
           01 CONTROL
         </strong>
         <strong
-          class={`text-7xl  hover:text-secondary border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 1
-              ? 'border-l-primary text-secondary -translate-x-10'
+              ? 'border-l-primary text-primary -translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -30,9 +30,9 @@ export default function AuthorityShowCase() {
           02 MANAGEMENT
         </strong>
         <strong
-          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
             textIndex === 2
-              ? 'border-l-primary text-secondary -translate-x-10'
+              ? 'border-l-primary text-primary -translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -42,9 +42,9 @@ export default function AuthorityShowCase() {
           03 PROTECT
         </strong>
         <strong
-          class={`text-7xl  hover:text-secondary border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 3
-              ? 'border-l-primary text-secondary -translate-x-10'
+              ? 'border-l-primary text-primary -translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -54,9 +54,9 @@ export default function AuthorityShowCase() {
           04 INNOVATION
         </strong>
         <strong
-          class={`text-7xl  hover:text-secondary  border-l-4 border-transparent pl-5 ${
+          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
             textIndex === 4
-              ? 'border-l-primary text-secondary -translate-x-10'
+              ? 'border-l-primary text-primary -translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -68,7 +68,7 @@ export default function AuthorityShowCase() {
       </div>
       <div class={`w-96 h-96  flex flex-col gap-4 justify-center `}>
         {textIndex === 0 && (
-          <div class="flex gap-2 flex-col unBlur">
+          <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">Security of supply</strong>
             <p class="mb-2 text-xl font-TekoLight">
               Our in-house team of scientists is constantly fine-tuning the
@@ -87,7 +87,7 @@ export default function AuthorityShowCase() {
         )}
         {/* --------------- */}
         {textIndex === 1 && (
-          <div class="flex gap-2 flex-col unBlur">
+          <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl ">
               ALUMINUM VS. STEEL. BENEFITS OF BOTH
             </strong>
@@ -107,7 +107,7 @@ export default function AuthorityShowCase() {
         )}
         {/* --------------- */}
         {textIndex === 2 && (
-          <div class="flex gap-2 flex-col unBlur">
+          <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">WHEN IS IT USED?</strong>
             <p class="text-xl font-TekoLight">
               {' '}
@@ -124,7 +124,7 @@ export default function AuthorityShowCase() {
         )}
         {/* --------------- */}
         {textIndex === 3 && (
-          <div class="flex gap-2 flex-col unBlur">
+          <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">
               THE INDUSTRIAL PROCESSES MOVE TOWARDS AUTOMATION
             </strong>
@@ -143,7 +143,7 @@ export default function AuthorityShowCase() {
         )}
         {/* --------------- */}
         {textIndex === 4 && (
-          <div class="flex gap-2 flex-col unBlur">
+          <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">SECURITY OF SUPPLY</strong>
             <p class="text-xl font-TekoLight mb-2">
               Our in-house team of scientists is constantly fine-tuning the
@@ -160,13 +160,6 @@ export default function AuthorityShowCase() {
             </p>
           </div>
         )}
-        <div>
-          <button
-            class={`bg-red text-2xl p-2 px-14 text-secondary bg-primary justify-center items-center`}
-          >
-            Explore more
-          </button>
-        </div>
       </div>
     </article>
   )

@@ -1,20 +1,37 @@
 import Info from '../ui/Info.astro'
 import Logo from '../ui/Logo.astro'
-import { useState } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 
 export default function NavToggleBtn({ closed, setClosed }) {
+  const overLayRef = useRef(null)
+  useEffect(() => {
+    if (!closed) {
+      overLayRef.current.style.display = 'block'
+      return
+    }
+    setTimeout(() => {
+      overLayRef.current.style.display = 'none'
+    }, 500)
+  }, [overLayRef, closed])
   return (
     <>
+      <div
+        class="w-screen h-[120vh] bg-black fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20"
+        style={{
+          opacity: closed ? '0' : '0.5',
+        }}
+        ref={overLayRef}
+      ></div>
       <div>
         <button
-          class="bg-primary p-8 px-10 text-2xl border-white border-l-2 bg-opacity-50 hover:bg-opacity-100 cursor-poitner transition-colors hidden lg:block"
+          class="bg-primary p-8 px-10 text-2xl hover:bg-opacity-100 cursor-poitner transition-colors hidden lg:block"
           onClick={() => setClosed(false)}
         >
           <i class="bi bi-list "></i>
         </button>
       </div>
       <section
-        class={`bg-tertiary z-10 text-secondary flex fixed justify-center right-0 top-0  flex-col p-10 w-[300px] gap-10 transition-transform ${
+        class={`bg-primary z-10 text-secondary flex fixed justify-center right-0 top-0  flex-col p-10 w-[300px] gap-10 transition-transform ${
           closed && 'translate-x-full'
         }`}
       >

@@ -1,10 +1,10 @@
 ---
-const {text, logo} = Astro.props;
+const {text} = Astro.props;
 const link = text === 'Home' ? '/' : `/${text}`
 ---
-<li class="text-secondary hover:text-primary transition-colors">
-    <a href={link} class="flex gap-2 nav-link border-b-2 border-transparent" >
-        <i class={logo}></i>
+<li class="text-secondary hover:text-primary transition-colors ">
+    <a href={link} class="flex gap-2 nav-link border-b-2 border-transparent pb-2 w-24" >
+
         <span>
         {text}
     </span>
@@ -24,7 +24,6 @@ const link = text === 'Home' ? '/' : `/${text}`
   </script>
   <style>
     .active {
-        color: theme(colors.primary);
-        border-bottom: 2px solid theme(colors.primary);
+        border-bottom: 2px solid theme(colors.secondary);
     }
   </style>
