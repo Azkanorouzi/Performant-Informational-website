@@ -14,14 +14,14 @@ export default function Popularity({
     }
     const interval = setInterval(intervalCallback, speed)
     return () => clearInterval(interval)
-  }, [initNum, setInterval])
+  }, [initNum, setInterval, numberText, setInitNum])
   return (
-    <div class="flex  flex-col">
-      <strong class="text-8xl text-forth">
+    <div class="flex gap-2 justify-center items-center ">
+      <strong class=" text-8xl text-primary w-28 text-right">
         {initNum}
         {strText}
       </strong>
-      <p class="text-secondary text-3xl">{title}</p>
+      <p class="text-forth text-xl w-10 ">{title}</p>
     </div>
   )
 }
