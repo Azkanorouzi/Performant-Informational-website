@@ -43,7 +43,6 @@ export default function Product({ title, description, children }) {
             </div>
             <button
               class={`text-primary bg-red -translate-x-[200%] hover:text-secondary rotate hover:scale-110 `}
-              onClick={() => alert('hi')}
               style={{
                 transition: '.5s',
                 transform: hovered ? 'translatex(0)' : '',

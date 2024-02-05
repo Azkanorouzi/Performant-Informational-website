@@ -9,7 +9,7 @@ export default function Popularity({
   const [initNum, setInitNum] = useState(0)
   useEffect(() => {
     const intervalCallback = () => {
-      if (numberText == initNum) return
+      if (numberText == initNum || initNum > numberText) return
       setInitNum((cur) => cur + 1)
     }
     const interval = setInterval(intervalCallback, speed)

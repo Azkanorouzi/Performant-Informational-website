@@ -1,7 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import homePage from '../assets/hompage.jpg'
-import Navbar from '../components/header/NavbarLayout.astro'
+import ProjectShowCaseContents from '../components/ProjectsShowCase/ProjectShowCaseContents.astro'
 import HeaderContent from '../components/header/HeaderContent.astro';
 import ProductShowCaseContents from '../components/ProductShowCase/ProductShowCaseContents.astro'
 import AuthorityShowCaseContents from '../components/AuthorityShowCase/AuthorityShowCaseContents.astro'
@@ -27,6 +26,10 @@ import ReviewShowCaseContents from '../components/ReviewShowCase/ReviewShowCaseC
 	<section slot="servicesShowCase" class="relative">
 		
 		<ServicesShowCaseContents />
+	</section>
+	<section slot="popularityShowCase" class="relative">
+		<ProjectShowCaseContents />
+		<div class="w-full h-28 bottom-0 bg-secondary absolute" style={{zIndex: '0'}}></div>
 	</section>
 	<section slot="popularityShowCase">
 		<PopularityShowCaseContents />
