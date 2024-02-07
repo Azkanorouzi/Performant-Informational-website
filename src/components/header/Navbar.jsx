@@ -19,6 +19,16 @@ export default function StickyNavbar({ children }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [prevScrollPos])
 
+  useEffect(() => {
+    const currentPath = window.location.pathname
+    const links = document.querySelectorAll('.nav-link')
+    links.forEach(function (link) {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active')
+      }
+    })
+  }, [window.location.pathname])
+
   const navbarStyle = {
     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
     transition: 'transform 0.3s ease-in-out',

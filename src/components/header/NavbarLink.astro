@@ -2,28 +2,25 @@
 const {text} = Astro.props;
 const link = text === 'Home' ? '/' : `/${text}`
 ---
-<li class="text-secondary hover:text-primary transition-colors ">
-    <a href={link} class="flex gap-2 nav-link border-b-2 border-transparent pb-2 w-24" >
+<li class="text-secondary  transition-colors ">
+    <a href={link} class="flex border-b-2 border-transparent  w-24  flex-col nav-link">
 
         <span>
         {text}
-    </span>
+      </span>
+      <hr class="text-secondary w-full hover:scale-x-100 transition-transform"/>
     </a>
 </li>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const currentPath = window.location.pathname;
-      const links = document.querySelectorAll(".nav-link");
-      links.forEach(function (link) {
-        if (link.getAttribute("href") === currentPath) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
   <style>
-    .active {
-        border-bottom: 2px solid theme(colors.secondary);
+    .nav-link > hr {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    .nav-link:hover > hr {
+      transform: scaleX(1)
+    }
+    .active > hr {
+        transform: scaleX(1)
     }
   </style>
