@@ -57,6 +57,9 @@ export function GalleryImages() {
       <Gallery.Container customStyles={{}}>
         <Gallery.Header>
           <Gallery.Title sectionTitle="Latest news" />
+          <button class="p-5 text-xl text-forth bg-secondary flex justify-between gap-20">
+            <span> EXPLORE MORE</span> <span> &rarr;</span>
+          </button>
         </Gallery.Header>
         <section class="flex justify-center gap-5 w-[70vw]">
           <Gallery.ImageStatic
@@ -170,9 +173,9 @@ function Title({
           ) : (
             <> </>
           )}
-          <div>
-            <h3 class="text-6xl uppercase">{title}</h3>{' '}
-            <h4 class="text-6xl uppercase -mt-4">{subTitle}</h4>
+          <div class="font-bold">
+            <h3 class="text-5xl uppercase">{title}</h3>{' '}
+            <h4 class="text-5xl uppercase ">{subTitle}</h4>
           </div>
         </>
       ) : (

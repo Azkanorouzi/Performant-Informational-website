@@ -28,17 +28,17 @@ export default function InfiniteScrollIcons() {
               style={{
                 animation: '4.5s fadeIn forwards',
                 filter: 'blur(10px)',
-                opacity: '.4',
+                opacity: '0',
                 animationDelay: `${
                   i === 4
-                    ? '.2s'
+                    ? '0s'
                     : i === 3
-                    ? '.4s'
+                    ? '.2s'
                     : i === 2
-                    ? '.6s'
+                    ? '.4s'
                     : i === 1
-                    ? '.8s'
-                    : '1s'
+                    ? '.6s'
+                    : '.8s'
                 }`,
               }}
             >

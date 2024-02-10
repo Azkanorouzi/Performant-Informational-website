@@ -5,7 +5,10 @@
   box-sizing: border-box;
 }
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+}
+body {
+  overflow-x: hidden !important;
 }
 body::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
@@ -32,7 +35,17 @@ body::-webkit-scrollbar-thumb {
 
 @font-face {
   font-family: 'Teko-medium';
-  src: url('path/to/font/Teko-SemiBold.ttf') format('truetype');
+  src: url('./assets/Teko-Medium.ttf') format('truetype');
+  font-weight: 500; /* semi-bold is often represented by font-weight 600 */
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('./assets/OSWALD-REGULAR.TTF') format('truetype');
+  font-weight: 500; /* semi-bold is often represented by font-weight 600 */
+}
+@font-face {
+  font-family: 'oswald-light';
+  src: url('./assets/OSWALD-LIGHT.TTF') format('truetype');
   font-weight: 500; /* semi-bold is often represented by font-weight 600 */
 }
 .unBlur {
@@ -56,16 +69,37 @@ body::-webkit-scrollbar-thumb {
   animation: 0.3s fadeIn backwards;
 }
 @keyframes fadeIn {
-  10% {
+  5% {
     filter: blur(0px);
     opacity: 1;
   }
-  80% {
+  85% {
     filter: blur(0px);
     opacity: 1;
   }
   100% {
     filter: blur(10px);
     opacity: 0;
+  }
+}
+.active {
+  color: theme(colors.primary);
+}
+@keyframes rotateFadeOut {
+  40% {
+    transform: rotate(1turn) scale(0.4);
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes rotateFadeIn {
+  40% {
+    transform: rotate(1turn) scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    scale: (1);
+    opacity: 1;
   }
 }

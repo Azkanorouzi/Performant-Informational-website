@@ -19,6 +19,8 @@ export default {
         TekoLight: ['Teko-light', 'sans-serif'],
         TekoMedium: ['Teko-medium', 'sans-serif'],
         TekoRegular: ['Teko-regular', 'sans-serif'],
+        oswald: ['oswald', 'sans-serif'],
+        oswaldLight: ['oswald-light', 'sans-serif'],
       },
     },
   },

@@ -4,33 +4,32 @@ import Product from './Product'
 ---
 <section class="bg-primary py-[5.5rem] px-20 pt-36 " style={{zIndex: '-1'}}>
   
-    <div class="text-4xl flex-col flex gap-10 ">
-        <div class="flex gap-2 flex-col">
-          <h2 class=" text-7xl font-TekoRegular">Services</h2>
+    <div class="text-4xl flex-col flex gap-10 items-center">
+        <div class="flex gap-2 flex-col lg:w-[1200px] xl:text-left text-center xl:items-start  items-center">
+          <h2 class=" text-7xl font-TekoMedium ">Services</h2>
 
-          <p class="font-TekoMedium  text-lg ">
-            WE HAVE BEEN PROCESSING
-            <br>
-            STEEL FOR OVER 25 YEARS
+          <p class="font-oswaldLight  text-lg  w-96  xl:text-left text-center ">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis, aliquid vero blanditiis eos 
           </p>
         </div>
-        <section class="flex  justify-center gap-10 width-4xl transition-transform overflow-scroll">
-            <div class="flex gap-10 flex-row products">
-                <Product title={'MACHINING STEEL'} description={'Metal elements that need to be shaped must be machined in an adquate way'} client:load>
+        <section class="flex  justify-center  width-4xl transition-transform overflow-scroll">
+            <div class="flex  gap-5 flex-col md:flex-row products flex-wrap justify-center">
+              
+                <Product title={'MACHINING STEEL'} description={'Metal elements that need to be shaped must be machined in an adquate way'} customStyles={''} client:load>
                     <div class="img1"></div>
                 </Product>
-                <Product title={'Rhino'} description={'Through our years of experience, we have also learned that while each chanel has'} client:load>
+                <Product title={'Rhino'} description={'Through our years of experience, we have also learned that while each chanel has'} customStyles='hidden lg:flex' client:load>
                     <div class="img2"></div>
                 </Product>
-                </div>
                 <div class="flex gap-10 flex-row">
-                <Product title={'METALS MATERIALS'} description={'On our way to cooporate with the customer we offer int field of building a product'} client:load>
+                <Product title={'METALS MATERIALS'} description={'On our way to cooporate with the customer we offer int field of building a product'} customStyles='hidden lg:flex' client:load>
                     <div class="img3"></div>
                 </Product>
                 </div>
+              </div>
           </section>
-        </div>
         <div class="flex"></div> 
+        </div>
 </section>
 
 <!-- <div class="text-4xl flex-col flex gap-10">

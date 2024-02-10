@@ -45,7 +45,7 @@ export default function StickyNavbar({ children }) {
 
   return (
     <nav
-      class="pl-6 bg-opacity-30    border-secondary text-secondary flex transition-all z-40"
+      class="bg-opacity-30    border-secondary text-secondary flex transition-all z-40 p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 "
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >
       {children}

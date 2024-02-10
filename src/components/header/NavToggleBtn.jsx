@@ -16,7 +16,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
   return (
     <>
       <div
-        class="w-screen h-[120vh] bg-black fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20"
+        class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20"
         style={{
           opacity: closed ? '0' : '0.5',
         }}

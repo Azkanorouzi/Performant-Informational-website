@@ -4,7 +4,7 @@ export default function PopularityShowCase() {
   return (
     <div class="flex gap-10 absolute  bottom-0 left-0 right-0 justify-center pb-20 flex-col">
       <h2
-        class="text-7xl text-forth font-bold w-[80vw]"
+        class="text-8xl text-forth font-bold w-[80vw]"
         style={{ letterSpacing: '10px', marginLeft: 'calc(10vw + 50px)' }}
       >
         ACHIEV

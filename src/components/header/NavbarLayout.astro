@@ -1,16 +1,19 @@
 ---
 import Logo from '../ui/Logo.astro'
+import HamburgerMenu from '../ui/HamburgerMenu'
 import NavToggleBtn from './NavToggleBtn'
 import NavBtn from './NavToggleBtn'
 import Navbar from './Navbar'
 import NavbarLinks from './NavbarLinks.astro'
+
 ---
 <Navbar client:load client:only>
-    <section class="flex justify-center items-center  pr-32 gap-4  pl-5 ">
+    <section class="flex justify-between items-center  lg:pr-32 gap-4  lg:pl-5 w-full lg:w-auto">
         <Logo />
         <NavbarLinks/>
+        <HamburgerMenu client:load/>
     </section>
-    <div class="flex-1"></div>
+    <div class="flex-1 hidden lg:block"></div>
 </Navbar>
 <style>
 .shadowed-element {

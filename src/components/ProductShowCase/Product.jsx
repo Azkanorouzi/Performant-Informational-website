@@ -1,12 +1,17 @@
 import case1 from '../../assets/cases1.png'
 import { useState, useEffect } from 'preact/hooks'
 
-export default function Product({ title, description, children }) {
+export default function Product({
+  title,
+  description,
+  children,
+  customStyles,
+}) {
   const [hovered, setHovered] = useState(false)
 
   return (
     <figure
-      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product`}
+      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product ${customStyles}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{ transform: hovered ? 'scale(1)' : '', zIndex: '1' }}
