@@ -19,7 +19,7 @@ export default function InfiniteScrollIcons() {
 
   return (
     <div class="w-full pt-16 flex flex-nowrap absolute bottom-0 right-0 left-0 pb-10  justify-center">
-      <ul class="flex items-center justify-center gap-36 w-[1000px]  overflow-visible">
+      <ul class="flex items-center justify-center gap-12 md:gap-28 lg:gap-36 px-5 md:px-0 w-[100%] md:w-[500px] lg:w-[1000px]  overflow-visible">
         {collabsArr.slice(index, index + 4).map((collab, i) => {
           if (i >= maxLogos) return
           return (
@@ -41,6 +41,7 @@ export default function InfiniteScrollIcons() {
                     : '.8s'
                 }`,
               }}
+              class={`${i === 3 ? 'hidden lg:block' : ''}`}
             >
               <img
                 src={collab.imgSrc}

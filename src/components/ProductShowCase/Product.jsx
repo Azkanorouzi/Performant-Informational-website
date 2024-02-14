@@ -11,7 +11,7 @@ export default function Product({
 
   return (
     <figure
-      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product ${customStyles}`}
+      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product ${customStyles} w-80 sm:w-auto`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{ transform: hovered ? 'scale(1)' : '', zIndex: '1' }}

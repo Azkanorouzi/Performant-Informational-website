@@ -16,8 +16,8 @@ export default function Popularity({
     return () => clearInterval(interval)
   }, [initNum, setInterval, numberText, setInitNum])
   return (
-    <div class="flex gap-2 justify-center items-center ">
-      <strong class=" text-8xl text-primary w-28 text-right">
+    <div class="flex gap-2 lg:justify-center items-center ">
+      <strong class=" text-4xl lg:text-8xl text-primary w-28 text-right">
         {initNum}
         {strText}
       </strong>

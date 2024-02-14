@@ -61,7 +61,7 @@ export function GalleryImages() {
             <span> EXPLORE MORE</span> <span> &rarr;</span>
           </button>
         </Gallery.Header>
-        <section class="flex justify-center gap-5 w-[70vw]">
+        <section class="flex justify-center lg:gap-5 w-[70vw]">
           <Gallery.ImageStatic
             name={'img1'}
             title={'TECHNOLOGY'}
@@ -70,6 +70,7 @@ export function GalleryImages() {
             imgIndex={0}
             customStyles={{ zIndex: 1 }}
             date="June 9, 2022"
+            customTailwind="hidden lg:flex"
           />
           <Gallery.ImageStatic
             name={'img2'}
@@ -79,6 +80,7 @@ export function GalleryImages() {
             imgIndex={1}
             customStyles={{ zIndex: 1 }}
             date="June 9, 2022"
+            customTailwind="hidden lg:flex"
           />
           <Gallery.ImageStatic
             name={'img3'}
@@ -145,7 +147,7 @@ function Container({ children, customStyles = {} }) {
 function Header({ children, customStyles }) {
   return (
     <article
-      class={`flex justify-between items-end w-[70vw] max-w-[1000px] `}
+      class={`flex lg:justify-between lg:items-end w-[70vw] max-w-[1000px] flex-col lg:flex-row items-center gap-4 lg:gap-0`}
       style={customStyles}
     >
       {children}
@@ -160,12 +162,15 @@ function Title({
   const { title = '', subTitle = '' } = useContext(GalleryContext)
 
   return (
-    <div class="text-secondary flex flex-col gap-2 " style={customStyles}>
+    <div
+      class="text-secondary flex flex-col gap-2 text-center lg:text-left"
+      style={customStyles}
+    >
       {title.length ? (
         <>
           {subTitle.length ? (
             <div>
-              <h2 class=" text-secondary text-2xl font-TekoLight">
+              <h2 class=" text-secondary text-xl lg:text-2xl font-TekoLight">
                 {sectionTitle}
               </h2>
               <hr class="w-44 text-secondary"></hr>
@@ -174,8 +179,8 @@ function Title({
             <> </>
           )}
           <div class="font-bold">
-            <h3 class="text-5xl uppercase">{title}</h3>{' '}
-            <h4 class="text-5xl uppercase ">{subTitle}</h4>
+            <h3 class="text-4xl lg:text-5xl uppercase">{title}</h3>{' '}
+            <h4 class="text-4xl lg:text-5xl uppercase ">{subTitle}</h4>
           </div>
         </>
       ) : (
@@ -208,7 +213,11 @@ function Pagination({ children = <></>, customStyles = {}, max, min }) {
 }
 
 function Slider({ children }) {
-  return <div class="flex gap-20 w-[300vw] justify-center ">{children}</div>
+  return (
+    <div class="flex gap-12 lg:gap-20 w-[300vw] justify-center max-w-[3500px]">
+      {children}
+    </div>
+  )
 }
 // Dynamic image
 function Image({
@@ -226,7 +235,7 @@ function Image({
       class="relative transition-transform"
       style={{
         transform: slider
-          ? `translate(${-100 * index}%) ${
+          ? `translate(${-108 * index}%) ${
               index == imgIndex - 1 ? 'scale(1.05)' : ''
             }`
           : '',
@@ -235,9 +244,9 @@ function Image({
     >
       <img src={src} alt={name} class="w-[1000px]" />
       {title && subTitle ? (
-        <figcaption class="uppercase absolute bottom-0 left-0 right-0 px-6 backdrop-blur-md py-7">
+        <figcaption class="uppercase absolute bottom-0 left-0 right-0 px-6 backdrop-blur-md py-2 lg:py-7">
           <p class="text-lg">{title}</p>
-          <strong class="text-4xl">{subTitle}</strong>
+          <strong class=" text-2xl lg:text-4xl">{subTitle}</strong>
           <div class="absolute bg-primary right-0 bottom-[110px] w-3 h-3"></div>
         </figcaption>
       ) : (
@@ -254,12 +263,13 @@ function ImageStatic({
   title = '',
   date = '',
   subTitle = '',
+  customTailwind = '',
 }) {
   const { index = 0, slider } = useContext(GalleryContext)
 
   return (
     <figure
-      class="relative transition-transform flex flex-col"
+      class={`relative transition-transform flex flex-col ${customTailwind}`}
       style={{
         transform: slider
           ? `translate(${-100 * index}%) ${

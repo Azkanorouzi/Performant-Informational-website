@@ -3,12 +3,12 @@ import { useState } from 'preact/hooks'
 export default function AuthorityShowCase() {
   const [textIndex, setTextIndex] = useState(0)
   return (
-    <article class="flex justify-center items-center gap-24">
-      <div class="flex gap-3 flex-col text-forth border-l-primary">
+    <article class="flex justify-center items-center gap-16 lg:gap-24 flex-col md:flex-row ">
+      <div class="flex gap-3 flex-col text-forth border-l-primary ">
         <strong
-          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
+          class={`text-5xl lg:text-7xl  text-nowrap hover:text-primary  border-l-4 border-transparent lg:pl-5 pl-5 ${
             textIndex === 0
-              ? 'border-l-primary text-primary -translate-x-10 '
+              ? 'border-l-primary text-primary lg:-translate-x-10 '
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -18,9 +18,9 @@ export default function AuthorityShowCase() {
           01 CONTROL
         </strong>
         <strong
-          class={`text-7xl  hover:text-primary border-l-4 border-transparent pl-5 ${
+          class={`text-5xl lg:text-7xl text-nowrap  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 1
-              ? 'border-l-primary text-primary -translate-x-10'
+              ? 'border-l-primary text-primary lg:-translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -30,9 +30,9 @@ export default function AuthorityShowCase() {
           02 MANAGEMENT
         </strong>
         <strong
-          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
+          class={`text-5xl lg:text-7xl  hover:text-primary  text-nowrap border-l-4 border-transparent pl-5 ${
             textIndex === 2
-              ? 'border-l-primary text-primary -translate-x-10'
+              ? 'border-l-primary text-primary lg:-translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -42,9 +42,9 @@ export default function AuthorityShowCase() {
           03 PROTECT
         </strong>
         <strong
-          class={`text-7xl  hover:text-primary border-l-4 border-transparent pl-5 ${
+          class={`text-5xl lg:text-7xl  text-nowrap  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 3
-              ? 'border-l-primary text-primary -translate-x-10'
+              ? 'border-l-primary text-primary lg:-translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -54,9 +54,9 @@ export default function AuthorityShowCase() {
           04 INNOVATION
         </strong>
         <strong
-          class={`text-7xl  hover:text-primary  border-l-4 border-transparent pl-5 ${
+          class={`text-5xl lg:text-7xl  text-nowrap hover:text-primary  border-l-4 border-transparent pl-5 ${
             textIndex === 4
-              ? 'border-l-primary text-primary -translate-x-10'
+              ? 'border-l-primary text-primary lg:-translate-x-10'
               : ''
           }`}
           style={{ transition: '.3s' }}
@@ -66,7 +66,7 @@ export default function AuthorityShowCase() {
           05 STRATEGY
         </strong>
       </div>
-      <div class={`w-96 h-96  flex flex-col gap-4 justify-center `}>
+      <div class={`  lg:w-96 lg:h-96  flex flex-col gap-4 justify-center `}>
         {textIndex === 0 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">Security of supply</strong>

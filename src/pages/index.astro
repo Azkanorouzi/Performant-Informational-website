@@ -11,13 +11,13 @@ import BlogShowCaseContent from '../components/BlogShowCase/BlogShowCaseContents
 
 <MainLayout title="Lantan">
 	
-	<header class="h-[90vh] text-xl flex flex-col" slot="header">
+	<header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
 		<HeaderContent />
 	</header>
 	
 	<section slot="productsShowCase" class="relative">
 		<ProductShowCaseContents />
-		<div class="w-full h-48 bottom-0 bg-secondary absolute" style={{zIndex: '0'}}></div>
+		<div class="w-full h-48 bottom-0 bg-secondary absolute border-none border-secondary" style={{zIndex: '0'}}></div>
 	</section>
 
 	<section slot="authorityShowCase">
