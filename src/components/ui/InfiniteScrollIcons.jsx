@@ -9,7 +9,6 @@ export default function InfiniteScrollIcons() {
   // useEffect for controlling the index
   useEffect(() => {
     const callBack = () => {
-      console.log(index)
       if (index == collabsArr.length - maxLogos) setIndex(0)
       setIndex((i) => i + 1)
     }
