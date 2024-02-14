@@ -1,4 +1,4 @@
-import staticMap from '../../assets/StaticMap.png'
+import staticMap from '../../assets/staticMap.png'
 
 export default function StaticMap() {
   return (
