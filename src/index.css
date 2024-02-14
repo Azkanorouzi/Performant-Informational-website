@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
 
 @font-face {
   font-family: 'Teko-regular';
-  src: url('./assets/Teko-regular.ttf') format('truetype');
+  src: url('./assets/Teko-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
