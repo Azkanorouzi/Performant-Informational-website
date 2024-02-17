@@ -12,7 +12,7 @@ export function GalleryFull() {
   return (
     <Gallery title="Tabriz" subTitle="Gold Mine" hasPagination={true}>
       <Gallery.Container customStyles={{}}>
-        <Gallery.Header>
+        <Gallery.Header customStyles={{ flexDirection: 'row', gap: '80px' }}>
           <Gallery.Title />
           <Gallery.Pagination max={2} min={-1} />
         </Gallery.Header>
@@ -147,7 +147,7 @@ function Container({ children, customStyles = {} }) {
 function Header({ children, customStyles }) {
   return (
     <article
-      class={`flex lg:justify-between lg:items-end w-[70vw] max-w-[1000px] flex-col lg:flex-row items-center gap-4 lg:gap-0`}
+      class={`flex justify-center lg:justify-between lg:items-end max-w-[1000px] flex-col lg:flex-row items-center gap-8 lg:gap-0  w-full lg:w-[70vw] `}
       style={customStyles}
     >
       {children}
@@ -163,7 +163,7 @@ function Title({
 
   return (
     <div
-      class="text-secondary flex flex-col gap-2 text-center lg:text-left"
+      class="text-secondary flex flex-col gap-2 text-left"
       style={customStyles}
     >
       {title.length ? (
@@ -173,7 +173,7 @@ function Title({
               <h2 class=" text-secondary text-xl lg:text-2xl font-TekoLight">
                 {sectionTitle}
               </h2>
-              <hr class="w-44 text-secondary"></hr>
+              <hr class=" w-30 lg:w-44 text-secondary"></hr>
             </div>
           ) : (
             <> </>

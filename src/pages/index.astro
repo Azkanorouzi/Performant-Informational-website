@@ -7,9 +7,10 @@ import AuthorityShowCaseContents from '../components/AuthorityShowCase/Authority
 import ServicesShowCaseContents from '../components/ServicesShowCase/ServicesShowCaseContents.astro'
 import PopularityShowCaseContents from '../components/PopularityShowCase/PopularityShowCaseContents.astro';
 import BlogShowCaseContent from '../components/BlogShowCase/BlogShowCaseContents.astro';
+import Loader from '../components/ui/Loader.astro'
 ---
 
-<MainLayout title="Lantan">
+<MainLayout title="sav-ghateh">
 	
 	<header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
 		<HeaderContent />
@@ -17,7 +18,7 @@ import BlogShowCaseContent from '../components/BlogShowCase/BlogShowCaseContents
 	
 	<section slot="productsShowCase" class="relative">
 		<ProductShowCaseContents />
-		<div class="w-full h-48 bottom-0 bg-secondary absolute border-none border-secondary" style={{zIndex: '0'}}></div>
+		<div class="w-full h-20 lg:h-48 bottom-0 bg-secondary absolute border-none border-secondary" style={{zIndex: '0'}}></div>
 	</section>
 
 	<section slot="authorityShowCase">

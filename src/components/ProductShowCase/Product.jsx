@@ -11,7 +11,7 @@ export default function Product({
 
   return (
     <figure
-      class={`relative cursor-pointer overflow-hidden scale-95 transition-transform product ${customStyles} w-80 sm:w-auto`}
+      class={`relative cursor-pointer overflow-hidden scale-100 lg:scale-95 transition-transform product ${customStyles} w-80 sm:w-auto`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{ transform: hovered ? 'scale(1)' : '', zIndex: '1' }}
@@ -19,14 +19,14 @@ export default function Product({
       {children}
       <figcaption class="flex flex-col ">
         <div
-          class={`absolute text-center flex justify-center items-center bottom-0 top-0 right-0 left-0 transition-colors bg-opacity-50 ${
-            hovered ? 'bg-forth' : ''
+          class={`absolute text-center flex justify-center items-center bottom-0 top-0 right-0 left-0 transition-colors bg-opacity-50 bg-forth  ${
+            hovered ? 'bg-forth' : ' bg-forth lg:bg-[rgba(255,255,255,0)]'
           }`}
         >
           <div class="py-4 h-full flex flex-col justify-center">
             <div class="flex gap-4 flex-col ">
               <h3
-                class={`text-5xl translate-y-10 opacity-70 px-[78px] `}
+                class={`text-5xl lg:translate-y-10 opacity-100 lg:opacity-70 px-[78px]`}
                 style={{
                   transition: '.5s',
                   opacity: hovered ? '1' : '.5',
@@ -37,7 +37,7 @@ export default function Product({
                 {title}
               </h3>
               <p
-                class={`text-2xl px-10 font-TekoLight translate-x-[100%]`}
+                class={`text-2xl px-10 font-TekoLight lg:translate-x-[100%]`}
                 style={{
                   transition: '.5s',
                   transform: hovered ? 'translatex(0)' : '',
@@ -47,7 +47,7 @@ export default function Product({
               </p>
             </div>
             <button
-              class={`text-primary bg-red -translate-x-[200%] hover:text-secondary rotate hover:scale-110 `}
+              class={`text-primary bg-red lg:-translate-x-[200%] hover:text-secondary rotate hover:scale-110 `}
               style={{
                 transition: '.5s',
                 transform: hovered ? 'translatex(0)' : '',

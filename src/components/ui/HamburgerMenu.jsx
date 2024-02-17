@@ -8,7 +8,7 @@ export default function HamburgerMenu() {
   const [closed, setClosed] = useState(true)
 
   return (
-    <div class="lg:hidden ">
+    <div class="lg:hidden overflow-scroll ">
       <div
         class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20"
         style={{
@@ -18,17 +18,17 @@ export default function HamburgerMenu() {
       ></div>
       <div></div>
       <section
-        class={`bg-[#0C0C0C] opacity-90 text-secondary flex absolute justify-center right-0 top-0  flex-col p-10 w-[100vw] gap-5 sm:gap-20 h-[110vh] transition-transform ${
+        class={`bg-[#0C0C0C] opacity-90 text-secondary flex absolute justify-center right-0 top-0  flex-col p-10 w-[100vw] gap-5 landscape:gap-3 sm:gap-20 h-[110vh] landscape:justify-center transition-transform ${
           closed && 'translate-x-[100%]'
         }`}
       >
-        <div class="flex  flex-col justify-center text-center text-4xl md:text-5xl ">
-          <ul class="flex flex-col gap-5">
+        <div class="flex  flex-col text-center text-4xl md:text-5xl ">
+          <ul class="flex flex-col gap-3 landscape:gap-5 landscape:flex-row landscape:text-3xl">
             <li class="home-link">
               {' '}
               <a href="/" class="nav-link">
                 {' '}
-                Homee{' '}
+                Home{' '}
               </a>
             </li>
             <li>
@@ -54,8 +54,8 @@ export default function HamburgerMenu() {
           </ul>
         </div>
         <hr />
-        <div class="flex justify-center items-center text-center flex-col gap-5">
-          <div class="flex gap-3 justify-center flex-wrap ">
+        <div class="flex justify-center items-center text-center flex-col landscape:flex-row gap-5 hamburgermenu-contacts">
+          <div class="flex gap-3 justify-center flex-wrap  landscape:flex-nowrap">
             <ContactBarInfo
               text="Call"
               secondaryText="+021 44456700"

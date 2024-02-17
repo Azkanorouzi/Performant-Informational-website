@@ -104,3 +104,34 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
+@media screen and (max-width: 300px) {
+  .hamburgermenu-contacts {
+    display: none;
+  }
+}
+.img1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 0, 0, 0.166)),
+    url('./assets/people.png');
+}
+.img2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)),
+    url('./assets/img-rhino.png');
+  background-position: center;
+  background-size: cover;
+}
+.img3 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)),
+    url('./assets/cases_4.png');
+}
+.img4 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)),
+    url('./assets/cases_3.jpg');
+}

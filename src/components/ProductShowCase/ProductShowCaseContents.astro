@@ -1,36 +1,21 @@
 ---
 import Creation from './Creation.jsx'
-import Product from './Product'
+import Products from './Products'
 ---
 <section class="bg-primary py-[5.5rem] px-20 pt-36  " style={{zIndex: '-1'}}>
   
-    <div class="text-4xl flex-col flex gap-10 items-center">
-        <div class="flex gap-2 flex-col lg:w-[1200px] xl:text-left text-center xl:items-start  items-center">
-          <h2 class=" text-7xl font-TekoMedium ">Services</h2>
+    <div class="text-4xl flex-col flex gap-10 items-center ">
 
-          <p class="font-oswaldLight  text-lg  w-96  xl:text-left text-center ">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis, aliquid vero blanditiis eos 
-          </p>
-        </div>
-        <section class="flex  justify-center  width-4xl transition-transform overflow-scroll">
-            <div class="flex  gap-5 flex-col md:flex-row products flex-wrap justify-center">
-              
-                <Product title={'MACHINING STEEL'} description={'Metal elements that need to be shaped must be machined in an adquate way'} customStyles={''} client:load>
-                    <div class="img1"></div>
-                </Product>
-                <Product title={'Rhino'} description={'Through our years of experience, we have also learned that while each chanel has'} customStyles='hidden lg:flex' client:load>
-                    <div class="img2"></div>
-                </Product>
-                <div class="flex gap-10 flex-row">
-                <Product title={'METALS MATERIALS'} description={'On our way to cooporate with the customer we offer int field of building a product'} customStyles='hidden lg:flex' client:load>
-                    <div class="img3"></div>
-                </Product>
-                </div>
-              </div>
-          </section>
+        
+          <Products client:load client:only/>
+
         <div class="flex"></div> 
         </div>
 </section>
+
+<script>
+
+</script>
 
 <!-- <div class="text-4xl flex-col flex gap-10">
     <div class="flex gap-5 flex-col justify-center items-center text-center">
@@ -46,12 +31,3 @@ import Product from './Product'
     </section>
   </div>
   <div class="flex"></div> -->
-<style>
-    .img1 {width: 400px; height: 400px; background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 0, 0, 0.166)), url('../../assets/people.png');}
-    .img2 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)), url('../../assets/img-rhino.png');
-    background-position: center;
-    background-size: cover;
-  }
-    .img3 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)), url('../../assets/cases_4.png');}
-    .img4 {width: 400px; height: 400px; background:linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)), url('../../assets/cases_3.jpg');}
-</style>

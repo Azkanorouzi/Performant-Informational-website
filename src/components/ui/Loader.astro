@@ -1,0 +1,22 @@
+---
+import logo2 from '../../assets/logo2.svg'
+---
+<div class="fixed z-50 w-screen h-screen bottom-0 bg-forth flex justify-center items-center bg-opacity-50 backdrop-blur-2xl loader">
+    <img src={logo2.src} alt="icon" class="w-[100px] h-[100px]">
+</div>
+
+<style>
+    img {
+        animation: blink 1s infinite alternate;
+    }
+    @keyframes blink{
+        from {
+            opacity: 0.2;
+            filter: blur(5px);
+            transform: rotate(360deg);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
