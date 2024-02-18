@@ -33,19 +33,19 @@ export default function StickyNavbar({ children }) {
     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
     transition: 'transform 0.3s ease-in-out',
     background:
-      window.pageYOffset > 400 && visible ? 'rgba(0,0,0,0.3)' : 'unset',
+      window.pageYOffset > 200 && visible ? 'rgba(0,0,0,0.3)' : 'unset',
     position: 'fixed',
-    backdropFilter: scrollPos > 400 ? 'blur(10px)' : 'unset',
+    backdropFilter: scrollPos > 200 ? 'blur(10px)' : 'unset',
     transition: 'background 1s, all .3s',
     top: 0,
     width: '100%',
-    zIndex: 10,
-    boxShadow: scrollPos > 400 ? '2px 2px 2px rgba(0,0,0,0.3)' : 'unset',
+    zIndex: 50,
+    boxShadow: scrollPos > 200 ? '2px 2px 2px rgba(0,0,0,0.3)' : 'unset',
   }
 
   return (
     <nav
-      class="bg-opacity-30    border-secondary text-secondary flex transition-all z-40 p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 "
+      class="bg-opacity-30    border-secondary text-secondary flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5"
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >
       {children}
