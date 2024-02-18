@@ -1,0 +1,36 @@
+---
+import img1 from '../../assets/blog-1.jpg'
+import img2 from '../../assets/blog-2.jpg'
+import img3 from '../../assets/blog-3.jpg'
+import { ProductStatic } from './Product';
+---
+
+<section
+    class="bg-secondary text-sixth py-20 something flex justify-center items-center gap-36 flex-col"
+  >
+    <div class="flex gap-36">
+      <div>
+        <h2 class="text-7xl">Accessory</h2>
+        <p class="w-[550px]">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quae
+          iste dolor eligendi dolorem voluptas fugit tempora blanditiis culpa
+          quibusdam quo, harum, delectus vitae repellat.
+        </p>
+      </div>
+      <div>
+        <button
+          class="bg-primary p-3 pr-28 flex justify-center items-center text-white"
+          >Readmore</button
+        >
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-14 mx-10 text-secondary">
+      <ProductStatic src={img1.src} alt={'img1'} title={'Experienced workers'} />
+      <ProductStatic src={img2.src} alt={'img2'} title={'Automation solutions'} />
+      <ProductStatic src={img3.src} alt={'img3'} title={'Professional support'} />
+      <ProductStatic src={img1.src} alt={'img4'} title={'Experiences workers'} />
+      <ProductStatic src={img2.src} alt={'img5'} title={'Automation solutions'} />
+      <ProductStatic src={img3.src} alt={'img6'} title={'professional support'} />
+    </div>
+  </section>
+

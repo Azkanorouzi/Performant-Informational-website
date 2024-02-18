@@ -11,31 +11,7 @@ import ProductHeader from '../components/header/ProductHeader.astro'
     style={{ paddingTop: '12rem' }}
   >
     <ProductHeader />
+    
   </header>
-  <section
-    slot="productsShowCase2"
-    class="bg-black py-20 something flex justify-center items-center gap-36"
-  >
-    <div class="flex gap-32">
-      <div>
-        <h2 class="text-7xl">Accessory</h2>
-        <p class="w-[550px]">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quae
-          iste dolor eligendi dolorem voluptas fugit tempora blanditiis culpa
-          quibusdam quo, harum, delectus vitae repellat.
-        </p>
-      </div>
-      <div>
-        <button
-          class="bg-primary p-3 pr-28 flex justify-center items-center text-white"
-          >Readmore</button
-        >
-      </div>
-    </div>
-    <div>
-        <div class="w-200px h-[350px]">
-          
-        </div>
-    </div>
-  </section>
+  <ProductPageContent slot="productsShowCase2"/>
 </MainLayout>
