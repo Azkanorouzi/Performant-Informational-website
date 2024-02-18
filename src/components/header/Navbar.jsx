@@ -22,6 +22,7 @@ export default function StickyNavbar({ children }) {
   useEffect(() => {
     const currentPath = window.location.pathname
     const links = document.querySelectorAll('.nav-link')
+    console.log(links, currentPath, '🥹')
     links.forEach(function (link) {
       if (link.getAttribute('href') === currentPath) {
         link.classList.add('active')
@@ -45,7 +46,7 @@ export default function StickyNavbar({ children }) {
 
   return (
     <nav
-      class="bg-opacity-30    border-secondary text-secondary flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5"
+      class="bg-opacity-30    border-secondary text-secondary flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 navbar"
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >
       {children}
