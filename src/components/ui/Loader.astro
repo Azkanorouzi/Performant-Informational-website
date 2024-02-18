@@ -9,10 +9,6 @@ import logo2 from '../../assets/logo2.svg'
     img {
         animation: blink 1s infinite alternate;
     }
-    div {
-        animation-delay: .5s;
-        animation: disapear 1s forwards;
-    }
     @keyframes blink{
         from {
             opacity: 0.2;
@@ -35,11 +31,16 @@ import logo2 from '../../assets/logo2.svg'
     }
 </style>
 <script>
-
     document.addEventListener('DOMContentLoaded', () => {
 	  const loader = document.querySelector('.loader');
 	  if (loader) {
-		(loader as HTMLDivElement).style.display = 'none';
+		(loader as HTMLDivElement).style.animation = ' disapear .5s forwards';
+        setInterval(() => {
+        const loader = document.querySelector('.loader');
+        console.log(loader);
+        (loader as HTMLDivElement).style.animation = ' disapear .5s forwards';
+        }, 500)
 	  }
 	});
+    
 </script>

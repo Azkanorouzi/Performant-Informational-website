@@ -2,9 +2,11 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import ProductPageContent from '../components/ProductShowCase/ProductPageContent.astro'
 import ProductHeader from '../components/header/ProductHeader.astro'
+import Loader from '../components/ui/Loader.astro'
 ---
 
 <MainLayout title="sav-ghateh (products)">
+  <Loader slot='loader'/>
   <header
     class="text-xl flex flex-col bg-slate-800 justify-center"
     slot="header"
