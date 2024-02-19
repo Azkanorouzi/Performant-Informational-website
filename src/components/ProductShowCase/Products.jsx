@@ -26,7 +26,7 @@ export default function Products() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           reiciendis, aliquid vero blanditiis eos
         </p>
-        <div class="gap-2 flex lg:hidden">
+        <div class="gap-2 flex lg:hidden z-50">
           <button
             class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary "
             onClick={() => goBack(0)}

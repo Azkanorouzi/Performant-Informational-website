@@ -24,6 +24,7 @@ export default function StickyNavbar({ children }) {
     const links = document.querySelectorAll('.nav-link')
     console.log(links, currentPath.slice(0, -2), '🥹')
     links.forEach(function (link) {
+      console.log(link.href)
       if (link.getAttribute('href') === currentPath.slice(0, -2)) {
         link.classList.add('active')
       }
