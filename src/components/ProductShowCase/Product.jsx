@@ -64,9 +64,9 @@ export default function Product({
 export function ProductStatic({ src, alt, title }) {
   return (
     <div class="relative">
-      <img src={src} alt={alt} class="max-w-[350px]" />
+      <img src={src} alt={alt} class="lg:max-w-[350px] " />
       <a
-        class="bottom-0 right-0 left-0 bg-sixth  py-8 bg-opacity-45 backdrop-blur-sm absolute text-3xl flex justify-center gap-10 items-center hover:text-primary transition-colors"
+        class="bottom-0 right-0 left-0 bg-sixth py-4  lg:py-8 bg-opacity-45 backdrop-blur-sm absolute lg:text-3xl flex justify-center lg:gap-10 gap-5 items-center hover:text-primary transition-colors"
         role={'button'}
       >
         <p> {title} </p>

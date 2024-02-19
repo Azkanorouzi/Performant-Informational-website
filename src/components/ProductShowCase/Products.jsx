@@ -1,6 +1,6 @@
 import Product from './Product'
 import Gallery from '../ui/Gallery'
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 
 export default function Products() {
   const [index, setIndex] = useState(0)

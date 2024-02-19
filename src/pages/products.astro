@@ -8,12 +8,13 @@ import Loader from '../components/ui/Loader.astro'
 <MainLayout title="sav-ghateh (products)">
   <Loader slot='loader'/>
   <header
-    class="text-xl flex flex-col bg-slate-800 justify-center"
+    class="text-xl flex flex-col bg-secondary justify-center  lg:pt-0"
     slot="header"
     style={{ paddingTop: '12rem' }}
   >
+  <div class="mt-[230px]">
     <ProductHeader />
-    
+  </div>
   </header>
   <ProductPageContent slot="productsShowCase2"/>
 </MainLayout>

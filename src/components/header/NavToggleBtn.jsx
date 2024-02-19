@@ -16,7 +16,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
   return (
     <>
       <div
-        class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20"
+        class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20 text-secondary"
         style={{
           opacity: closed ? '0' : '0.5',
         }}
@@ -24,7 +24,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
       ></div>
       <div>
         <button
-          class="bg-primary p-8 px-10 text-2xl hover:bg-opacity-100 cursor-poitner transition-colors hidden lg:block"
+          class="bg-primary p-8 px-10 text-2xl hover:bg-opacity-100 cursor-poitner transition-colors hidden lg:block text-secondary"
           onClick={() => setClosed(false)}
         >
           <i class="bi bi-list "></i>
@@ -69,7 +69,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
           }`}
           onClick={() => setClosed(true)}
         >
-          <i class="bi bi-x-lg"></i>
+          <i class="bi bi-x-lg text-secondary"></i>
         </button>
       </section>
     </>

@@ -6,6 +6,7 @@ export default function StickyNavbar({ children }) {
   const [visible, setVisible] = useState(true)
   const [closed, setClosed] = useState(true)
   const [scrollPos, setScrollPos] = useState(window.pageYOffset)
+  const isRoot = window.location.pathname.length === 1
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,20 +23,33 @@ export default function StickyNavbar({ children }) {
   useEffect(() => {
     const currentPath = window.location.pathname
     const links = document.querySelectorAll('.nav-link')
-    console.log(links, currentPath.slice(0, -1) || '/', '🥹')
+
+    // Setting the active class for the navbar
     links.forEach(function (link) {
       console.log(link.href)
       if (link.getAttribute('href') === (currentPath.slice(0, -1) || '/')) {
-        link.classList.add('active')
+        link.classList.add(isRoot ? 'text-secondary' : 'text-sixth')
       }
     })
+    // Changing the navbar logo based on the current path
+    const navLogo = document.querySelector('.nav-logo')
+    const navLogoGrey = document.querySelector('.nav-logo-grey')
+
+    // Hiding the navbar logo based on the current path (there will be two logos, grey - red, the red one is only apparent on index)
+    if (isRoot) {
+      navLogoGrey.classList.add('hidden')
+    } else navLogo.classList.add('hidden')
   }, [window.location.pathname])
 
   const navbarStyle = {
     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
     transition: 'transform 0.3s ease-in-out',
     background:
-      window.pageYOffset > 200 && visible ? 'rgba(0,0,0,0.3)' : 'unset',
+      window.pageYOffset > 200 && visible && !isRoot
+        ? 'rgba(255,255,255,0.3)'
+        : window.pageYOffset > 200 && visible
+        ? 'rgba(0,0,0,0.3)'
+        : 'unset',
     position: 'fixed',
     backdropFilter: scrollPos > 200 ? 'blur(10px)' : 'unset',
     transition: 'background 1s, all .3s',
@@ -47,7 +61,9 @@ export default function StickyNavbar({ children }) {
 
   return (
     <nav
-      class="bg-opacity-30    border-secondary text-secondary flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 navbar"
+      class={`bg-opacity-30    border-secondary  flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 navbar ${
+        window.location.pathname.length === 1 ? 'text-secondary' : 'text-sixth'
+      }`}
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >
       {children}

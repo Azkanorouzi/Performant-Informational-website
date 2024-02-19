@@ -2,13 +2,13 @@
 const {text} = Astro.props;
 const link = text === 'Home' ? '/' : `/${text.toLowerCase()}`
 ---
-<li class="text-secondary  transition-colors ">
+<li class="transition-colors ">
     <a href={link} class="flex border-b-2 border-transparent w-20 xl:w-24  flex-col nav-link">
 
         <span>
         {text}
       </span>
-      <hr class="text-secondary w-full hover:scale-x-100 transition-transform"/>
+      <hr class="w-full hover:scale-x-100 transition-transform"/>
     </a>
 </li>
 
@@ -22,8 +22,5 @@ const link = text === 'Home' ? '/' : `/${text.toLowerCase()}`
     }
     .active > hr {
         transform: scaleX(1)
-    }
-    .active {
-      color: theme(colors.secondary);
     }
   </style>

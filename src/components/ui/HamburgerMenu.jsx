@@ -78,7 +78,7 @@ export default function HamburgerMenu() {
         </div>
       </section>
       <button
-        class={` text-4xl absolute p-3 md:p-[1.65rem] top-0  text-white  cursor-pointer transition-colors right-0  `}
+        class={` text-4xl absolute p-3 md:p-[1.65rem] top-0    cursor-pointer transition-colors right-0  `}
         onClick={() => setClosed((closed) => !closed)}
         style={{
           animation: closed
