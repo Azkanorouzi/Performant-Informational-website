@@ -3,7 +3,7 @@ import { useState } from 'preact/hooks'
 export default function AuthorityShowCase() {
   const [textIndex, setTextIndex] = useState(0)
   return (
-    <article class="flex justify-center items-center gap-16 lg:gap-24 flex-col md:flex-row ">
+    <article class="flex justify-center items-center gap-16 lg:gap-24 flex-col md:flex-row z-50">
       <div class="flex gap-3 flex-col text-forth border-l-primary ">
         <strong
           class={`text-5xl lg:text-7xl  text-nowrap hover:text-primary  border-l-4 border-transparent lg:pl-5 pl-5 ${

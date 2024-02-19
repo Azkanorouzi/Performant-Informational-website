@@ -28,7 +28,7 @@ export default function Products() {
         </p>
         <div class="gap-2 flex lg:hidden">
           <button
-            class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary"
+            class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary "
             onClick={() => goBack(0)}
           >
             <span class=" h-6">&larr;</span>
@@ -41,7 +41,7 @@ export default function Products() {
           </button>
         </div>
       </div>
-      <section class="flex  justify-center  width-4xl transition-transform overflow-scroll">
+      <section class="flex  justify-center  width-4xl transition-transform overflow-scroll z-50">
         <div class="flex flex-col justify-center gap-8 items-center">
           <div class="flex  gap-5 flex-col md:flex-row products flex-wrap justify-center">
             <Product
@@ -49,7 +49,7 @@ export default function Products() {
               description={
                 'Metal elements that need to be shaped must be machined in an adquate way'
               }
-              customStyles={`unBlur lg:flex ${
+              customStyles={`unBlur lg:flex  ${
                 index === 0 ? 'flex' : 'hidden lg:flex'
               }`}
             >

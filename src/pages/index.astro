@@ -11,13 +11,13 @@ import Loader from '../components/ui/Loader.astro'
 import { ViewTransitions } from 'astro:transitions';
 ---
 
-<MainLayout title="sav-ghateh">
+<MainLayout title="sav-ghateh" >
 	<Loader slot='loader'/>
 	<header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
 		<HeaderContent />
 	</header>
 	
-	<section slot="productsShowCase" class="relative">
+	<section slot="productsShowCase" class="relative" >
 		<ProductShowCaseContents />
 		<div class="w-full h-20 lg:h-48 bottom-0 bg-secondary absolute border-none border-secondary" style={{zIndex: '0'}}></div>
 	</section>

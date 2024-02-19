@@ -57,11 +57,11 @@ export function GalleryImages() {
       <Gallery.Container customStyles={{}}>
         <Gallery.Header>
           <Gallery.Title sectionTitle="Latest news" />
-          <button class="p-5 text-xl text-forth bg-secondary flex justify-between gap-20">
+          <button class="p-5 text-xl text-forth bg-secondary flex justify-between gap-20 z-50 hover:bg-forth hover:text-secondary transition-colors">
             <span> EXPLORE MORE</span> <span> &rarr;</span>
           </button>
         </Gallery.Header>
-        <section class="flex justify-center lg:gap-5 w-[70vw]">
+        <section class="flex justify-center lg:gap-5 w-[70vw] z-50">
           <Gallery.ImageStatic
             name={'img1'}
             title={'TECHNOLOGY'}
@@ -195,13 +195,13 @@ function Pagination({ children = <></>, customStyles = {}, max, min }) {
   return hasPagination ? (
     <div class="flex gap-2" style={customStyles}>
       <button
-        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary"
+        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goBack(min)}
       >
         <span class=" h-6">&larr;</span>
       </button>
       <button
-        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary"
+        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goNext(max)}
       >
         <span class=" h-6">&rarr;</span>

@@ -40,7 +40,7 @@ export default function StickyNavbar({ children }) {
     transition: 'background 1s, all .3s',
     top: 0,
     width: '100%',
-    zIndex: 50,
+    zIndex: 60,
     boxShadow: scrollPos > 200 ? '2px 2px 2px rgba(0,0,0,0.3)' : 'unset',
   }
 
