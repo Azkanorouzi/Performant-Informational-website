@@ -22,10 +22,10 @@ export default function StickyNavbar({ children }) {
   useEffect(() => {
     const currentPath = window.location.pathname
     const links = document.querySelectorAll('.nav-link')
-    console.log(links, currentPath.slice(0, -2), '🥹')
+    console.log(links, currentPath.slice(0, -1) || '/', '🥹')
     links.forEach(function (link) {
       console.log(link.href)
-      if (link.getAttribute('href') === currentPath.slice(0, -2)) {
+      if (link.getAttribute('href') === (currentPath.slice(0, -1) || '/')) {
         link.classList.add('active')
       }
     })
