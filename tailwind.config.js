@@ -21,6 +21,7 @@ export default {
         TekoRegular: ['Teko-regular', 'sans-serif'],
         oswald: ['oswald', 'sans-serif'],
         oswaldLight: ['oswald-light', 'sans-serif'],
+        oswaldBold: ['oswald-bold', 'sans-serif'],
       },
     },
   },

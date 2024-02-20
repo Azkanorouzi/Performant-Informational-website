@@ -45,6 +45,11 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500; /* semi-bold is often represented by font-weight 600 */
 }
 @font-face {
+  font-family: 'oswald-bold';
+  src: url('./assets/OSWALD-MEDIUM.TTF') format('truetype');
+  font-weight: 500; /* semi-bold is often represented by font-weight 600 */
+}
+@font-face {
   font-family: 'oswald-light';
   src: url('./assets/OSWALD-LIGHT.TTF') format('truetype');
   font-weight: 500; /* semi-bold is often represented by font-weight 600 */

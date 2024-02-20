@@ -70,13 +70,13 @@ export default function AuthorityShowCase() {
         {textIndex === 0 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">Security of supply</strong>
-            <p class="mb-2 text-xl font-TekoLight">
+            <p class="mb-2 text-lg font-oswaldLight">
               Our in-house team of scientists is constantly fine-tuning the
               adopted methods and processes and guarantees that only top-quality
               powder is obtained. In the case of tungsten in particular.
             </p>
             <strong class="text-3xl"> CAREFUL USE OF NATURAL RESOURCES </strong>
-            <p class="text-xl font-TekoLight">
+            <p class="text-lg font-oswaldLight">
               The input material for the recovery process consists of sintered
               hard tungsten carbide scrap, as well as soft scrap such as
               powders. Whether in electronics, coating technology, or
@@ -91,7 +91,7 @@ export default function AuthorityShowCase() {
             <strong class="text-3xl ">
               ALUMINUM VS. STEEL. BENEFITS OF BOTH
             </strong>
-            <p class="text-xl font-TekoLight">
+            <p class="text-lg font-oswaldLight">
               Powder coating is a popular industrial finish that can be used to
               coat a variety of materials, including metals, plastics, and
               ceramics. Powder coating typically works by applying the dry
@@ -109,7 +109,7 @@ export default function AuthorityShowCase() {
         {textIndex === 2 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">WHEN IS IT USED?</strong>
-            <p class="text-xl font-TekoLight">
+            <p class="text-lg font-oswaldLight">
               {' '}
               The added resistance to rust and corrosion that is provided by
               powder coatings allow the surfaces of steel beams, appliances,
@@ -128,7 +128,7 @@ export default function AuthorityShowCase() {
             <strong class="text-3xl">
               THE INDUSTRIAL PROCESSES MOVE TOWARDS AUTOMATION
             </strong>
-            <p class="text-xl font-TekoLight">
+            <p class="text-lg font-oswaldLight">
               Heat resistance, low thermal expansion, high thermal conductivity,
               good corrosion resistance and wear resistance, high density,
               radiation absorption, outstanding purity – these are the decisive
@@ -145,13 +145,13 @@ export default function AuthorityShowCase() {
         {textIndex === 4 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
             <strong class="text-3xl">SECURITY OF SUPPLY</strong>
-            <p class="text-xl font-TekoLight mb-2">
+            <p class="text-lg font-oswaldLight mb-2">
               Our in-house team of scientists is constantly fine-tuning the
               adopted methods and processes and guarantees that only top-quality
               powder is obtained. In the case of tungsten in particular.
             </p>
             <strong class="text-3xl">CAREFUL USE OF NATURAL RESOURCES</strong>
-            <p class="text-xl font-TekoLight">
+            <p class="text-lg font-oswaldLight">
               The input material for the recovery process consists of sintered
               hard tungsten carbide scrap, as well as soft scrap such as
               powders. Whether in electronics, coating technology, or

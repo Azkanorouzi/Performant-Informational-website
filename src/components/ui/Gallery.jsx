@@ -11,7 +11,7 @@ const GalleryContext = createContext({})
 export function GalleryFull() {
   return (
     <Gallery title="Tabriz" subTitle="Gold Mine" hasPagination={true}>
-      <Gallery.Container customStyles={{}}>
+      <Gallery.Container customStyles={{ fontFamily: 'oswald' }}>
         <Gallery.Header customStyles={{ flexDirection: 'row', gap: '80px' }}>
           <Gallery.Title />
           <Gallery.Pagination max={2} min={-1} />
@@ -54,10 +54,10 @@ export function GalleryImages() {
       title="STAY INFORMED ON OUR"
       subTitle="LATEST NEWS"
     >
-      <Gallery.Container customStyles={{}}>
+      <Gallery.Container customStyles={{ fontFamily: 'oswald' }}>
         <Gallery.Header>
           <Gallery.Title sectionTitle="Latest news" />
-          <button class="p-5 text-xl text-forth bg-secondary flex justify-between gap-20 z-50 hover:bg-forth hover:text-secondary transition-colors">
+          <button class="p-5 text-lg text-forth bg-secondary flex justify-between gap-20 z-50 hover:bg-forth hover:text-secondary transition-colors">
             <span> EXPLORE MORE</span> <span> &rarr;</span>
           </button>
         </Gallery.Header>
@@ -170,7 +170,7 @@ function Title({
         <>
           {subTitle.length ? (
             <div>
-              <h2 class=" text-secondary text-xl lg:text-2xl font-TekoLight">
+              <h2 class=" text-secondary text-lg lg:text-xl font-TekoLight">
                 {sectionTitle}
               </h2>
               <hr class=" w-30 lg:w-44 text-secondary"></hr>
@@ -179,8 +179,8 @@ function Title({
             <> </>
           )}
           <div class="font-bold">
-            <h3 class="text-4xl lg:text-5xl uppercase">{title}</h3>{' '}
-            <h4 class="text-4xl lg:text-5xl uppercase ">{subTitle}</h4>
+            <h3 class="text-4xl lg:text-4xl uppercase">{title}</h3>{' '}
+            <h4 class="text-4xl lg:text-4xl uppercase ">{subTitle}</h4>
           </div>
         </>
       ) : (
@@ -195,13 +195,13 @@ function Pagination({ children = <></>, customStyles = {}, max, min }) {
   return hasPagination ? (
     <div class="flex gap-2" style={customStyles}>
       <button
-        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
+        class="border border-secondary w-12 h-12 text-lg flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goBack(min)}
       >
         <span class=" h-6">&larr;</span>
       </button>
       <button
-        class="border border-secondary w-12 h-12 text-xl flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
+        class="border border-secondary w-12 h-12 text-lg flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goNext(max)}
       >
         <span class=" h-6">&rarr;</span>
@@ -245,8 +245,8 @@ function Image({
       <img src={src} alt={name} class="w-[1000px]" />
       {title && subTitle ? (
         <figcaption class="uppercase absolute bottom-0 left-0 right-0 px-6 backdrop-blur-md py-2 lg:py-7">
-          <p class="text-lg">{title}</p>
-          <strong class=" text-2xl lg:text-4xl">{subTitle}</strong>
+          <p class="text-sm">{title}</p>
+          <strong class=" text-2xl lg:text-3xl">{subTitle}</strong>
           <div class="absolute bg-primary right-0 bottom-[110px] w-3 h-3"></div>
         </figcaption>
       ) : (
@@ -283,7 +283,7 @@ function ImageStatic({
         <img src={src} alt={name} />
 
         <p
-          class=" absolute bottom-0 left-0 bg-secondary p-1 px-5 text-md"
+          class=" absolute bottom-0 left-0 bg-secondary p-1 px-5 text-sm"
           style={{ letterSpacing: '2px' }}
         >
           {title}
@@ -297,9 +297,9 @@ function ImageStatic({
           >
             {date}
           </p>
-          <strong class="text-3xl">{subTitle}</strong>
+          <strong class="text-2xl">{subTitle}</strong>
           <div class="absolute bg-primary right-0 bottom-[110px] w-3 h-3"></div>
-          <button className="text-xl text-primary text-left w-[120px] border-b-2 border-current hover:text-forth transition-colors">
+          <button className="text-sm text-primary text-left w-[120px] border-b-2 border-current hover:text-forth transition-colors">
             Read more &rarr;
           </button>
         </figcaption>

@@ -1,5 +1,4 @@
-import Info from '../ui/Info.astro'
-import Logo from '../ui/Logo.astro'
+import savGhatehLogo from '../../assets/logo en full.svg'
 import { useEffect, useRef, useState } from 'preact/hooks'
 
 export default function NavToggleBtn({ closed, setClosed }) {
@@ -16,7 +15,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
   return (
     <>
       <div
-        class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20 text-secondary"
+        class="w-screen h-[120vh]  hidden lg:fixed top-0 left-0 right-0 bottom-0  transition-opacity -z-20 text-secondary bg-black"
         style={{
           opacity: closed ? '0' : '0.5',
         }}
@@ -36,8 +35,11 @@ export default function NavToggleBtn({ closed, setClosed }) {
         }`}
       >
         <div class="gap-3 flex  flex-col">
-          <i class="bi bi-gem text-5xl gap-4 text-secondary"></i>
-          <h2 class="text-4xl">LANTAN</h2>
+          <img
+            src={savGhatehLogo.src}
+            alt="SAV GHATEH"
+            class="w-[200px] mb-14"
+          />
           <p class="text-2xl ">
             We have been processing steel for over 25 years
           </p>
@@ -64,7 +66,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
           icon="bi bi-envelope"
         />
         <button
-          class={`bg-primary text-4xl fixed p-[1.65rem] top-0 right-[300px] text-white hover:text-primary hover:bg-secondary cursor-pointer transition-colors ${
+          class={`bg-primary text-4xl fixed p-[1.65rem] top-0 right-[300px] text-white hover:text-primary hover:bg-fifth cursor-pointer transition-colors ${
             closed && 'translate-x-full'
           }`}
           onClick={() => setClosed(true)}
