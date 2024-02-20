@@ -1,0 +1,24 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import Loader from '../components/ui/Loader.astro'
+import ContactsContent from '../components/Contacts/ContactsContent.astro'
+---
+
+<MainLayout title="sav-ghateh (Contacts)">
+  <Loader slot='loader'/>
+  <header
+    class="text-xl flex flex-col    lg:pt-0 font-oswald h-[500px] pl-56 "
+    slot="header"
+    style={{ paddingTop: '12rem' }}
+  >
+  <h1 class="text-8xl uppercase font-oswaldBold mt-10">Contacts</h1>
+  </header>
+  <ContactsContent slot='contactsContent'/>
+</MainLayout>
+
+<style>
+    header {
+        background: url('../assets/cont.png');
+        background-size: cover;
+    }
+</style>

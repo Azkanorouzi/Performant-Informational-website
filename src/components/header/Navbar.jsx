@@ -6,7 +6,9 @@ export default function StickyNavbar({ children }) {
   const [visible, setVisible] = useState(true)
   const [closed, setClosed] = useState(true)
   const [scrollPos, setScrollPos] = useState(window.pageYOffset)
-  const isRoot = window.location.pathname.length === 1
+  const isWhite =
+    window.location.pathname.length === 1 ||
+    window.location.pathname.includes('contacts')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +30,7 @@ export default function StickyNavbar({ children }) {
     links.forEach(function (link) {
       console.log(link.href)
       if (link.getAttribute('href') === (currentPath.slice(0, -1) || '/')) {
-        link.classList.add(isRoot ? 'text-secondary' : 'text-sixth')
+        link.classList.add(isWhite ? 'text-secondary' : 'text-sixth')
       }
     })
     // Changing the navbar logo based on the current path
@@ -36,7 +38,7 @@ export default function StickyNavbar({ children }) {
     const navLogoGrey = document.querySelector('.nav-logo-grey')
 
     // Hiding the navbar logo based on the current path (there will be two logos, grey - red, the red one is only apparent on index)
-    if (isRoot) {
+    if (isWhite) {
       navLogoGrey.classList.add('hidden')
     } else navLogo.classList.add('hidden')
   }, [window.location.pathname])
@@ -45,7 +47,7 @@ export default function StickyNavbar({ children }) {
     transform: visible ? 'translateY(0)' : 'translateY(-100%)',
     transition: 'transform 0.3s ease-in-out',
     background:
-      window.pageYOffset > 200 && visible && !isRoot
+      window.pageYOffset > 200 && visible && !isWhite
         ? 'rgba(255,255,255,0.3)'
         : window.pageYOffset > 200 && visible
         ? 'rgba(0,0,0,0.3)'
@@ -65,7 +67,7 @@ export default function StickyNavbar({ children }) {
   return (
     <nav
       class={`bg-opacity-30    border-secondary  flex transition-all  p-3 lg:py-0 lg:pr-0 xl:pl-16 lg:pl-5 navbar ${
-        window.location.pathname.length === 1 ? 'text-secondary' : 'text-sixth'
+        isWhite ? 'text-secondary' : 'text-sixth'
       }`}
       style={{ boxShadow: 'inner', ...navbarStyle }}
     >

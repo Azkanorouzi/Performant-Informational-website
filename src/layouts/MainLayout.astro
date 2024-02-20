@@ -24,11 +24,13 @@ const { title } = Astro.props;
 		<ViewTransitions slot='transition'/>
 	</head>
 	<body class="font-TekoRegular text-secondary  relative bg-primary">
-		<slot name="loader" />
+		<Loader />
+		
 		<Navbar slot='navbar' />
 		<!-- Header area -->
 		<slot name="header" />
 		<main>
+			<slot name="contactsContent" />
 			<slot name="productsShowCase2" />
 			<slot name="productsShowCase" />
 			<slot name="authorityShowCase" />
