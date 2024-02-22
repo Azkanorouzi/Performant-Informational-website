@@ -5,7 +5,7 @@ import img2 from '../../assets/call.png'
 import img3 from '../../assets/mail.png'
 ---
 <section class="bg-white flex justify-center items-center text-sixth font-oswald">
-<div class="flex flex-col  justify-end  gap-10 py-2  lg:py-20 lg:w-[75vw] max-w-[1200px]  ">
+<div class="flex flex-col  justify-end  gap-10 py-2  lg:py-20 w-[80vw] lg:w-[75vw] lg:max-w-[1200px]  ">
     <div class="flex flex-col gap-2">
         <h2 class=" text-primary text-xl font-oswaldLight">our contacts</h2>
         <hr class="w-44 text-primary"></hr>
@@ -15,7 +15,7 @@ import img3 from '../../assets/mail.png'
             Get in touch!
           </h3>
     </div> 
-    <div class="flex gap-7">
+    <div class="flex gap-7   justify-center flex-wrap lg:flex-nowrap">
         <ContactCard name="Address" icon="bi bi-geo-alt-fill" src={img1.src} info1={'Lorem ipsum dolor sit amet.'} info2={'Lorem, ipsum dolor '}/>
         <ContactCard name="Phone" icon="bi bi-telephone-fill" src={img2.src} info1={'+1 800 123 456 789'} info2={'+1 800 123 456 780'}/>
         <ContactCard name="Mail" icon="bi bi-envelope-fill" src={img3.src} info1={'test_sav-ghateh@gmail.com'} info2={'test2-sav-ghateh@gmail.com'}/>
