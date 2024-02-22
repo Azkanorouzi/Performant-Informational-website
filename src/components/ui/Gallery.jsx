@@ -198,13 +198,18 @@ function Pagination({ children = <></>, customStyles = {}, max, min }) {
         class="border border-secondary w-12 h-12 text-lg flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goBack(min)}
       >
-        <span class=" h-6">&larr;</span>
+        <span class=" h-6 flex justify-center items-center">
+          <i class="bi bi-arrow-left"></i>
+        </span>
       </button>
       <button
         class="border border-secondary w-12 h-12 text-lg flex justify-center items-center hover:bg-secondary hover:text-primary z-50"
         onClick={() => goNext(max)}
       >
-        <span class=" h-6">&rarr;</span>
+        <span class=" h-6 flex items-center justify-center">
+          {' '}
+          <i class="bi bi-arrow-right"></i>{' '}
+        </span>
       </button>
     </div>
   ) : (
@@ -317,9 +322,3 @@ Gallery.Title = Title
 Gallery.Header = Header
 Gallery.Image = Image
 Gallery.ImageStatic = ImageStatic
-// <><p class="text-lg border-b-2 border-secondary">Project gallery</p>
-//           <h2 class="text-5xl uppercase">
-//             Tabriz
-//             <br />
-//             Gold Mine
-//           </h2></>
