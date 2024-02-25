@@ -8,7 +8,8 @@ export default function StickyNavbar({ children }) {
   const [scrollPos, setScrollPos] = useState(window.pageYOffset)
   const isWhite =
     window.location.pathname.length === 1 ||
-    window.location.pathname.includes('contacts')
+    window.location.pathname.includes('contacts') ||
+    window.location.pathname.includes('about')
 
   useEffect(() => {
     const handleScroll = () => {

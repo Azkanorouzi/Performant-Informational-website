@@ -1,0 +1,15 @@
+---
+const {title} = Astro.props;
+import contImg from '../../assets/cont.png'
+import aboutImg from '../../assets/about-header.png'
+let bgUrl = ''
+if (title === 'contacts') bgUrl = contImg.src
+if (title === 'about us') bgUrl = aboutImg.src;
+---
+<header
+class="text-xl flex flex-col    lg:pt-0 font-oswald h-[500px] lg:pl-44 pl-6 sm:pl-12  w-full bg-cover object-fill bg-center header"
+slot="header"
+style={{ paddingTop: '12rem', background:`url(${bgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+>
+<h1 class="sm:text-8xl text-6xl uppercase font-oswaldBold mt-10">{title}</h1>
+</header>
