@@ -1,9 +1,34 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/ui/Header.astro'
+import AboutSecondHeader from '../components/AboutUs/AboutSecondHeader.astro'
+import aboutMachine from '../assets/about-machine.png'
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
   <Header title="about us" slot='header'/>
-
+  <AboutSecondHeader slot='aboutHeaderContent'/>
+  <section slot="aboutContent">
+    <div class="flex bg-primary  justify-center items-center overflow-hidden">
+      <div class="w-[50%] bg-black h-[650px] machine-div"></div>
+      <div class="flex flex-col  flex-1 justify-center items-center  py-20" >
+        <div class="flex gap-4 flex-col">
+        <div class="">
+          <strong class="text-sm font-oswaldLight">OUR STORY</strong>
+          <hr class="w-44 text-secondary"></hr>
+        </div>
+        <h3 class="text-4xl  font-oswaldBold ">OUR STORY</h3>
+        <p class="w-[400px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita fuga quibusdam mollitia reprehenderit eligendi velit quo minima distinctio consectetur dignissimos illum temporibus autem vel aperiam, provident reiciendis, accusantium vero, sequi tenetur quis quae. Debitis et esse alias perferendis rem dolor tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, vitae quod! Reprehenderit culpa officiis corrupti dicta magni perspiciatis deserunt esse dignissimos architecto deleniti? Accusantium magnam ipsa eius fuga sapiente necessitatibus perspiciatis repudiandae iusto saepe pariatur id labore, cumque quasi reprehenderit.</p>
+      </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  .machine-div {
+    background: url('../assets/about-machine.png');
+    background-size: cover;
+    background-position: center;
+  }
+</style>
