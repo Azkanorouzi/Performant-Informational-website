@@ -30,7 +30,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
         </button>
       </div>
       <section
-        class={`bg-primary z-10 text-secondary flex fixed justify-center right-0 top-0  flex-col p-10 w-[300px] gap-10 transition-transform ${
+        class={`bg-primary z-10 text-secondary flex fixed right-0 top-0 h-screen overflow-scroll  flex-col p-10 w-[300px] gap-10 transition-transform ${
           closed && 'translate-x-full'
         }`}
       >
@@ -38,7 +38,7 @@ export default function NavToggleBtn({ closed, setClosed }) {
           <img
             src={savGhatehLogo.src}
             alt="SAV GHATEH"
-            class="w-[200px] mb-14"
+            class="w-[200px] mb-5"
           />
           <p class="text-2xl ">
             We have been processing steel for over 25 years

@@ -1,13 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/ui/Header.astro'
-import aboutMachine from '../assets/about-machine.png'
+import forward from '../assets/about-forward.png'
+import rhinoLogo from '../assets/about-rhinoLogo.png'
 import back from '../assets/back.svg'
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
   <Header title="about us" slot='header'/>
-<section class=" flex justify-center items-center h-[600px] relative bg-secondary " slot="aboutHeaderContent">
+
+<section class=" flex justify-center items-center h-[600px] relative bg-secondary" slot="aboutHeaderContent">
     <article class="absolute top-0 right-0 bottom-0 left-0 grid place-content-center text-center z-10 ">
     <h2 class="text-4xl text-sixth font-oswaldBold mb-5">OUR STORY</h2>
     <p class="text-sixth w-[60vw] max-w-[700px] font-oswaldLight" style={{letterSpacing: '1px'}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam consequatur perferendis laboriosam cupiditate harum minima suscipit molestias, dicta, ratione totam explicabo, modi quam dolorum illo itaque nisi! Similique est temporibus laboriosam voluptatibus quam at velit maiores recusandae, tempore sit. Tenetur.</p>
@@ -15,9 +17,9 @@ import back from '../assets/back.svg'
     <img src={back.src} alt="back" aria-hidden="true" class="w-[430px]  rotate-90">
   </section>
   
-<section slot="aboutContent" class="bg-secondary">
+<section slot="aboutContent" class="bg-secondary ">
   <!-- ============= our story -->
-    <div class="flex bg-primary  justify-center items-center overflow-hidden mb-10">
+    <div class="flex bg-primary  justify-center items-center overflow-hidden mb-10 max-w-[1800px] mx-auto">
       <div class="w-[50%] bg-black h-[650px] machine-div"></div>
       <div class="flex flex-col  flex-1 justify-center items-center  py-20" >
         <div class="flex gap-4 flex-col">
@@ -32,11 +34,27 @@ import back from '../assets/back.svg'
     </div>
      <!-- ============= our story end -->
 
-     <div class="w-[100vw] h-[640px] bg-secondary text-sixth backpeople-div max-w-[1500px]">
-      <div>
-        <img src="" alt="">
+     <div class="w-[100vw] h-[640px] bg-secondary text-sixth backpeople-div  grid place-content-center max-w-[1800px] mx-auto">
+      <div class="w-[600px] flex items-center flex-col gap-10">
+        <img src={forward.src} alt="forward" class="w-[250px]">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, distinctio nulla alias provident minima architecto. Reprehenderit laborum atque quibusdam, quis aspernatur aut in expedita reiciendis deserunt a molestiae iure explicabo perferendis quasi et numquam excepturi velit doloremque aperiam ipsum nesciunt est vel ratione! Illum voluptatem est necessitatibus deserunt veritatis labore? Explicabo doloremque illo natus rem ex incidunt doloribus repellendus, nostrum quidem laborum nisi fugit alias earum voluptates corporis voluptatibus voluptas reiciendis sed asperiores quo quis ipsum. Modi tempore ab similique.</p>
       </div>
      </div>
+
+     <!-- rhino -->
+     <div class="flex bg-secondary text-sixth  justify-center items-center overflow-hidden max-w-[1800px] mx-auto">
+      
+      <div class="flex flex-col  flex-1   py-20 bg-transparent " >
+        <div class="flex gap-7 flex-col justify-center px-20 ">
+        <div >
+          <img src={rhinoLogo.src} alt="rhino">
+        </div>
+
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita fuga quibusdam mollitia reprehenderit eligendi velit quo minima distinctio consectetur dignissimos illum temporibus autem vel aperiam, provident reiciendis, accusantium vero, sequi tenetur quis quae. Debitis et esse alias perferendis rem dolor tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, vitae quod! Reprehenderit culpa officiis corrupti dicta magni perspiciatis deserunt esse dignissimos architecto deleniti? Accusantium magnam ipsa eius fuga sapiente necessitatibus perspiciatis repudiandae iusto saepe pariatur id labore, cumque quasi reprehenderit.</p>
+      </div>
+      </div>
+      <div class="lg:w-[50%] w-[60%]  h-[650px] rhino-div z-50"></div>
+    </div>
   </section>
 
 </MainLayout>
@@ -49,6 +67,11 @@ import back from '../assets/back.svg'
   }
   .backpeople-div {
     background-image: url('../assets/about-backpeople.png');
+    background-size: cover;
+    background-position: top;
+  }
+  .rhino-div {
+    background-image: url('../assets/about-rhinoImg.png');
     background-size: cover;
     background-position: top;
   }
