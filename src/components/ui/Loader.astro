@@ -1,7 +1,7 @@
 ---
 import logo2 from '../../assets/logo2.svg'
 ---
-<div class="fixed z-50 w-screen h-screen bottom-0 bg-forth flex justify-center items-center bg-opacity-50 backdrop-blur-2xl loader disappear" style={{zIndex: 1000}}>
+<div class="fixed z-50 w-screen h-screen top-0  bg-forth flex justify-center items-center bg-opacity-50 backdrop-blur-2xl  content-loader" style={{zIndex: 1000}}>
     <img src={logo2.src} alt="icon" class="w-[100px] h-[100px]">
 </div>
 
@@ -34,11 +34,11 @@ import logo2 from '../../assets/logo2.svg'
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('load', () => {
-            const loader = document.querySelector('.loader');
+            const loader = document.querySelector('.content-loader');
 	  if (loader) {
 		(loader as HTMLDivElement).style.animation = ' disapear .5s forwards';
         setInterval(() => {
-        const loader = document.querySelector('.loader');
+        const loader = document.querySelector('.content-loader');
         (loader as HTMLDivElement).style.animation = ' disapear .5s forwards';
         }, 500)
 	  }
