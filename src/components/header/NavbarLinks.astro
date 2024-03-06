@@ -1,10 +1,7 @@
 ---
 import NavbarLink from './NavbarLink.astro'
-    const posts = fetch('https://jsonplaceholder.typicode.com/posts');
-    
 ---
 <ul class=" font-oswald uppercase text-xl    justify-between px-10 xl:px-20 items-center gap-3 xl:gap-5 hidden lg:flex ">
-    {JSON.stringify(posts)}
     <NavbarLink  text="Home" />
     <NavbarLink text="Products" />
     <NavbarLink  text="Services" />

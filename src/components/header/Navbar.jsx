@@ -9,7 +9,8 @@ export default function StickyNavbar({ children }) {
   const isWhite =
     window.location.pathname.length === 1 ||
     window.location.pathname.includes('contacts') ||
-    window.location.pathname.includes('about')
+    window.location.pathname.includes('about') ||
+    window.location.pathname.includes('projects')
 
   useEffect(() => {
     const handleScroll = () => {

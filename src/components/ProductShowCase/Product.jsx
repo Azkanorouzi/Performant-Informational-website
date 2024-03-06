@@ -26,18 +26,19 @@ export default function Product({
           <div class="py-4 h-full flex flex-col justify-center">
             <div class="flex gap-4 flex-col ">
               <h3
-                class={`text-5xl lg:translate-y-10 opacity-100 lg:opacity-70 px-[78px]`}
+                class={`text-[2.5rem] lg:translate-y-10 opacity-100 lg:opacity-70 px-[78px] `}
                 style={{
                   transition: '.5s',
                   opacity: hovered ? '1' : '.5',
                   transform: hovered ? 'translateY(0)' : '',
                   letterSpacing: hovered ? '10px' : '0',
+                  lineHeight: '50px',
                 }}
               >
                 {title}
               </h3>
               <p
-                class={`text-2xl px-10 font-TekoLight lg:translate-x-[100%]`}
+                class={`text-xl px-10 font-oswald lg:translate-x-[100%]`}
                 style={{
                   transition: '.5s',
                   transform: hovered ? 'translatex(0)' : '',
