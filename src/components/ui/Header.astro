@@ -1,5 +1,5 @@
 ---
-const {title} = Astro.props;
+const {title, subTitle, underLine} = Astro.props;
 import contImg from '../../assets/cont.png'
 import aboutImg from '../../assets/about-header.png'
 import projectsImg from '../../assets/projects-header.png'
@@ -10,9 +10,11 @@ if (title === 'about us') bgUrl = aboutImg.src;
 if (title === 'projects') bgUrl = projectsImg.src;
 ---
 <header
-class="text-xl flex flex-col    lg:pt-0 font-oswald h-[500px] lg:pl-44 pl-6 sm:pl-12  w-full bg-cover object-fill bg-center header"
+class="text-xl flex flex-col    lg:pt-0 font-oswald h-[500px] lg:pl-44 pl-6 sm:pl-12  w-full bg-cover object-fill bg-center header relative"
 slot="header"
 style={{ paddingTop: '12rem', background:`url(${bgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
 >
 <h1 class="sm:text-8xl text-6xl uppercase font-oswaldBold mt-10">{title}</h1>
+{subTitle ? <h2 class="font-oswaldLight mt-7 lg:w-[500px]">{subTitle}</h2> : ''}
+{underLine ? <hr class="absolute left-0 right-0 bottom-14"/> : ''}
 </header>
