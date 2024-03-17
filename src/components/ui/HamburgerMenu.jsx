@@ -37,19 +37,19 @@ export default function HamburgerMenu() {
             </li>
             <li>
               {' '}
-              <a href="#"> Services </a>
+              <a href="/services"> Services </a>
             </li>
             <li>
               {' '}
-              <a href="#"> Projects </a>
+              <a href="/projects"> Projects </a>
             </li>
             <li>
               {' '}
-              <a href="#"> About us </a>
+              <a href="/about"> About us </a>
             </li>
             <li>
               {' '}
-              <a href="#"> Contacts </a>
+              <a href="/contacts"> Contacts </a>
             </li>
           </ul>
         </div>
