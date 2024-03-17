@@ -6,6 +6,7 @@ export default function Product({
   description,
   children,
   customStyles,
+  href,
 }) {
   const [hovered, setHovered] = useState(false)
 
@@ -47,28 +48,30 @@ export default function Product({
                 {description}
               </p>
             </div>
-            <button
+            <a
               class={`text-primary bg-red lg:-translate-x-[200%] hover:text-secondary rotate hover:scale-110 `}
               style={{
                 transition: '.5s',
                 transform: hovered ? 'translatex(0)' : '',
               }}
+              href={href}
             >
               <span>Learn More</span> <span> &rarr; </span>
-            </button>
+            </a>
           </div>
         </div>
       </figcaption>
     </figure>
   )
 }
-export function ProductStatic({ src, alt, title }) {
+export function ProductStatic({ src, alt, title, href }) {
   return (
     <div class="relative">
       <img src={src} alt={alt} class="lg:max-w-[350px] " />
       <a
         class="bottom-0 right-0 left-0 bg-sixth py-4  lg:py-8 bg-opacity-45 backdrop-blur-sm absolute lg:text-2xl flex justify-center lg:gap-10 gap-5 items-center hover:text-primary transition-colors"
         role={'button'}
+        href={href}
       >
         <p> {title} </p>
         <span>&rarr;</span>

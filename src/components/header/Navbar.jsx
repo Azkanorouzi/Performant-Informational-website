@@ -10,7 +10,8 @@ export default function StickyNavbar({ children }) {
     window.location.pathname.length === 1 ||
     window.location.pathname.includes('contacts') ||
     window.location.pathname.includes('about') ||
-    window.location.pathname.includes('projects')
+    window.location.pathname.includes('projects') ||
+    window.location.pathname.includes('coringrig')
 
   useEffect(() => {
     const handleScroll = () => {
