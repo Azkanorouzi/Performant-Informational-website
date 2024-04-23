@@ -1,9 +1,27 @@
 ---
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import drill1Img from "../../assets/drill-accessories-1.png";
+import drill2Img from "../../assets/drill-accessories-2.png";
 ---
 <MainLayout title="sav-ghateh (Contacts)">
-    <Header title="Drilling Accessories" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
+    <Header title="drilling accessories" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" />
     
+    <section slot="projectsContent" class="bg-white text-sixth py-20">
+        <div class="flex gap-5 justify-center px-10 lg:px-44 items-center mb-24 flex-col lg:flex-row">
+        <p class=" font-oswaldLight text-lg">
+            <span class="font-oswaldBold">   Sinocoredrill  </span> offers a complete line of components to compliment our coring
+            systems, including core lifters, water swivel, hosting plug, adapter subs, circle
+            wrenches, foot clamps, core trays. wire-line winchand much more.
+            We have no stock problems of spare parts and repair kits so that it always
+            stands by and support its customers.
+        </p>
+        <img src={drill1Img.src} alt="Drill accessories" class="w-[650px] bg-green-900">
+    </div>
+    <div class="lg:px-44 px-10 ">
+    <p class="font-oswaldLight text-lg mb-6"><span class="font-oswaldBold">   Coring Wrenches  </span>, also know as full circle grip wrenches, are designed specifically for the assembly and disassembly of outer tube and inner tube components. The coring wrenches are designed to grip the tubes around the full circumference therefore minimizing pressure points that can deform the tubes or accessories</p>
+    <img src={drill2Img.src} alt="Drill Image" class="w-[1050px]">
+</div>
+
+    </section>
 </MainLayout>

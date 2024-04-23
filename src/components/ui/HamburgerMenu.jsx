@@ -1,7 +1,4 @@
-import NavbarLink from '../header/NavbarLink.astro'
-import Info from '../ui/Info.astro'
-import Logo from '../ui/Logo.astro'
-import { useEffect, useRef, useState } from 'preact/hooks'
+import { useRef, useState } from 'preact/hooks'
 
 export default function HamburgerMenu() {
   const overLayRef = useRef(null)

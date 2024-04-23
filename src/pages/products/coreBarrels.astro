@@ -1,9 +1,39 @@
 ---
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import img1 from "../../assets/core-barrel-2.jpg"
+import img2 from "../../assets/core-barrel-1.jpg"
+import img3 from "../../assets/core-barrel-3.png"
 ---
 <MainLayout title="sav-ghateh (Contacts)">
-    <Header title="Core Barrels" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
-    
+    <Header title="core barrels" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made" underLine={false}/>
+    <section class="flex flex-col bg-[#FDFDFD] text-sixth lg:py-20 lg:px-16" slot="projectsContent">
+        <div class="flex  relative mb-14 flex-col-reverse lg:flex-row " >
+            <p class="flex-1 lg:w-[900px] font-oswaldLight text-xl  left-0  lg:px-28  px-10 z-10 pt-44 lg:absolute lg:pt-0" style="line-height: 30px;">
+                Wire-line core drilling equiment is very commonly used for mineral exploration for deep
+                <br>
+                holes because of practical usage.
+                <br>
+                Sinocoredrill products are manufactured by using high quality raw materials and designed
+                <br>
+                according to DCDMA, wire-line-Q standard.
+                <br>
+                We offers to clients following models of wire-line core barrel compatible with-Q Wire-line
+                <br>
+                Standard Drilling Equipment
+                <br>
+                Wire-line Double Tube Core Barrel; B, N, H, P sizes;
+                <br>
+                W-line Triple Tube Core Barrel: B3-, N3-, H3-, P3- sizes:
+                <br>
+                Wire-line Core Barrel T2-76,T2-86,T2-101,T series;
+            </p>
+            <div class="flex-1 w-[20px]"></div>
+            <img src={img1.src} alt="core barrels 1 " class="absolute lg:static top-0 right-0 lg:w-[750px]">
+    </div>
+    <div class="px-10 lg:px-0 lg:pl-24 flex flex-col lg:flex-row justify-center items-center">
+        <img src={img2.src} alt="core barrels 2" class="lg:w-[50%]">
+        <img src={img3.src} alt="core barrels 3" class="lg:w-[50%]">
+    </div>
+    </section>
 </MainLayout>

@@ -11,7 +11,10 @@ export default function StickyNavbar({ children }) {
     window.location.pathname.includes('contacts') ||
     window.location.pathname.includes('about') ||
     window.location.pathname.includes('projects') ||
-    window.location.pathname.includes('coringrig')
+    window.location.pathname.includes('coringrig') || 
+    window.location.pathname.includes('rods') ||
+    window.location.pathname.includes('drillingAccessories') ||
+    window.location.pathname.includes('coreBarrels')
 
   useEffect(() => {
     const handleScroll = () => {

@@ -3,13 +3,13 @@ import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import CoringRigHeader from '../../components/header/CoringRigHeader.astro';
 import CoringRigImg from '../../components/coringrig/coringRigImg.astro';
-import CoringRigContent from '../../components/coringrig/coringrigContent.astro'
+import CoringRigContent from '../../components/coringrig/coringRigContent.astro'
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
     <Header title="Coring rig" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
     <CoringRigHeader slot="coringrigHeader"/>
-    <section slot="projectsContent" class=" bg-secondary flex justify-center flex-col items-center">
+    <section slot="projectsContent" class="bg-secondary flex justify-center flex-col items-center">
     <CoringRigImg />
     <CoringRigContent />
 </section>
