@@ -1,9 +1,130 @@
 ---
+import reamingShellImg from "../../assets/rsh.png";
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import listDot from "../../assets/icon_gray.png";
+import ReamingShellTable from "../../components/reamingShell/reamingShellTable.astro";
+import ReamingShellItem from "../../components/reamingShell/ReamingShellItem.astro";
+import flag from "../../assets/australia-flag.png";
 ---
+
 <MainLayout title="sav-ghateh (Contacts)">
-    <Header title="Reaming Shells" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
-    
+  <Header
+    title="reaming shells"
+    slot="header"
+    subTitle="Lorem ipsum is simply dummy text of the printing and typesetting industry"
+  />
+  <section
+    slot="projectsContent"
+    class="relative bg-white px-6 py-20 text-sixth flex flex-col justify-center items-center"
+  >
+    <article class="lg:w-[1065px] flex relative">
+      <div class="font-oswald text-2xl z-20 lg:z-0 flex flex-col gap-7 mb-20">
+        <h2 class="lg:text-7xl text-5xl pr-5 font-oswaldBold font-bold">
+          REAMING SHELS RHINO
+        </h2>
+        <p class="lg:w-[600px] font-oswaldLight">
+          Reaming shell is used to couple the drill bit with core barrel.
+          <br />
+          It is suitable for use on all conventional and wireline core barrel. this
+          product is mainly desigend to ream the hole to the standard diameter. it
+          can keep the stability of the core barrel. When the old bit is replaced
+          by the new one, reaming shell can also provide sufficient clearance for
+          the new bit. it can also provide sufficient clearance for the new bit.
+          it can also help t resist the abrasion of the core barrel
+        </p>
+
+        <ul class="font-oswaldLight">
+          <li>
+            <img
+              src={listDot.src}
+              alt="dot"
+              aria-hidden="true"
+              class="w-6 inline"
+            /> Acts as a stabilizer for drill bit.
+          </li>
+          <li>
+            <img
+              src={listDot.src}
+              alt="dot"
+              aria-hidden="true"
+              class="w-6 inline"
+            />
+            Be set with natural or synthetic diamond.
+          </li>
+          <li>
+            <img
+              src={listDot.src}
+              alt="dot"
+              aria-hidden="true"
+              class="w-6 inline"
+            />
+            Our reaming shells enjoy the best quality <br />
+            and most special design in the industry
+          </li>
+        </ul>
+      </div>
+      <img
+        src={reamingShellImg.src}
+        alt="reaming shell"
+        class="absolute top-0 lg:relative opacity-20 lg:opacity-100 lg:w-[22rem] lg:bottom-32 lg:left-20"
+      />
+    </article>
+    <!-- intro -->
+    <article class="lg:w-[1065px] -mt-10 mb-44">
+      <h2
+        class="text-7xl mb-5 font-oswaldBold font-bold uppercase mt-12 lg:mt-0"
+      >
+        Intro
+      </h2>
+      <p class="text-2xl font-oswaldLight">
+        The reaming shell is available for use on all wireline core barrel
+        assemblies. The deeper reaming shell is manufactured with a full matrix
+        body gauge ring that is cast onto the steel tool body for maximum bond
+        strength and tool integrity. in addition, the reaming shell's gauge ring
+        features spiral waterway canals that both effectively clear the bit's
+        cuttings and provide full 360° hole contact with the matrix body gauge
+        ring.
+      </p>
+    </article>
+
+    <article class="lg:w-[1065px] -mt-10">
+      <h2 class="text-5xl mb-12 font-oswaldBold font-bold uppercase">
+        Dimension & sizes
+      </h2>
+      <ReamingShellTable />
+    </article>
+
+    <div
+      class="overflow-visible flex gap-20 lg:w-[1065px] lg:flex-row flex-col"
+    >
+      <ReamingShellItem
+        header="IMPERGENATED REAMING SHELL (IMP) "
+        desc="IMP (Diamond Impregnated) reaming shell produced by deeper, is used to most of competent and non-abrasive rock conditions. the matrix strengthen by tungsten carbide inserts and synetic diamond parts "
+      />
+      <ReamingShellItem
+        img="2"
+        header="TUNGSTEN WELDED REAMING SHELL (WSC)"
+        desc="WSC (wolfram carbide welded) reaming shell produced by Deeper, is used to most of soft abrasive and fractured rock conditions. the welding material contents 2800-2400 Hrv hardness wolfram carbide particules provide to resistance against to abrasion and friction"
+      />
+
+      <ReamingShellItem
+        img="3"
+        header="TUNGSTEN INSERTED REAMING SHELL (TCI)"
+        desc="TCI (Tungsen Carbide Inserted) reaming shell produced by Deeper, is used to most of soft, abrasive and fractured rock conditions. The tungsten inserts welded by braze, stabilize the hole diameter. This type of reaming shells may use instead of impregnated reaming shells clay, coal or sand formations"
+      />
+    </div>
+    <div
+      class="hidden lg:block bg-australia absolute left-0 mr-96 h-[130rem] w-screen bottom-0 lg:h-[55rem] lg:w-[1700px]"
+      style={{ backgroundImage: `url(${flag.src})`, backgroundSize: "cover" }}
+      aria-hidden="true"
+    >
+    </div>
+  </section>
 </MainLayout>
+<style>
+  .bg-australia {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>

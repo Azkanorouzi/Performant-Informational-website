@@ -14,7 +14,8 @@ export default function StickyNavbar({ children }) {
     window.location.pathname.includes('coringrig') || 
     window.location.pathname.includes('rods') ||
     window.location.pathname.includes('drillingAccessories') ||
-    window.location.pathname.includes('coreBarrels')
+    window.location.pathname.includes('coreBarrels') ||
+    window.location.pathname.includes('reamingShells')
 
   useEffect(() => {
     const handleScroll = () => {

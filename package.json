@@ -21,7 +21,9 @@
     "framer-motion": "^10.18.0",
     "lodash": "^4.17.21",
     "preact": "^10.19.3",
-    "preact-motion": "^1.2.0"
+    "preact-motion": "^1.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   },
   "devDependencies": {
     "postcss": "^8.4.33",
