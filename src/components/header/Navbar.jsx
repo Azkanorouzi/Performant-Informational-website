@@ -13,11 +13,11 @@ export default function StickyNavbar({ children }) {
     window.location.pathname.includes("projects") ||
     window.location.pathname.includes("coringrig") ||
     window.location.pathname.includes("rods") ||
-    window.location.pathname.includes("drillingAccessories") ||
-    window.location.pathname.includes("coreBarrels") ||
-    window.location.pathname.includes("reamingShells") ||
-    window.location.pathname.includes("coreBits") ||
-    window.location.pathname.includes("casingShoes");
+    window.location.pathname.includes("drillingaccessories") ||
+    window.location.pathname.includes("corebarrels") ||
+    window.location.pathname.includes("reamingshells") ||
+    window.location.pathname.includes("corebits") ||
+    window.location.pathname.includes("casingshoes");
 
   useEffect(() => {
     const handleScroll = () => {
