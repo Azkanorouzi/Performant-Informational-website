@@ -1,1 +1,29 @@
-<section class="w-screen overflow-hidden flex flex-col gap-3"></section>
+---
+import video from "../../assets/headerVideo.mp4";
+---
+
+<div
+  class="w-screen h-full overflow-hidden relative flex flex-col gap-3 bg-black"
+>
+  <video
+    autoplay
+    muted
+    loop
+    class="responsive-video fixed top-0 bottom-0 left-0 right-0"
+    style={{ height: "100vh", width: "100vw", objectFit: "cover" }}
+    src={video}
+  >
+  </video>
+</div>
+
+<style>
+  div {
+    /* background-image: radial-gradient( */
+    /*     rgba(0, 0, 0, 0.226), */
+    /*     rgba(0, 0, 0, 0.226) */
+    /*   ), */
+    /*   url(../assets/hompage.jpg); */
+    background-size: cover;
+    background-position: right;
+  }
+</style>
