@@ -1,9 +1,121 @@
 ---
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import casingShoeImg from "../../assets/casingShoImg.jpg";
 ---
+
 <MainLayout title="sav-ghateh (Contacts)">
-    <Header title="Casing Shoes" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
-    
+  <Header
+    title="Casing Shoes"
+    slot="header"
+    subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa"
+    underLine={true}
+  />
+  <section slot="projectsContent" class="bg-secondary py-20 px-5 lg:px-20">
+    <figure
+      class="flex gap-12 lg:flex-row flex-col-reverse justify-center items-center"
+    >
+      <img src={casingShoeImg.src} class="w-[30rem]" alt="casingShoe" />
+      <figcaption
+        class="text-sixth gap-10 lg:gap-32 flex flex-col justify-between"
+      >
+        <p class="text-xl font-oswaldLight">
+          Casing shoe is used on the leading edge of a casing tube string to
+          advance it through the overburden layer and into the bedrock by means
+          of rotational drilling. depending on the range of application, the
+          cutting media on the core bit may take the form of synthetic diamond,
+          tungsten-carbide particles or tunsten-carbide elements.
+        </p>
+        <table class="lg:text-xl text-sm font-oswaldLight">
+          <tbody>
+            <tr>
+              <th rowspan="2">Size</th>
+              <th colspan="2">Outer Diameter</th>
+              <th colspan="2">Inner Diameter</th>
+              <th>Unit Weight</th></tr
+            >
+            <tr class="odd-row">
+              <td>mm</td>
+              <td>in</td>
+              <td>mm</td>
+              <td>in</td>
+              <td>kg</td></tr
+            >
+            <tr class="even-row">
+              <th>BW</th>
+              <td>75.82</td>
+              <td>2.985</td>
+              <td>60.20</td>
+              <td>2.370</td>
+              <td>0.91</td>
+            </tr>
+            <tr class="odd-row">
+              <th>NW</th>
+              <td>91.95</td>
+              <td>3.620</td>
+              <td>76.0</td>
+              <td>2.992</td>
+              <td>1.59</td>
+            </tr>
+            <tr class="even-row">
+              <th>HW</th>
+              <td>117.65</td>
+              <td>4.632</td>
+              <td>101.09</td>
+              <td>3.980</td>
+              <td>2.27</td>
+            </tr>
+            <tr class="odd-row">
+              <th>HWT</th>
+              <td>117.65</td>
+              <td>4.632</td>
+              <td>100.84</td>
+              <td>3.970</td>
+              <td>2.27</td>
+            </tr>
+            <tr class="even-row">
+              <th>PW</th>
+              <td>143.51</td>
+              <td>5.650</td>
+              <td>123.24</td>
+              <td>4.852</td>
+              <td>3.22</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+  </section>
 </MainLayout>
+<style>
+  th,
+  td,
+  tr {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid white;
+    text-align: center;
+  }
+  th {
+    color: white;
+    background-color: hsla(360, 96%, 65%, 1);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .odd-row td {
+    background-color: hsla(360, 96%, 80%, 1);
+  }
+  .even-row td {
+    background-color: hsla(360, 96%, 90%, 1);
+  }
+  @media (max-width: 768px) {
+    td,
+    tr,
+    th {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+</style>
+

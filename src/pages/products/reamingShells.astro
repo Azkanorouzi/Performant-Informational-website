@@ -16,7 +16,7 @@ import flag from "../../assets/australia-flag.png";
   />
   <section
     slot="projectsContent"
-    class="relative bg-white px-6 py-20 text-sixth flex flex-col justify-center items-center"
+    class="relative bg-white px-6 sm:px-20 py-20 text-sixth flex flex-col justify-center items-center"
   >
     <article class="lg:w-[1065px] flex relative">
       <div class="font-oswald text-2xl z-20 lg:z-0 flex flex-col gap-7 mb-20">
@@ -67,7 +67,7 @@ import flag from "../../assets/australia-flag.png";
       <img
         src={reamingShellImg.src}
         alt="reaming shell"
-        class="absolute top-0 lg:relative opacity-20 lg:opacity-100 lg:w-[22rem] lg:bottom-32 lg:left-20"
+        class="absolute top-0 sm:hidden max-h-[700px] lg:block lg:relative opacity-20 lg:opacity-100 lg:w-[22rem] lg:bottom-96 lg:-top-32 lg:left-20"
       />
     </article>
     <!-- intro -->
@@ -88,7 +88,7 @@ import flag from "../../assets/australia-flag.png";
       </p>
     </article>
 
-    <article class="lg:w-[1065px] -mt-10">
+    <article class="w-[82vw] mb-20 lg:mb-0 lg:w-[1065px] -mt-10">
       <h2 class="text-5xl mb-12 font-oswaldBold font-bold uppercase">
         Dimension & sizes
       </h2>
@@ -115,7 +115,7 @@ import flag from "../../assets/australia-flag.png";
       />
     </div>
     <div
-      class="hidden lg:block bg-australia absolute left-0 mr-96 h-[130rem] w-screen bottom-0 lg:h-[55rem] lg:w-[1700px]"
+      class="hidden lg:block bg-australia absolute mr-96 w-screen bottom-0 lg:h-[55rem] lg:w-[1400px] left-0 right-0"
       style={{ backgroundImage: `url(${flag.src})`, backgroundSize: "cover" }}
       aria-hidden="true"
     >
@@ -126,5 +126,6 @@ import flag from "../../assets/australia-flag.png";
   .bg-australia {
     background-size: cover;
     background-attachment: fixed;
+    height: 635px;
   }
 </style>

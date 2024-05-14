@@ -1,10 +1,171 @@
 ---
+import coreBitBackground from "../../assets/corebits-background.svg";
+import coreBits from "../../assets/corebits.png";
+import one from "../../assets/1.svg";
+import two from "../../assets/2.svg";
+import three from "../../assets/3.svg";
+import four from "../../assets/4.svg";
+import five from "../../assets/5.svg";
+import oneMobile from "../../assets/c1.png";
+import twoMobile from "../../assets/c2.png";
+import threeMobile from "../../assets/c3.png";
+import fourMobile from "../../assets/c4.png";
+import coreBitsImg from "../../assets/corebts-rhino-1.png";
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+import CoreBitInfo from "../../components/ui/coreBitInfo.astro";
+import CoreBitTable1 from "../../components/corebit/coreBitTable1.astro";
+import CoreBitTable2 from "../../components/corebit/CoreBitTable2.astro";
+import CoreBitTable3 from "../../components/corebit/CoreBitTable3.astro";
+import CoreBitTable4 from "../../components/corebit/CoreBitTable4.astro";
+import coreBitRhino from "../../assets/corbits-rhino-2 (1).png";
 ---
 
-
 <MainLayout title="sav-ghateh (Contacts)">
-    <Header title="Core Bits" slot='header' subTitle="Forward drilling rig will be Europe's high reliability and china's manufacturing advantage made the perfect combination, Rig diesel engine DEUTZ, all hydraulic components from europe and the usa" underLine={true}/>
-    
+  <Header
+    title="core bits"
+    slot="header"
+    subTitle="Crown rhino profile"
+    underLine={false}
+  />
+  <section
+    slot="projectsContent"
+    class="bg-secondary lg:px-40 px-4 text-sixth flex flex-col gap-20 font-oswaldLight"
+  >
+    <!-- ================ Core bits header ===================  -->
+    <figure
+      class="flex lg:flex-row flex-col-reverse justify-center gap-10 pt-20 lg:pt-40"
+    >
+      <img
+        src={coreBitsImg.src}
+        alt="coreBits"
+        class="w-full max-w-96 lg:w-96"
+      />
+      <figcaption>
+        <h2
+          class="uppercase font-bold text-4xl lg:text-7xl font-oswaldBold text-primary"
+        >
+          Crown <br /> rhino profile
+        </h2>
+        <h3 class="font-oswaldBold text-2xl font-bold mt-9">
+          Waterway Configurations
+        </h3>
+        <p>
+          SINOCOREDRILL bit's are offered with multiple custom waterway
+          configurations. Waterway selection should be determined based on the
+          drilling condition and approach appropriately to the bit, flush away
+          cuttings, and maximize penetration rates.
+        </p>
+      </figcaption>
+    </figure>
+
+    <!-- ================ Core bits header end===================  -->
+    <!-- ================ Rhino details ===================  -->
+
+    <div class="flex gap-5 justify-center">
+      <div class="flex lg:flex-row-reverse flex-col gap-10 lg:gap-40">
+        <div class="flex flex-row">
+          <img
+            src={coreBits.src}
+            alt="core bits"
+            class="lg:pl-32 h-[58rem] hidden lg:block lg:h-[37rem] -ml-40 mr-6"
+          />
+          <div
+            class="flex flex-col text-5xl gap-[2.5rem] mb-16 lg:gap-[4.2rem]"
+          >
+            <CoreBitInfo
+              imgMobile={oneMobile}
+              title="Standard/channel flushing (cf)"
+              desc="The bit face contact area is reduced by around 15% compared to the normal arrangement by waterway canals. is most suitable for formation that range from hard to extremely hard while under solid or at most slightly broken conditoins, typically chopped with a lower bit load."
+            />
+            <CoreBitInfo
+              imgMobile={twoMobile}
+              title="WIDE"
+              desc="applicable to the majority of impregnated core bits. ensure excellent mud circulation from the core barrel's inside to the exterior. is generally employed on wire line core bits and thin-kerf core bits that are designed for use in mostly fractured rocks."
+            />
+
+            <CoreBitInfo
+              imgMobile={threeMobile}
+              title="TURBO"
+              desc="is advised in situations when extremely large flushing volumes-higher than usual flushing volumes----are needed in tougher, cemented formatios, gives roughly a 40% improvement in flushing capacity standard type arrangement while keeping roughly the same bit face area"
+            />
+
+            <CoreBitInfo
+              imgMobile={fourMobile}
+              title="Face discharg"
+              desc="is advised to use when drilling in moderately brittle, unconsolidated formations and/or when employing triple tube wire line core barrel system since it ejects fluid through ports molded into the bit's face and has a low fluid pressure"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-10">
+          <CoreBitInfo
+            title="Starred/ W Profile"
+            desc="Standard profile for most impregnated bits. it provides good drilling stability and is suitable for various formations."
+            imgSrc={one}
+          />
+          <CoreBitInfo
+            title="Flat Profile"
+            desc="It's suitable for various rocks, often used impregnated casing bits, casing shoes as well as bits with very hard metrics"
+            imgSrc={two}
+          />
+
+          <CoreBitInfo
+            title="Cross Profile"
+            desc="It's specially designed for ultra-hard formations, such as granite (hardness 8-9), genister, quartzite, siliceous limestone, cherty, etc"
+            imgSrc={three}
+          />
+
+          <CoreBitInfo
+            title="Semi-Round profile"
+            desc="Even diamond distribution in the bit face, suitable for drilling medium-hard and hard rocks, or a little broken and loose formation."
+            imgSrc={four}
+          />
+
+          <CoreBitInfo
+            title="Multi-Step profile"
+            desc="Multi-Step type impregnated bit are suitable for soft to medium hard formations and altering hard-soft formations."
+            imgSrc={five}
+          />
+        </div>
+      </div>
+      <!-- ================ Rhino details end===================  -->
+    </div>
+
+    <!-- ================ Rhino details table ===================  -->
+    <div class="mb-20 relative">
+      <img
+        src={coreBitBackground.src}
+        alt="core bits backgournd"
+        aria-hidden="true"
+        class="absolute lg:right-[-21rem] scale-[2] lg:scale-125 -bottom-16"
+      />
+      <h3
+        class="uppercase text-4xl lg:text-6xl mb-4 lg:mb-10 mt-10 font-oswaldBold z-10 font-bold"
+      >
+        Rhino silver
+      </h3>
+      <p class="font-oswald text-2xl mb-3 z-10">Reading impregnated bit code</p>
+      <!-- ==== tables ==== -->
+      <div class="flex lg:flex-row flex-col gap-5 z-20">
+        <CoreBitTable1 />
+        <CoreBitTable2 />
+      </div>
+
+      <!-- ========== rhino type table and coring bit image ========= -->
+      <div class="mt-28 flex flex-col lg:flex-row gap-5 z-20">
+        <div class="mr-8 z-20 overflow-scroll lg:overflow-hidden">
+          <CoreBitTable3 />
+          <CoreBitTable4 />
+        </div>
+        <img
+          src={coreBitRhino.src}
+          class="z-20 w-[28rem] mt-10 lg:mt-0"
+          alt="corebits rhino"
+        />
+      </div>
+
+      <!-- ========== rhino type table and coring bit image end ========= -->
+    </div>
+    <!-- ================ Rhino details table end ===================  -->
+  </section>
 </MainLayout>

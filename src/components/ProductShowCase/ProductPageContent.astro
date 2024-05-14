@@ -1,38 +1,71 @@
 ---
-import img1 from '../../assets/blog-1.jpg'
-import img2 from '../../assets/blog-2.jpg'
-import img3 from '../../assets/blog-3.jpg'
-import { ProductStatic } from './Product';
+import casingShoes from "../../assets/casingShoImg.jpg";
+import { ProductStatic } from "./Product";
+import corebitsImg from "../../assets/corebts-rhino-1.png";
+import reamingShell from "../../assets/reamingshell-header-small.jpg";
+import coreBarrels from "../../assets/core-barrel-2-small.jpg";
+import rodsimg from "../../assets/rodsSmall.png";
+import drillingAccessories from "../../assets/drill-accessories-1.png";
 ---
 
 <section
-    class="bg-secondary text-sixth py-20 something flex justify-center items-center lg:gap-36 gap-20 flex-col font-oswald z-50"
+  class="bg-secondary text-sixth py-20 something flex justify-center items-center lg:gap-36 gap-20 flex-col font-oswald z-50"
+>
+  <div class="flex lg:gap-60 mx-10 flex-col gap-5 lg:flex-row">
+    <div class="lg:w-auto">
+      <h2 class="text-6xl font-oswaldBold uppercase mb-4">Accessory</h2>
+      <p class="lg:w-[550px] font-oswaldLight">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quae
+        iste dolor eligendi dolorem voluptas fugit tempora blanditiis culpa
+        quibusdam quo, harum, delectus vitae repellat.
+      </p>
+    </div>
+    <div>
+      <a
+        class="bg-primary p-3 pr-28 flex justify-center items-center text-white hover:bg-sixth hover:text-primary transition-colors"
+        href="/products/coringrig">Read more</a
+      >
+    </div>
+  </div>
+  <div
+    class="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-14 lg:mx-10 text-secondary z-50 mx-5"
   >
-    <div class="flex lg:gap-60 mx-10 flex-col gap-5 lg:flex-row">
-      <div class="lg:w-auto ">
-        <h2 class="text-6xl font-oswaldBold uppercase mb-4">Accessory</h2>
-        <p class="lg:w-[550px] font-oswaldLight">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quae
-          iste dolor eligendi dolorem voluptas fugit tempora blanditiis culpa
-          quibusdam quo, harum, delectus vitae repellat.
-        </p>
-      </div>
-      <div>
-        <a
-          class="bg-primary p-3 pr-28 flex justify-center items-center text-white hover:bg-sixth hover:text-primary transition-colors"
-
-          href="/products/coringrig"
-          >Read more</a
-        >
-      </div>
-    </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-14 lg:mx-10 text-secondary z-50 mx-5">
-      <ProductStatic src={img1.src} alt={'img1'} title={'Core Bits'} href='/products/coreBits'/>
-      <ProductStatic src={img2.src} alt={'img2'} title={'Reaming Shells'} href='/products/reamingShells'/>
-      <ProductStatic src={img3.src} alt={'img3'} title={'Casing Shoes & Casing Bits'} href='/products/casingShoes' />
-      <ProductStatic src={img1.src} alt={'img4'} title={'Core Barrels'} href='/products/coreBarrels'/>
-      <ProductStatic src={img2.src} alt={'img5'} title={'Rods & Casing'} href='/products/rods' href="/products/rods"/>
-      <ProductStatic src={img3.src} alt={'img6'} title={'Drilling Accessories'} href='/products/drillingAccessories'/>
-    </div>
-  </section>
-
+    <ProductStatic
+      src={corebitsImg.src}
+      alt={"img1"}
+      title={"Core Bits"}
+      href="/products/coreBits"
+    />
+    <ProductStatic
+      src={reamingShell.src}
+      alt={"img2"}
+      title={"Reaming Shells"}
+      href="/products/reamingShells"
+    />
+    <ProductStatic
+      src={casingShoes.src}
+      alt={"img3"}
+      title={"Casing Shoes & Casing Bits"}
+      href="/products/casingShoes"
+    />
+    <ProductStatic
+      src={coreBarrels.src}
+      alt={"img4"}
+      title={"Core Barrels"}
+      href="/products/coreBarrels"
+    />
+    <ProductStatic
+      src={rodsimg.src}
+      alt={"img5"}
+      title={"Rods & Casing"}
+      href="/products/rods"
+      href="/products/rods"
+    />
+    <ProductStatic
+      src={drillingAccessories.src}
+      alt={"img6"}
+      title={"Drilling Accessories"}
+      href="/products/drillingAccessories"
+    />
+  </div>
+</section>

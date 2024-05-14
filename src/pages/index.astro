@@ -1,49 +1,62 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import ProjectShowCaseContents from '../components/ProjectsShowCase/ProjectShowCaseContents.astro'
-import HeaderContent from '../components/header/HeaderContent.astro';
-import ProductShowCaseContents from '../components/ProductShowCase/ProductShowCaseContents.astro'
-import AuthorityShowCaseContents from '../components/AuthorityShowCase/AuthorityShowCaseContents.astro'
-import ServicesShowCaseContents from '../components/ServicesShowCase/ServicesShowCaseContents.astro'
-import PopularityShowCaseContents from '../components/PopularityShowCase/PopularityShowCaseContents.astro';
-import BlogShowCaseContent from '../components/BlogShowCase/BlogShowCaseContents.astro';
-import Loader from '../components/ui/Loader.astro'
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectShowCaseContents from "../components/ProjectsShowCase/ProjectShowCaseContents.astro";
+import HeaderContent from "../components/header/HeaderContent.astro";
+import ProductShowCaseContents from "../components/ProductShowCase/ProductShowCaseContents.astro";
+import AuthorityShowCaseContents from "../components/AuthorityShowCase/AuthorityShowCaseContents.astro";
+import ServicesShowCaseContents from "../components/ServicesShowCase/ServicesShowCaseContents.astro";
+import PopularityShowCaseContents from "../components/PopularityShowCase/PopularityShowCaseContents.astro";
+import BlogShowCaseContent from "../components/BlogShowCase/BlogShowCaseContents.astro";
+import Loader from "../components/ui/Loader.astro";
 ---
 
-<MainLayout title="sav-ghateh" >
-	<Loader slot='loader'/>
-	<header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
-		<HeaderContent />
-	</header>
-	
-	<section slot="productsShowCase" class="relative" >
-		<ProductShowCaseContents />
-		<div class="w-full h-20 lg:h-48 bottom-0 bg-secondary absolute border-none border-secondary" style={{zIndex: '0'}}></div>
-	</section>
+<MainLayout title="sav-ghateh">
+  <Loader slot="loader" />
+  <header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
+    <HeaderContent />
+  </header>
 
-	<section slot="authorityShowCase">
-		<AuthorityShowCaseContents />
-	</section>
-	<section slot="servicesShowCase" class="relative">
-		
-		<ServicesShowCaseContents />
-	</section>
-	<section slot="popularityShowCase" class="relative">
-		<ProjectShowCaseContents />
-		<div class="w-full h-28 bottom-0 bg-secondary absolute" style={{zIndex: '0'}}></div>
-	</section>
-	<section slot="popularityShowCase">
-		<PopularityShowCaseContents />
-	</section>
-	<section slot="popularityShowCase">
-		<BlogShowCaseContent />
-	</section>
+  <section slot="productsShowCase" class="relative">
+    <ProductShowCaseContents />
+    <div
+      class="w-full h-20 lg:h-48 bottom-0 bg-secondary absolute border-none border-secondary"
+      style={{ zIndex: "0" }}
+    >
+    </div>
+  </section>
+
+  <section slot="authorityShowCase">
+    <AuthorityShowCaseContents />
+  </section>
+  <section slot="servicesShowCase" class="relative">
+    <ServicesShowCaseContents />
+  </section>
+  <section slot="popularityShowCase" class="relative">
+    <ProjectShowCaseContents />
+    <div
+      class="w-full h-28 bottom-0 bg-secondary absolute"
+      style={{ zIndex: "0" }}
+    >
+    </div>
+  </section>
+  <section slot="popularityShowCase">
+    <PopularityShowCaseContents />
+  </section>
+  <section slot="popularityShowCase">
+    <BlogShowCaseContent />
+  </section>
 </MainLayout>
 
 <style>
-	header {
-		background-image:  radial-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.226)), url(../assets/hompage.jpg);
-		background-size: cover;
-		background-position: right;
-	}
+  header {
+    background-color: black;
+    /* background-image: radial-gradient( */
+    /*     rgba(0, 0, 0, 0.226), */
+    /*     rgba(0, 0, 0, 0.226) */
+    /*   ), */
+    /*   url(../assets/hompage.jpg); */
+    background-size: cover;
+    background-position: right;
+  }
 </style>
+

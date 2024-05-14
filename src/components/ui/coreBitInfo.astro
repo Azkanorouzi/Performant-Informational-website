@@ -1,0 +1,20 @@
+---
+const { title, desc, imgSrc, imgMobile } = Astro.props;
+---
+
+<div class="flex">
+  {imgSrc && <img src={imgSrc?.src} alt={title} class="w-20 mr-4 " />}
+  {
+    imgMobile && (
+      <img src={imgMobile?.src} alt={title} class="w-20 h-20 mr-4 lg:hidden" />
+    )
+  }
+  <div>
+    <h3 class="text-2xl text-primary font-oswaldBold">
+      {title}
+    </h3>
+    <p class="text-sm font-oswaldLight" style={{ lineHeight: "20px" }}>
+      {desc}
+    </p>
+  </div>
+</div>
