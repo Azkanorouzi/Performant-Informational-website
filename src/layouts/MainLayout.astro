@@ -1,49 +1,46 @@
 ---
-import Navbar from '../components/header/NavbarLayout.astro';
-import Footer from '../components/Footer/Footer.astro';
-import '../index.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import Loader from '../components/ui/Loader.astro';
-import Logo2 from '../assets/logo2.svg'
+import Navbar from "../components/header/NavbarLayout.astro";
+import Footer from "../components/Footer/Footer.astro";
+import "../index.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Loader from "../components/ui/Loader.astro";
+import Logo2 from "../assets/logo2.svg";
 interface Props {
-	title: string;
+  title: string;
 }
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href={Logo2.src} />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="font-TekoRegular text-secondary   bg-primary">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={Logo2.src} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-TekoRegular text-secondary bg-primary">
+    <Loader />
 
-		<Loader />
-		
-		<Navbar slot='navbar' />
-		<!-- Header area -->
-		<slot name="header" />
-		<main class="">
-			<slot name="contactsContent" />
-			<slot name="contactsForm"/>
-			<slot name="productsShowCase2" />
-			<slot name="productsShowCase" />
-			<slot name="authorityShowCase" />
-			<slot name="servicesShowCase" />
-			<slot name="popularityShowCase" />
-			<slot name="aboutHeaderContent" />
-			<slot name="aboutContent" />
-			<slot name="coringrigHeader"/>
-			<slot name="projectsContent">
-		</main>
+    <Navbar slot="navbar" />
+    <!-- Header area -->
+    <slot name="header" />
+    <main class="">
+      <slot name="contactsContent" />
+      <slot name="contactsForm" />
+      <slot name="productsShowCase2" />
+      <slot name="productsShowCase" />
+      <slot name="authorityShowCase" />
+      <slot name="servicesShowCase" />
+      <slot name="popularityShowCase" />
+      <slot name="aboutHeaderContent" />
+      <slot name="aboutContent" />
+      <slot name="coringrigHeader" />
+      <slot name="projectsContent" />
 
-		<Footer />
-
-	</body>
+      <Footer />
+    </main>
+  </body>
 </html>
-

@@ -1,166 +1,162 @@
-import { useState } from 'preact/hooks'
+import { useState } from "preact/hooks";
 
 export default function AuthorityShowCase() {
-  const [textIndex, setTextIndex] = useState(0)
+  const [textIndex, setTextIndex] = useState(0);
   return (
-    <article class="flex justify-center items-center gap-16 lg:gap-24 flex-col md:flex-row z-50">
+    <article class="flex justify-center items-center gap-16 lg:gap-24 flex-col md:flex-row z-50  h-[20rem]">
       <div class="flex gap-3 flex-col text-forth border-l-primary font-TekoLight">
         <strong
           class={`text-5xl lg:text-7xl  text-nowrap hover:text-primary  border-l-4 border-transparent lg:pl-5 pl-5 ${
             textIndex === 0
-              ? 'border-l-primary text-primary lg:-translate-x-10 '
-              : ''
+              ? "border-l-primary text-primary lg:-translate-x-10 "
+              : ""
           }`}
-          style={{ transition: '.3s' }}
+          style={{ transition: ".3s" }}
           role="button"
           onClick={() => setTextIndex(0)}
         >
-          01 CONTROL
+          01 COMMITMENT
         </strong>
         <strong
           class={`text-5xl lg:text-7xl text-nowrap  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 1
-              ? 'border-l-primary text-primary lg:-translate-x-10'
-              : ''
+              ? "border-l-primary text-primary lg:-translate-x-10"
+              : ""
           }`}
-          style={{ transition: '.3s' }}
+          style={{ transition: ".3s" }}
           role="button"
           onClick={() => setTextIndex(1)}
         >
-          02 MANAGEMENT
+          02 EXPERIENCE
         </strong>
         <strong
           class={`text-5xl lg:text-7xl  hover:text-primary  text-nowrap border-l-4 border-transparent pl-5 ${
             textIndex === 2
-              ? 'border-l-primary text-primary lg:-translate-x-10'
-              : ''
+              ? "border-l-primary text-primary lg:-translate-x-10"
+              : ""
           }`}
-          style={{ transition: '.3s' }}
+          style={{ transition: ".3s" }}
           role="button"
           onClick={() => setTextIndex(2)}
         >
-          03 PROTECT
+          03 PROBLEM SOLVING
         </strong>
         <strong
           class={`text-5xl lg:text-7xl  text-nowrap  hover:text-primary border-l-4 border-transparent pl-5 ${
             textIndex === 3
-              ? 'border-l-primary text-primary lg:-translate-x-10'
-              : ''
+              ? "border-l-primary text-primary lg:-translate-x-10"
+              : ""
           }`}
-          style={{ transition: '.3s' }}
+          style={{ transition: ".3s" }}
           role="button"
           onClick={() => setTextIndex(3)}
         >
-          04 INNOVATION
+          04 SUPPORT
         </strong>
         <strong
           class={`text-5xl lg:text-7xl  text-nowrap hover:text-primary  border-l-4 border-transparent pl-5 ${
             textIndex === 4
-              ? 'border-l-primary text-primary lg:-translate-x-10'
-              : ''
+              ? "border-l-primary text-primary lg:-translate-x-10"
+              : ""
           }`}
-          style={{ transition: '.3s' }}
+          style={{ transition: ".3s" }}
           role="button"
           onClick={() => setTextIndex(4)}
         >
-          05 STRATEGY
+          05 TRADE PARTNERSHIP
         </strong>
       </div>
       <div class={`  lg:w-96 lg:h-96  flex flex-col gap-4 justify-center `}>
         {textIndex === 0 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
-            <strong class="text-3xl">Security of supply</strong>
+            <strong class="text-3xl uppercase">Convenant and ensure</strong>
             <p class="mb-2 text-lg font-oswaldLight">
-              Our in-house team of scientists is constantly fine-tuning the
-              adopted methods and processes and guarantees that only top-quality
-              powder is obtained. In the case of tungsten in particular.
+              Commitment consists of two words, covenant and ensure. Our
+              professional team is always a guarantor of your quality, capital,
+              and reliability with our ethical covenant. We're unwaveringly
+              dedicated to honoring our promise to you
             </p>
-            <strong class="text-3xl"> CAREFUL USE OF NATURAL RESOURCES </strong>
-            <p class="text-lg font-oswaldLight">
-              The input material for the recovery process consists of sintered
-              hard tungsten carbide scrap, as well as soft scrap such as
-              powders. Whether in electronics, coating technology, or
-              high-temperature furnaces, where regular metals reach their
-              limits, the refractory metals, alloys
+            <h3 class="text-3xl font-bold uppercase">
+              Your Success is Our Priority
+            </h3>
+            <p class="text-lg mb-2 font-oswaldLight">
+              We believe in transparency, open communication, and a
+              collaborative approach. Our commitment is not just a word; it's a
+              fundamental principle that guides every decision we make.
             </p>
           </div>
         )}
         {/* --------------- */}
         {textIndex === 1 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
-            <strong class="text-3xl ">
-              ALUMINUM VS. STEEL. BENEFITS OF BOTH
+            <strong class="text-3xl uppercase">
+              {" "}
+              Expeirnce is the portrayal of life
             </strong>
             <p class="text-lg font-oswaldLight">
-              Powder coating is a popular industrial finish that can be used to
-              coat a variety of materials, including metals, plastics, and
-              ceramics. Powder coating typically works by applying the dry
-              powder onto an item using an electric charge. This charge keeps
-              the powder coat as tight as possible to the exterior. The powder
-              itself will contain resin and pigments for coloring, as well as
-              other potential additives that help to reach the desired levels of
-              thickness, hardness or shine. The process used to make the powder
-              coating stick to the surface starts by pushing the powder through
-              a spray gun with compressed air.
+              Fair one sees at it'll deliver you more understanding and growth.
+              We believe in fostering an environment where knowledge flourishes,
+              and where everyone has the opportunity to learn and grow. Our
+              professional team, with a combined 15 years of team experience and
+              40 years of individual experience, brings a wealth of knowledge
+              and expertise to every project. This depth of experience ensures
+              that we can effectively analyze your needs, provide insightful
+              solutions, and navigate challenges with confidence.
             </p>
           </div>
         )}
         {/* --------------- */}
         {textIndex === 2 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
-            <strong class="text-3xl">WHEN IS IT USED?</strong>
+            <strong class="text-3xl uppercase">We're Professionals</strong>
             <p class="text-lg font-oswaldLight">
-              {' '}
-              The added resistance to rust and corrosion that is provided by
-              powder coatings allow the surfaces of steel beams, appliances,
-              outdoor furniture, and similarly exposed material to stay clean
-              and protected for much longer. There is a wide range of reasons as
-              to why using powder coating may be the right option for the
-              material you are looking to cover. Because the coating is sealed
-              onto the substrate with its electrostatic charge, the coating is
-              held much tighter to the substrate.{' '}
+              Our proficient team, drawing on a deep well of scientific and
+              practical experience, is dedicated to delivering comprehensive
+              solutions tailored to your specific needs. We have a proven track
+              record of success across diverse projects spanning the entire
+              country, from north to south. Our expertise extends beyond mere
+              problem identification. We are committed to working alongside you,
+              providing a clear diagnosis of the root causes, exploring a range
+              of solution options, and ultimately guiding the implementation
+              process for lasting results. Our collaborative approach ensures
+              that you are involved every step of the way, building trust and
+              confidence in our shared journey towards success.
             </p>
           </div>
         )}
         {/* --------------- */}
         {textIndex === 3 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
-            <strong class="text-3xl">
-              THE INDUSTRIAL PROCESSES MOVE TOWARDS AUTOMATION
-            </strong>
+            <strong class="text-3xl">The next step of trust is support</strong>
             <p class="text-lg font-oswaldLight">
-              Heat resistance, low thermal expansion, high thermal conductivity,
-              good corrosion resistance and wear resistance, high density,
-              radiation absorption, outstanding purity – these are the decisive
-              properties that we perfect depending. When recently asked for him
-              advice on making good career choices he said, “When you think
-              about where you want to go to work, you should really think about
-              what you want to do, not what seems fashionable or prestigious at
-              the moment. It’s important, right from the start of your career,
-              to do what you enjoy. It should be fun.
+              We earn your trust not only by providing exceptional services and
+              cutting-edge technical solutions but also by offering a
+              comprehensive range of parts, machines, and supplies. Our
+              commitment extends beyond solving technical challenges to ensuring
+              you have access to the highest quality components and equipment.
+              Whether you need specific machine parts, complete machinery, or
+              essential supplies, we are dedicated to meeting all your needs
+              with reliability and excellence.
             </p>
           </div>
         )}
         {/* --------------- */}
         {textIndex === 4 && (
           <div class="flex gap-2 flex-col unBlur text-forth">
-            <strong class="text-3xl">SECURITY OF SUPPLY</strong>
-            <p class="text-lg font-oswaldLight mb-2">
-              Our in-house team of scientists is constantly fine-tuning the
-              adopted methods and processes and guarantees that only top-quality
-              powder is obtained. In the case of tungsten in particular.
-            </p>
-            <strong class="text-3xl">CAREFUL USE OF NATURAL RESOURCES</strong>
+            <strong class="text-3xl">We're open for corporation</strong>
             <p class="text-lg font-oswaldLight">
-              The input material for the recovery process consists of sintered
-              hard tungsten carbide scrap, as well as soft scrap such as
-              powders. Whether in electronics, coating technology, or
-              high-temperature furnaces, where regular metals reach their
-              limits, the refractory metals, alloys.
+              {" "}
+              We believe that true business success hinges on anticipating and
+              managing risk. By working together, we can identify potential
+              threats, implement preventative measures, and develop
+              comprehensive plans for swift and effective mitigation. Our
+              commitment to proactive risk management empowers you to focus on
+              growth and opportunity, knowing that you have a trusted partner by
+              your side.{" "}
             </p>
           </div>
         )}
       </div>
     </article>
-  )
+  );
 }
