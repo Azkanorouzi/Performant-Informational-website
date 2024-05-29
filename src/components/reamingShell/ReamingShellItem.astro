@@ -3,23 +3,27 @@ import rsh1 from "../../assets/rsh-1.png";
 import rsh2 from "../../assets/rsh-2.png";
 import rsh3 from "../../assets/rsh-3.png";
 import flag from "../../assets/australia-flag.png";
+import { Image } from "astro:assets";
 
 const { img, header, desc } = Astro.props;
 
-let imgUrl = rsh1.src;
-if (img == 1) imgUrl = rsh1.src;
-if (img == 2) imgUrl = rsh2.src;
-if (img == 3) imgUrl = rsh3.src;
+let imgUrl = rsh1;
+if (img == 1) imgUrl = rsh1;
+if (img == 2) imgUrl = rsh2;
+if (img == 3) imgUrl = rsh3;
 ---
 
 <figure class="flex flex-col px-1 z-10 relative">
-  <img
-    src={flag.src}
+  <Image
+    src={flag}
     alt="australia-flag"
     aria-hidden="true"
     class="lg:hidden absolute top-2 z-10"
+    quality={1}
+    loading="lazy"
+    decoding="async"
   />
-  <img src={imgUrl} alt=`rsh ${imgUrl}` class="w-20 mb-6 mt-10 z-20" />
+  <Image  src={imgUrl} alt=`rsh ${imgUrl}` quality={40} loading="lazy" decoding="async" class="w-20 mb-6 mt-10 z-20" />
   <figcaption>
     <h3 class="text-2xl font-oswaldBold">
       {header}<h3>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import Map from '../../assets/map.svg'
 ---
-<img src={Map.src} alt="Map" class="w-[70%]">
+<Image quality={2} decoding='async' src={Map} alt="Map" class="w-[70%]" loading="lazy">

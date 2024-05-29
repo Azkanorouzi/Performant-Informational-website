@@ -1,12 +1,14 @@
 ---
+import { Image } from "astro:assets";
+
 const { title, desc, imgSrc, imgMobile } = Astro.props;
 ---
 
 <div class="flex">
-  {imgSrc && <img src={imgSrc?.src} alt={title} class="w-20 mr-4 " />}
+  {imgSrc && <Image quality={30} loading="lazy" decoding="async" src={imgSrc} alt={title} class="w-20 mr-4 " />}
   {
     imgMobile && (
-      <img src={imgMobile?.src} alt={title} class="w-20 h-20 mr-4 lg:hidden" />
+      <Image quality={30} loading="lazy" decoding="async" src={imgMobile} alt={title} class="w-20 h-20 mr-4 lg:hidden" />
     )
   }
   <div>

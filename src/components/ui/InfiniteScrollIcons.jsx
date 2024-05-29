@@ -47,6 +47,7 @@ export default function InfiniteScrollIcons() {
                 alt={collab.name}
                 width={120}
                 height={120}
+                loading={"lazy"}
               />
             </li>
           )

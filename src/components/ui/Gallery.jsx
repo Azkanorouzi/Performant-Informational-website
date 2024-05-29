@@ -247,7 +247,7 @@ function Image({
         ...customStyles,
       }}
     >
-      <img src={src} alt={name} class="w-[1000px]" />
+      <img loading={'lazy'} src={src} alt={name} class="w-[1000px]" />
       {title && subTitle ? (
         <figcaption class="uppercase absolute bottom-0 left-0 right-0 px-6 backdrop-blur-md py-2 lg:py-7">
           <p class="text-sm">{title}</p>
@@ -285,7 +285,7 @@ function ImageStatic({
       }}
     >
       <div class="relative text-primary">
-        <img src={src} alt={name} />
+        <img src={src} alt={name} loading="lazy" />
 
         <p
           class=" absolute bottom-0 left-0 bg-secondary p-1 px-5 text-sm"
