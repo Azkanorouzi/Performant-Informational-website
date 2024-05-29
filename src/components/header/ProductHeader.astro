@@ -1,6 +1,7 @@
 ---
 import machineImg from '../../assets/machine.png'
 import back from '../../assets/back.svg'
+import { Image } from 'astro:assets'
 ---
 
 <div class="pl-5 text-sixth flex relative bg-primary justify-center ">
@@ -18,9 +19,9 @@ import back from '../../assets/back.svg'
         Read more
       </a>
     </div>
-    <img src={back.src} alt="back" class="absolute bottom-0 top-0  -z-10 opacity-50 h-full w-full " >
+    <Image width={back.width} height={back.height} quality={5} loading='lazy' src={back} alt="back" class="absolute bottom-0 top-0  -z-10 opacity-50 h-full w-full " >
   </div>
   <div class="z-10 lg:w-[700px]  absolute md:w-[400px] lg:static ">
-    <img src={machineImg.src} alt="machine" class="w-[250px] lg:w-auto " />
+    <Image quality={40} src={machineImg} alt="machine" class="w-[250px] lg:w-auto " />
   </div>
 </div>

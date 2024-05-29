@@ -6,6 +6,7 @@ import reamingShell from "../../assets/reamingshell-header-small.jpg";
 import coreBarrels from "../../assets/core-barrel-2-small.jpg";
 import rodsimg from "../../assets/rodsSmall.png";
 import drillingAccessories from "../../assets/drill-accessories-1.png";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -29,41 +30,40 @@ import drillingAccessories from "../../assets/drill-accessories-1.png";
     class="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-14 lg:mx-10 text-secondary z-50 mx-5"
   >
     <ProductStatic
-      src={corebitsImg.src}
-      alt={"img1"}
       title={"Core Bits"}
-      href="/products/corebits"
-    />
+      href={'/products/corebits'}
+    >
+    <Image quality={25} width={corebitsImg.width} height={corebitsImg.height} src={corebitsImg} alt={"Core bits"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/>  
+    </ProductStatic>
     <ProductStatic
-      src={reamingShell.src}
-      alt={"img2"}
       title={"Reaming Shells"}
-      href="/products/reamingShells"
-    />
+      href={"/products/reamingshells"}
+    >
+    <Image quality={40} width={reamingShell.width} height={reamingShell.height} src={reamingShell} alt={"Reaming shells"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/>  
+    </ProductStatic>
     <ProductStatic
-      src={casingShoes.src}
-      alt={"img3"}
+    href={'/products/casingshoes'}
       title={"Casing Shoes & Casing Bits"}
-      href="/products/casingShoes"
-    />
+    >
+    <Image quality={25} width={casingShoes.width} height={casingShoes.height} src={casingShoes} alt={"Casing shoes"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/> 
+    </ProductStatic>
     <ProductStatic
-      src={coreBarrels.src}
-      alt={"img4"}
       title={"Core Barrels"}
-      href="/products/coreBarrels"
-    />
+      href={'/products/corebarrels'}
+    >
+      <Image quality={25} width={coreBarrels.width} height={coreBarrels.height} src={coreBarrels} alt={"Core barrels"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/>
+    </ProductStatic>
     <ProductStatic
-      src={rodsimg.src}
-      alt={"img5"}
+      href={"/products/rods"}
       title={"Rods & Casing"}
-      href="/products/rods"
-      href="/products/rods"
-    />
+    >
+    <Image quality={15} width={rodsimg.width} height={rodsimg.height} src={rodsimg} alt={"Rods & casing"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/>
+    </ProductStatic>
     <ProductStatic
-      src={drillingAccessories.src}
-      alt={"img6"}
       title={"Drilling Accessories"}
-      href="/products/drillingAccessories"
-    />
+      href={"/products/drillingaccessories"}
+    >
+      <Image quality={5} width={drillingAccessories.width} height={drillingAccessories.height} src={drillingAccessories} alt={"Drilling accessories"} class="lg:max-w-[350px] h-full" loading={"lazy"} decoding="async"/>
+    </ProductStatic>
   </div>
 </section>

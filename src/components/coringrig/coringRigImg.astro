@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets"
 import img from "../../assets/hompage.jpg"
 ---
 <div class="flex justify-center pt-14">
-<img src={img.src} alt="forward" class="w-[90vw] lg:w-[1090px]">
+<Image width={img.width} height={img.height} src={img} loading="lazy" decoding="async" alt="forward" class="w-[90vw] lg:w-[1090px]" quality={50}>
 </div>

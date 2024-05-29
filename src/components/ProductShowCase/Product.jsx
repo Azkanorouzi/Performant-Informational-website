@@ -1,5 +1,6 @@
 import case1 from "../../assets/cases1.png";
 import { useState, useEffect } from "preact/hooks";
+import { Image } from "astro/components";
 
 export default function Product({
   title,
@@ -64,10 +65,10 @@ export default function Product({
     </figure>
   );
 }
-export function ProductStatic({ src, alt, title, href }) {
+export function ProductStatic({ title, children, href }) {
   return (
     <div class="relative">
-      <img src={src} alt={alt} class="lg:max-w-[350px] h-full" />
+      {children}
       <a
         class="bottom-0 right-0 left-0 bg-sixth py-4  lg:py-8 bg-opacity-45 backdrop-blur-sm absolute lg:text-2xl flex justify-center lg:gap-10 gap-5 items-center hover:text-primary transition-colors"
         role={"button"}

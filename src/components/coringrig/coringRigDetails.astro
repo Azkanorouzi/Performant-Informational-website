@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import img1 from '../../assets/blog-1.jpg'
 import img2 from '../../assets/blog-2.jpg'
 import img3 from '../../assets/blog-3.jpg'
@@ -10,7 +11,7 @@ import img3 from '../../assets/blog-3.jpg'
                 <div class="bg-primary h-12 w-1 mr-2"></div>
                 <h4 class="text-4xl font-oswaldBold uppercase text-white">Control panel</h4>
         </div>
-        <img src={img1.src} alt="img1" class="rounded-xl">
+        <Image src={img1} alt="img1" class="rounded-xl" width={img1.width} height={img1.height} decoding='async' loading='lazy' quality={10}>
     </div>
         <ul class="list flex flex-col gap-3">
             <li><i class="bi bi-caret-right-fill text-primary"></i>
@@ -30,7 +31,7 @@ import img3 from '../../assets/blog-3.jpg'
                 <div class="bg-primary h-12 w-1 mr-2"></div>
                 <h4 class="text-4xl font-oswaldBold uppercase text-white">Features</h4>
         </div>
-        <img src={img1.src} alt="img1" class="rounded-xl">
+        <Image src={img2} width={img2.width} height={img2.width} alt="img1" class="rounded-xl" decoding='async' quality={10}>
     </div>
 
             <ul class="list flex flex-col gap-3">
@@ -53,7 +54,7 @@ Both the Rotation and Fine Feed controls are fitted with friction dampeners with
                 <div class="bg-primary h-12 w-1 mr-2"></div>
                 <h4 class="text-4xl font-oswaldBold uppercase text-white">Features</h4>
         </div>
-        <img src={img1.src} alt="img1" class="rounded-xl">
+        <Image src={img3} alt="img1" class="rounded-xl" decoding='async' width={img3.width} height={img3.width} quality={10}>
     </div>
     <ul class="list flex flex-col gap-3">
         <li><i class="bi bi-caret-right-fill text-primary "></i>

@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets'
 import machineImg from '../../assets/machine.png'
+
 ---
 
 <section class="bg-secondary flex items-end pt-10 lg:h-[650px] lg:pl-44 pl-6 sm:pl-12 gap-5 lg:pb-20">
@@ -13,5 +15,5 @@ import machineImg from '../../assets/machine.png'
         </p>
     
     </div>
-    <img src={machineImg.src} alt="machine" class="w-[250px] lg:w-[730px] z-10 hidden lg:block"/>
+    <Image src={machineImg} quality={80} loading="lazy" alt="machine" class="w-[250px] lg:w-[730px] z-10 hidden lg:block" width={machineImg.width} height={machineImg.height} decoding='async'/>
 </section>
