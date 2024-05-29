@@ -1,6 +1,4 @@
-import case1 from "../../assets/cases1.png";
-import { useState, useEffect } from "preact/hooks";
-import { Image } from "astro/components";
+import { useState} from "preact/hooks";
 
 export default function Product({
   title,

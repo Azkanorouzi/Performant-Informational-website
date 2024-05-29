@@ -21,7 +21,7 @@ export default function TextSlider({title, subTitle, textSlides}) {
             <i class="bi bi-caret-left-fill text-3xl drop-shadow-sm"></i>
         </button>
     
-        <p class="lg:w-[500px] text-lg px-3 h-[21rem] unBlur font-oswaldLight" key={Math.random()}>{curText}</p>
+        <p class="lg:w-[500px] text-lg px-3 lg:h-[21rem] unBlur font-oswaldLight" key={Math.random()}>{curText}</p>
         <button class={isLastIndex ? "text-primary" : "hover:scale-110 transition-transform"}  onClick={() => {
             setIndex(index => index + 1)
         }} disabled={isLastIndex}>

@@ -2,6 +2,7 @@
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import casingShoeImg from "../../assets/casingShoImg.jpg";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
@@ -15,7 +16,7 @@ import casingShoeImg from "../../assets/casingShoImg.jpg";
     <figure
       class="flex gap-12 lg:flex-row flex-col-reverse justify-center items-center"
     >
-      <img src={casingShoeImg.src} class="w-[30rem]" alt="casingShoe" />
+      <Image decoding="async" loading="lazy" quality={20} src={casingShoeImg} class="w-[30rem]" alt="casingShoe" />
       <figcaption
         class="text-sixth gap-10 lg:gap-32 flex flex-col justify-between"
       >

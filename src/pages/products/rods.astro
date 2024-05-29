@@ -2,6 +2,7 @@
 import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import rodsImg from '../../assets/RodsImg.jpg'
+import { Image } from "astro:assets";
 
 ---
 <MainLayout title="sav-ghateh (Contacts)">
@@ -11,7 +12,7 @@ import rodsImg from '../../assets/RodsImg.jpg'
         <p class="lg:w-[1090px] w-[350px] text-xl pb-8">
             Sinocordrill drill and casing tubes are manufactured from highest quality material, under stringent industry DCDMA standards, and are field tested under a variety of conditions, in order to meet the most rigid demands in during performance and in manufacturing standards, we will make sure the compositions and specifications match the inspection report from the suppliers.  
         </p>
-        <img src={rodsImg.src} alt="rods" class="w-[1090px]">
+        <Image loading="lazy"  src={rodsImg} alt="rods" class="w-[1090px]">
         
         <section class="lg:w-[1090px] w-[350px] pt-10 pb-20 flex flex-col gap-10">
             <div>

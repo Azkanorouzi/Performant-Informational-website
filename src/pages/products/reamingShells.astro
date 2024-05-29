@@ -6,6 +6,7 @@ import listDot from "../../assets/icon_gray.png";
 import ReamingShellTable from "../../components/reamingShell/reamingShellTable.astro";
 import ReamingShellItem from "../../components/reamingShell/ReamingShellItem.astro";
 import flag from "../../assets/australia-flag.png";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
@@ -64,8 +65,9 @@ import flag from "../../assets/australia-flag.png";
           </li>
         </ul>
       </div>
-      <img
-        src={reamingShellImg.src}
+      <Image
+        src={reamingShellImg}
+        quality={10}
         alt="reaming shell"
         class="absolute top-0 sm:hidden max-h-[700px] lg:block lg:relative opacity-20 lg:opacity-100 lg:w-[22rem] lg:bottom-96 lg:-top-32 lg:left-20"
       />

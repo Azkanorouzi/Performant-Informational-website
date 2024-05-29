@@ -19,6 +19,7 @@ import CoreBitTable2 from "../../components/corebit/CoreBitTable2.astro";
 import CoreBitTable3 from "../../components/corebit/CoreBitTable3.astro";
 import CoreBitTable4 from "../../components/corebit/CoreBitTable4.astro";
 import coreBitRhino from "../../assets/corbits-rhino-2 (1).png";
+import { Image } from "astro:assets";
 ---
 
 <MainLayout title="sav-ghateh (Contacts)">
@@ -36,10 +37,12 @@ import coreBitRhino from "../../assets/corbits-rhino-2 (1).png";
     <figure
       class="flex lg:flex-row flex-col-reverse justify-center gap-10 pt-20 lg:pt-40"
     >
-      <img
-        src={coreBitsImg.src}
+      <Image
+        src={coreBitsImg}
         alt="coreBits"
         class="w-full max-w-96 lg:w-96"
+        quality={50}
+        loading="lazy"
       />
       <figcaption>
         <h2
@@ -69,6 +72,8 @@ import coreBitRhino from "../../assets/corbits-rhino-2 (1).png";
             src={coreBits.src}
             alt="core bits"
             class="lg:pl-32 h-[58rem] hidden lg:block lg:h-[37rem] -ml-40 mr-6"
+            decoding="async"
+            loading="lazy"
           />
           <div
             class="flex flex-col text-5xl gap-[2.5rem] mb-16 lg:gap-[4.2rem]"

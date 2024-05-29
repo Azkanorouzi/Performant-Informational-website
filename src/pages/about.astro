@@ -6,6 +6,9 @@ import rhinoLogo from '../assets/about-rhinoLogo.png'
 import back from '../assets/back.svg'
 import ReadMore from "../components/ui/ReadMore.jsx"
 import TextSlider from "../components/ui/TextSlider"
+import { Image } from 'astro:assets'
+import rhinoBg from "../assets/about-rhinoImg.png"
+import aboutMachine from "../assets/about-machine.png"
 ---
 
 <MainLayout title="About | sav-ghateh">
@@ -19,13 +22,13 @@ import TextSlider from "../components/ui/TextSlider"
     <b class="font-oswald block"> Mines are the main arteries of a country's industrial life and the cornerstone of any economy. </b>
       Since the exploration process is the foundation of mining activities, focusing on enhancing the quality of exploration projects is crucial for increasing reserves and the number of mines in the future outlook of the mining and drilling industries.</p>
     </article>
-    <img src={back.src} alt="back" aria-hidden="true" class="w-[430px]  rotate-90">
+    <Image loading='lazy' quality={30} src={back} alt="back" aria-hidden="true" class="w-[430px]  rotate-90">
   </section>
   
 <section slot="aboutContent" class="bg-secondary ">
   <!-- ============= our story -->
     <div class="flex   justify-center items-center overflow-hidden mb-10 max-w-[1800px] mx-auto flex-col lg:flex-row bg-primary">
-      <div class="lg:w-[50%] w-[100%] bg-black h-[700px] lg:h-[650px] machine-div"></div>
+      <Image class="lg:w-[50%] w-[100%] bg-black h-[700px] lg:h-[650px] machine-div" src={aboutMachine} alt='about-machine' loading='lazy' quality={25}/>
       <div class="flex flex-col  flex-1 justify-center items-center  py-20 " >
         <TextSlider client:load title={"OUR STORY"} subTitle={'OUR STORY'} textSlides={[`The technical and commercial company "Sav Gheteh Kaviyan”, backed by half a century of experience and continuous effort in management, planning, and execution in the field of exploratory drilling, was established and registered in 2010. In recent years, the company's main specialized activities, alongside executing "non-oil exploratory drilling contracts," have focused on "supplying and selling drilling machinery, parts, and consumables." Over these years, " Sav Gheteh Kaviyan " has successfully combined an experienced and young workforce and implemented systematic and precise planning, taking significant steps in enhancing the quality of exploratory drilling. By leveraging modern technology and machinery, the company has not only improved the operational efficiency of drilling projects but also increased the capacity and speed of downhole drilling operations.`, `The importance and impact of this company extend beyond these achievements. “Sav Gheteh Kaviyan” is an active member of the "Iranian Non-Oil Drillers Association" and holds a valuable and influential position on its board of directors. Additionally, the company serves as an active member of the "Iran Mining House," which is part of the knowledge-based segment of Iran's drilling industry Throughout these years, " Sav Gheteh Kaviyan " has spared no effort in enhancing quality and services within these influential organizations and bodies. With a vision of being a pioneering and competitive company in the value chain of the mining and mineral industries, it has always been a strong and reliable partner for the demands of this market.`]}/>
       </div>
@@ -33,8 +36,8 @@ import TextSlider from "../components/ui/TextSlider"
      <!-- ============= our story end -->
 
      <div class="w-[100vw] h-[740px] bg-secondary text-sixth backpeople-div  grid place-content-center max-w-[1800px] mx-auto">
-      <div class="lg:w-[600px] flex items-center flex-col gap-10 px-8 lg:px-0 h-[19rem] font-oswaldLight">
-        <img src={forward.src} alt="forward" class="w-[250px]">
+      <div class="lg:w-[600px] flex items-center flex-col gap-10 px-8 lg:px-0  lg:h-[19rem] font-oswaldLight">
+        <Image quality={30} loading='lazy'  src={forward} alt="forward" class="w-[250px]" />
         <ReadMore client:visible limit={70} text={`Since 2022, "Sav Gheteh Kaviyan" has secured exclusive sales and after-sales service representation for "FORWARD" drilling machines in Iran and the Middle East. FORWARD, a joint Russian-Chinese company, is one of the largest and most equipped manufacturers of mining and exploratory machinery. The company produces extraction and exploratory equipment with a focus on high quality and international standards.
 A major achievement of FORWARD is the introduction of the advanced, fully hydraulic FORWARD C5 and FORWARD C6 machines. These devices were designed and engineered in collaboration with a German company, utilizing their expertise, and are assembled in China and Malaysia.
 Currently, we possess two of the latest FORWARD drilling machines equipped with cutting-edge technology, ready to conduct drilling operations up to a depth of 1,000 meters. Over the past two years, we have successfully completed more than 42,000 meters of sampling drilling in regions such as Ardestan in Yazd, Varzaneh in Isfahan, Iranshahr in Sistan and Baluchestan, Harris in Tabriz, Maku, and Iran’s gold in Damghan.
@@ -50,7 +53,7 @@ Our on-site drilling team comprises individuals with university degrees and spec
       <div class="flex flex-col  flex-1 items-center justify-center    py-20 bg-transparent " >
         <div class="flex gap-7 flex-col justify-center px-8 lg:px-20 items-center lg:items-start">
         <div >
-          <img src={rhinoLogo.src} alt="rhino">
+          <Image loading='lazy' decoding='async' src={rhinoLogo} alt="rhino">
         </div>
 
         <p class="font-oswaldLight">
@@ -60,7 +63,7 @@ Our on-site drilling team comprises individuals with university degrees and spec
         </p>
       </div>
       </div>
-      <div class=" w-[60%]  h-[650px] rhino-div z-50 lg:block hidden"></div>
+      <Image class=" w-[60%]  h-[650px] rhino-div z-50 lg:block hidden" src={rhinoBg} alt='rhino-bg' loading='lazy'/>
     </div>
   </section>
 
@@ -68,9 +71,7 @@ Our on-site drilling team comprises individuals with university degrees and spec
 
 <style>
   .machine-div {
-    background: url('../assets/about-machine.png');
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
   }
   .backpeople-div {
     background-image: url('../assets/about-backpeople.png');
@@ -78,8 +79,6 @@ Our on-site drilling team comprises individuals with university degrees and spec
     background-position: top;
   }
   .rhino-div {
-    background-image: url('../assets/about-rhinoImg.png');
-    background-size: cover;
-    background-position: top;
+    object-fit: cover;
   }
 </style>
