@@ -27,7 +27,7 @@ export default function Product({
           <div class="py-4 h-full flex flex-col justify-center">
             <div class="flex gap-4 flex-col ">
               <h3
-                class={`text-[2.5rem] lg:translate-y-10 opacity-100 lg:opacity-70 px-[78px] `}
+                class={`text-[2.5rem] lg:translate-y-10 opacity-100 lg:opacity-70 px-[78px] text-nowrap`}
                 style={{
                   transition: ".5s",
                   opacity: hovered ? "1" : ".5",

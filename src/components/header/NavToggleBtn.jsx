@@ -47,15 +47,15 @@ export default function NavToggleBtn({ closed, setClosed }) {
 
         <ContactBarInfo
           text="Call"
-          secondaryText="+021 44456700"
-          tertiaryText="+98 9129959510"
+          secondaryText="+98 21 443 720 82"
+          tertiaryText="+98 912 869 55 23"
           icon="bi bi-telephone"
         />
         <hr />
         <ContactBarInfo
           text="Address"
-          secondaryText="22 Division st, Ny 10562 IR"
-          tertiaryText="25 Division st, Ny 10002 USA"
+          secondaryText=""
+          tertiaryText="5th floor, No. 2, First Sepehr, Sepehr str., Marzdaran Blvd., Tehran, IRAN"
           icon="bi bi-geo-alt"
         />
         <hr />

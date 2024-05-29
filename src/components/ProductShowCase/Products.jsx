@@ -45,13 +45,14 @@ export default function Products() {
         <div class="flex flex-col justify-center gap-8 items-center">
           <div class="flex  gap-5 flex-col md:flex-row products flex-wrap justify-center">
             <Product
-              title={'MACHINING STEEL'}
+              title={'Projects'}
               description={
-                'Metal elements that need to be shaped must be machined in an adquate way'
+                'Take a tour with us and, Explore our latest case studies'
               }
               customStyles={`unBlur lg:flex  ${
                 index === 0 ? 'flex' : 'hidden lg:flex'
               }`}
+              href={"/projects"}
             >
               <div class="img1"></div>
             </Product>
@@ -63,18 +64,20 @@ export default function Products() {
               customStyles={`unBlur  lg:flex ${
                 index === 1 ? 'flex' : 'hidden lg:flex'
               }`}
+              href={'/products/corebits'}
             >
               <div class="img2"></div>
             </Product>
             <div class="flex gap-10 flex-row">
               <Product
-                title={'METALS MATERIALS'}
+                title={<span>CORING RIG</span>}
                 description={
-                  'On our way to cooporate with the customer we offer int field of building a product'
+                  `Forward's C6 coring rig, the first range of coring rigs`
                 }
                 customStyles={`unBlur lg:flex ${
                   index === 2 ? 'flex' : 'hidden lg:flex'
                 }`}
+                href={"/products/coringrig"}
               >
                 <div class="img3"></div>
               </Product>

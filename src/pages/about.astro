@@ -4,6 +4,8 @@ import Header from '../components/ui/Header.astro'
 import forward from '../assets/about-forward.png'
 import rhinoLogo from '../assets/about-rhinoLogo.png'
 import back from '../assets/back.svg'
+import ReadMore from "../components/ui/ReadMore.jsx"
+import TextSlider from "../components/ui/TextSlider"
 ---
 
 <MainLayout title="About | sav-ghateh">
@@ -11,8 +13,11 @@ import back from '../assets/back.svg'
 
 <section class=" flex justify-center items-center h-[600px] relative bg-secondary" slot="aboutHeaderContent">
     <article class="absolute top-0 right-0 bottom-0 left-0 grid place-content-center text-center z-10 ">
-    <h2 class="text-4xl text-sixth font-oswaldBold mb-5">OUR STORY</h2>
-    <p class="text-sixth w-[60vw] max-w-[700px] font-oswaldLight" style={{letterSpacing: '1px'}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam consequatur perferendis laboriosam cupiditate harum minima suscipit molestias, dicta, ratione totam explicabo, modi quam dolorum illo itaque nisi! Similique est temporibus laboriosam voluptatibus quam at velit maiores recusandae, tempore sit. Tenetur.</p>
+    <h2 class="text-4xl text-sixth font-oswaldBold mb-5">MISSION</h2>
+    <p class="text-sixth w-[60vw] max-w-[700px] font-oswaldLight" style={{letterSpacing: '1px'}}>
+      
+    <b class="font-oswald block"> Mines are the main arteries of a country's industrial life and the cornerstone of any economy. </b>
+      Since the exploration process is the foundation of mining activities, focusing on enhancing the quality of exploration projects is crucial for increasing reserves and the number of mines in the future outlook of the mining and drilling industries.</p>
     </article>
     <img src={back.src} alt="back" aria-hidden="true" class="w-[430px]  rotate-90">
   </section>
@@ -22,35 +27,37 @@ import back from '../assets/back.svg'
     <div class="flex   justify-center items-center overflow-hidden mb-10 max-w-[1800px] mx-auto flex-col lg:flex-row bg-primary">
       <div class="lg:w-[50%] w-[100%] bg-black h-[700px] lg:h-[650px] machine-div"></div>
       <div class="flex flex-col  flex-1 justify-center items-center  py-20 " >
-        <div class="flex gap-4 flex-col ">
-        <div class="pl-5">
-          <strong class="text-sm font-oswaldLight">OUR STORY</strong>
-          <hr class="w-44 text-secondary"></hr>
-        </div>
-        <h3 class="text-4xl font-oswaldBold pl-5">OUR STORY</h3>
-        <p class="lg:w-[400px] px-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita fuga quibusdam mollitia reprehenderit eligendi velit quo minima distinctio consectetur dignissimos illum temporibus autem vel aperiam, provident reiciendis, accusantium vero, sequi tenetur quis quae. Debitis et esse alias perferendis rem dolor tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, vitae quod! Reprehenderit culpa officiis corrupti dicta magni perspiciatis deserunt esse dignissimos architecto deleniti? Accusantium magnam ipsa eius fuga sapiente necessitatibus perspiciatis repudiandae iusto saepe pariatur id labore, cumque quasi reprehenderit.</p>
-      </div>
+        <TextSlider client:load title={"OUR STORY"} subTitle={'OUR STORY'} textSlides={[`The technical and commercial company "Sav Gheteh Kaviyan”, backed by half a century of experience and continuous effort in management, planning, and execution in the field of exploratory drilling, was established and registered in 2010. In recent years, the company's main specialized activities, alongside executing "non-oil exploratory drilling contracts," have focused on "supplying and selling drilling machinery, parts, and consumables." Over these years, " Sav Gheteh Kaviyan " has successfully combined an experienced and young workforce and implemented systematic and precise planning, taking significant steps in enhancing the quality of exploratory drilling. By leveraging modern technology and machinery, the company has not only improved the operational efficiency of drilling projects but also increased the capacity and speed of downhole drilling operations.`, `The importance and impact of this company extend beyond these achievements. “Sav Gheteh Kaviyan” is an active member of the "Iranian Non-Oil Drillers Association" and holds a valuable and influential position on its board of directors. Additionally, the company serves as an active member of the "Iran Mining House," which is part of the knowledge-based segment of Iran's drilling industry Throughout these years, " Sav Gheteh Kaviyan " has spared no effort in enhancing quality and services within these influential organizations and bodies. With a vision of being a pioneering and competitive company in the value chain of the mining and mineral industries, it has always been a strong and reliable partner for the demands of this market.`]}/>
       </div>
     </div>
      <!-- ============= our story end -->
 
      <div class="w-[100vw] h-[740px] bg-secondary text-sixth backpeople-div  grid place-content-center max-w-[1800px] mx-auto">
-      <div class="lg:w-[600px] flex items-center flex-col gap-10 px-8 lg:px-0">
+      <div class="lg:w-[600px] flex items-center flex-col gap-10 px-8 lg:px-0 h-[19rem] font-oswaldLight">
         <img src={forward.src} alt="forward" class="w-[250px]">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, distinctio nulla alias provident minima architecto. Reprehenderit laborum atque quibusdam, quis aspernatur aut in expedita reiciendis deserunt a molestiae iure explicabo perferendis quasi et numquam excepturi velit doloremque aperiam ipsum nesciunt est vel ratione! Illum voluptatem est necessitatibus deserunt veritatis labore? Explicabo doloremque illo natus rem ex incidunt doloribus repellendus, nostrum quidem laborum nisi fugit alias earum voluptates corporis voluptatibus voluptas reiciendis sed asperiores quo quis ipsum. Modi tempore ab similique.</p>
+        <ReadMore client:visible limit={70} text={`Since 2022, "Sav Gheteh Kaviyan" has secured exclusive sales and after-sales service representation for "FORWARD" drilling machines in Iran and the Middle East. FORWARD, a joint Russian-Chinese company, is one of the largest and most equipped manufacturers of mining and exploratory machinery. The company produces extraction and exploratory equipment with a focus on high quality and international standards.
+A major achievement of FORWARD is the introduction of the advanced, fully hydraulic FORWARD C5 and FORWARD C6 machines. These devices were designed and engineered in collaboration with a German company, utilizing their expertise, and are assembled in China and Malaysia.
+Currently, we possess two of the latest FORWARD drilling machines equipped with cutting-edge technology, ready to conduct drilling operations up to a depth of 1,000 meters. Over the past two years, we have successfully completed more than 42,000 meters of sampling drilling in regions such as Ardestan in Yazd, Varzaneh in Isfahan, Iranshahr in Sistan and Baluchestan, Harris in Tabriz, Maku, and Iran’s gold in Damghan.
+Our on-site drilling team comprises individuals with university degrees and specialized mechanics, working in two shifts on various projects. This makes us one of the best exploratory drilling teams in Iran.
+`} classList={""}/>
       </div>
+
      </div>
 
      <!-- rhino -->
      <div class="flex bg-secondary text-sixth  justify-center items-center overflow-hidden max-w-[1800px] mx-auto   ">
       
-      <div class="flex flex-col  flex-1   py-20 bg-transparent " >
+      <div class="flex flex-col  flex-1 items-center justify-center    py-20 bg-transparent " >
         <div class="flex gap-7 flex-col justify-center px-8 lg:px-20 items-center lg:items-start">
         <div >
           <img src={rhinoLogo.src} alt="rhino">
         </div>
 
-        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita fuga quibusdam mollitia reprehenderit eligendi velit quo minima distinctio consectetur dignissimos illum temporibus autem vel aperiam, provident reiciendis, accusantium vero, sequi tenetur quis quae. Debitis et esse alias perferendis rem dolor tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, vitae quod! Reprehenderit culpa officiis corrupti dicta magni perspiciatis deserunt esse dignissimos architecto deleniti? Accusantium magnam ipsa eius fuga sapiente necessitatibus perspiciatis repudiandae iusto saepe pariatur id labore, cumque quasi reprehenderit.</p>
+        <p class="font-oswaldLight">
+          Our collaboration with foreign companies dates back several years. For 12 years, from 2006 to 2018, we were the exclusive sales and after-sales service representative for the Chinese company "SINOCOREDRILL" in Iran.
+        The good news is that since 2023, the "RHINO" brand, a reputable name from Australia, has been added to our portfolio! We are proud to hold the exclusive sales and after-sales service representation for this Australian company. With their high-quality and diverse offerings, we are fulfilling another part of our mission to enhance the quality of drilling services in this industry.
+        
+        </p>
       </div>
       </div>
       <div class=" w-[60%]  h-[650px] rhino-div z-50 lg:block hidden"></div>

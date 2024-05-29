@@ -132,7 +132,8 @@ body::-webkit-scrollbar-thumb {
   width: 400px;
   height: 400px;
   background: linear-gradient(rgba(0, 0, 0, 0.387), rgba(255, 255, 255, 0.166)),
-    url('./assets/cases_4.png');
+    url('./assets/about-machine.png');
+    background-size: cover;
 }
 .img4 {
   width: 400px;
