@@ -37,7 +37,6 @@ export default function StickyNavbar({ children }) {
 
     // Setting the active class for the navbar
     links.forEach(function (link) {
-      console.log(link.href);
       if (link.getAttribute("href") === (currentPath.slice(0, -1) || "/")) {
         link.classList.add(isWhite ? "text-secondary" : "text-sixth");
       }

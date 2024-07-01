@@ -1,15 +1,27 @@
-import Project from './Project'
-import img1 from '../../assets/about-machine.png'
-import img2 from '../../assets/blog-1.jpg'
-import img3 from '../../assets/blog-2.jpg'
-import img4 from '../../assets/blog-3.jpg'
-import img5 from '../../assets/cases1.png'
-import img6 from '../../assets/cases_2.png'
-import img7 from '../../assets/portfolio-s-10-1170x690.jpg'
-import img8 from '../../assets/portfolio-s-11-1170x690.jpg'
-import img9 from '../../assets/portfolio-s-12-1170x690.jpg'
+import { useEffect, useState } from "preact/hooks";
+import ProjectsDesktop from "./ProjectsDesktop";
+import ProjectCategories from "./ProjectCategories";
+import PaginationDesktop from "./PaginationDesktop";
+import { projectsData } from "../../data/projects";
 
 export default function ProjectsContent() {
+  const [curCategory, setCurCategory] = useState("All");
+  const [curIndex, setCurIndex] = useState(0);
+  const [forwards, setForwards] = useState(true);
+  const [curPage, setCurPage] = useState(1);
+  const max = 9;
+  const timeoutSec = 1500;
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setForwards((cur) => (!cur ? true : cur));
+    }, timeoutSec);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [forwards]);
+
   return (
     <section class="bg-secondary text-sixth flex flex-col items-center">
       <div class="flex flex-col gap-2  pt-32   w-[85vw] max-w-[1160px] py-9">
@@ -21,36 +33,34 @@ export default function ProjectsContent() {
           case studies
         </h3>
       </div>
+      <ProjectCategories
+        setCurIndex={setCurIndex}
+        setCurPage={setCurPage}
+        curCategory={curCategory}
+        setCurCategory={setCurCategory}
+        setForwards={setForwards}
+        timeoutSec={timeoutSec}
+      />
 
-      <div class="flex  w-[85vw] max-w-[1160px] gap-3 text-xl pb-5">
-        <button class=" px-5 pt-3 relative text-primary">
-          <span>All</span>
-          <span class="absolute text-primary top-0 right-0">11</span>
-        </button>
-        <p class="px-5 pt-3 relative">
-          <span>Drilling</span>
-          <span class="absolute  top-0 right-0">3</span>
-        </p>
-        <p class="px-5 pt-3 relative">
-          <span>Mine</span>
-          <span class="absolute  top-0 right-0">7</span>
-        </p>
-      </div>
+      <ProjectsDesktop
+        curPage={curPage}
+        curCategory={curCategory}
+        curIndex={curIndex}
+        max={max}
+        forwards={forwards}
+      />
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  lg:mx-10 text-secondary z-50 p-2 px-5 h-[1200px] w-[85vw] max-w-[1200px]  justify-center ">
-        <Project src={img1.src} />
-        <Project src={img2.src} />
-        <Project src={img3.src} />
-        <Project src={img4.src} />
-        <Project src={img5.src} customStyles="hidden sm:block" />
-        <Project src={img6.src} customStyles="hidden sm:block" />
-        <Project src={img7.src} customStyles="hidden sm:block" />
-        <Project src={img8.src} customStyles="hidden sm:block" />
-        <Project src={img9.src} customStyles="hidden lg:block" />
-      </div>
-      <button class="bg-primary p-3 pr-28 flex justify-center items-center text-white hover:bg-sixth hover:text-primary transition-colors mb-36 mt-10">
-        Load more
-      </button>
+      <PaginationDesktop
+        curIndex={curIndex}
+        setCurIndex={setCurIndex}
+        setCurPage={setCurPage}
+        curPage={curPage}
+        projectsLength={
+          projectsData.filter((pj) => {
+            return curCategory === "All" || curCategory === pj.name;
+          }).length
+        }
+      />
     </section>
-  )
+  );
 }
