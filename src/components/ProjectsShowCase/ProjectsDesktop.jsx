@@ -3,12 +3,13 @@ import { projectsData } from "../../data/projects";
 import { useState } from "preact/hooks";
 import FocusedPagination from "./FocusedPag";
 
-export default function ProjectsDesktop({
+export default function ProjectsImages({
   curCategory,
   curIndex,
   max,
   forwards,
   curPage,
+  type,
 }) {
   const [hoveredPj, setHoveredPj] = useState(-1);
   const [curImgIndex, setCurImgIndex] = useState(-1);
@@ -17,12 +18,15 @@ export default function ProjectsDesktop({
   );
 
   const curPj = curCategoryPjs.filter((_, index) => curImgIndex === index)[0];
+  const curPjs = curCategoryPjs.slice(curIndex, curIndex + max)
 
   return (
-    <article class=" grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  lg:mx-10 text-secondary z-50 p-2 px-5 h-[900px]  w-[85vw] max-w-[1200px]  justify-center  hidden lg:grid">
-      {curCategoryPjs.slice(curIndex, curIndex + max).map((pj, index) => {
+    <article class={` grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  lg:mx-10 text-secondary z-50 p-2 px-5 h-[${300 * curPjs.length}px] lg:h-[900px]  w-[85vw] max-w-[1200px]  justify-center  ${type === "mobile" ? `grid grid-cols-1 grid-flow-col  grid-rows-${curPjs.length} lg:hidden`: "lg:grid hidden"}`}>
+      {curPjs.map((pj, index) => {
         return (
+          <>
           <Project
+          type="mobile"
             curPage={curPage}
             hoveredPj={hoveredPj}
             setHoveredPj={setHoveredPj}
@@ -32,6 +36,18 @@ export default function ProjectsDesktop({
             forwards={forwards}
             setCurImgIndex={setCurImgIndex}
           />
+             <Project
+             type="desktop"
+            curPage={curPage}
+            hoveredPj={hoveredPj}
+            setHoveredPj={setHoveredPj}
+            src={pj.img.src}
+            index={index}
+            key={pj.img.src}
+            forwards={forwards}
+            setCurImgIndex={setCurImgIndex}
+          />
+          </>
         );
       })}
       {curImgIndex !== -1 && (

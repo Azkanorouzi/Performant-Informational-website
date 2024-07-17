@@ -1,8 +1,8 @@
 import { useEffect, useState } from "preact/hooks";
-import ProjectsDesktop from "./ProjectsDesktop";
 import ProjectCategories from "./ProjectCategories";
-import PaginationDesktop from "./PaginationDesktop";
+import ProjectPagination from "./ProjectPagination";
 import { projectsData } from "../../data/projects";
+import ProjectsImages from "./ProjectsDesktop";
 
 export default function ProjectsContent() {
   const [curCategory, setCurCategory] = useState("All");
@@ -10,6 +10,7 @@ export default function ProjectsContent() {
   const [forwards, setForwards] = useState(true);
   const [curPage, setCurPage] = useState(1);
   const max = 9;
+  const maxMobile = 3;
   const timeoutSec = 1500;
 
   useEffect(() => {
@@ -42,15 +43,38 @@ export default function ProjectsContent() {
         timeoutSec={timeoutSec}
       />
 
-      <ProjectsDesktop
+      <ProjectsImages
         curPage={curPage}
         curCategory={curCategory}
         curIndex={curIndex}
         max={max}
+        type={"desktop"}
         forwards={forwards}
       />
 
-      <PaginationDesktop
+     <ProjectsImages
+        curPage={curPage}
+        curCategory={curCategory}
+        curIndex={curIndex}
+        max={maxMobile}
+        type={"mobile"}
+        forwards={forwards}
+      />
+
+      <ProjectPagination
+        type={'mobile'}
+        curIndex={curIndex}
+        setCurIndex={setCurIndex}
+        setCurPage={setCurPage}
+        curPage={curPage}
+        projectsLength={
+          projectsData.filter((pj) => {
+            return curCategory === "All" || curCategory === pj.name;
+          }).length
+        }
+      />
+      <ProjectPagination
+        type={'desktop'}
         curIndex={curIndex}
         setCurIndex={setCurIndex}
         setCurPage={setCurPage}

@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import img1 from '../../assets/blog-1.jpg'
-import img2 from '../../assets/blog-2.jpg'
-import img3 from '../../assets/blog-3.jpg'
+import img1 from '../../assets/p1.jpg'
+import img2 from '../../assets/p4.jpg'
 ---
 <div class="flex lg:gap-8 gap-28 flex-col lg:flex-row text-sixth font-oswaldLight">
     <div class="flex  flex-col gap-6 flex-1">
@@ -11,7 +10,7 @@ import img3 from '../../assets/blog-3.jpg'
                 <div class="bg-primary h-12 w-1 mr-2"></div>
                 <h4 class="text-4xl font-oswaldBold uppercase text-white">Control panel</h4>
         </div>
-        <Image src={img1} alt="img1" class="rounded-xl" width={img1.width} height={img1.height} decoding='async' loading='lazy' quality={10}>
+        <Image src={img1} alt="img1" class="rounded-xl h-[500px] object-cover" width={img1.width} height={img1.height} decoding='async' loading='lazy' quality={10}>
     </div>
         <ul class="list flex flex-col gap-3">
             <li><i class="bi bi-caret-right-fill text-primary"></i>
@@ -31,7 +30,7 @@ import img3 from '../../assets/blog-3.jpg'
                 <div class="bg-primary h-12 w-1 mr-2"></div>
                 <h4 class="text-4xl font-oswaldBold uppercase text-white">Features</h4>
         </div>
-        <Image src={img2} width={img2.width} height={img2.width} alt="img1" class="rounded-xl" decoding='async' quality={10}>
+        <Image src={img2} width={img2.width} height={img2.width} alt="img1" class="rounded-xl h-[500px] object-cover" decoding='async' quality={10}>
     </div>
 
             <ul class="list flex flex-col gap-3">
@@ -48,26 +47,5 @@ Both the Rotation and Fine Feed controls are fitted with friction dampeners with
                 </li>
             </ul>
     </div>
-    <div class="flex flex-col gap-6 flex-1">
-        <div class="relative z-20">
-            <div class="absolute top-0 left-0 right-0 bottom-0 bg-black rounded-xl bg-opacity-40 flex justify-center items-center">
-                <div class="bg-primary h-12 w-1 mr-2"></div>
-                <h4 class="text-4xl font-oswaldBold uppercase text-white">Features</h4>
-        </div>
-        <Image src={img3} alt="img1" class="rounded-xl" decoding='async' width={img3.width} height={img3.width} quality={10}>
-    </div>
-    <ul class="list flex flex-col gap-3">
-        <li><i class="bi bi-caret-right-fill text-primary "></i>
-            When the rig is shutdown or being transported the Control Panel can be locked to prevent damage or vandalism.</li>
-        <li>
-            <i class="bi bi-caret-right-fill text-primary"></i>
-Both the Rotation and Fine Feed controls are fitted with friction dampeners with positive and easy to find neutral positions..</li>
-        <li>
-            <i class="bi bi-caret-right-fill text-primary"></i>
-            There is an auto alarm function for low level of hydraulic oil</li>
-        <li><i class="bi bi-caret-right-fill text-primary"></i> 
-            All the gauges are conveniently located for ease of monitoring
-        </li>
-    </ul>   
-    </div>
+
 </div>

@@ -1,13 +1,14 @@
-const PaginationDesktop = ({
+const ProjectPagination = ({
   setCurIndex,
   projectsLength,
   curPage,
   setCurPage,
+  type
 }) => {
-  const maxPage = Math.ceil(projectsLength / 9);
+  const maxPage = type === "desktop" ? Math.ceil(projectsLength / 9) : Math.ceil(projectsLength / 3);
 
   return (
-    <div class="h-80 flex justify-center items-center gap-5">
+    <div class={`h-80 flex justify-center items-center gap-5 ${type === "mobile" ? "lg:hidden flex" : "hidden lg:flex"}`}>
       <button
         class={`bg-secondary border-[2px] w-20  grid place-content-center text-center h-20 border-primary transition-colors text-primary ${curPage !== 1 ? "hover:bg-primary hover:text-black" : "opacity-50"} `}
         disabled={curPage === 1}
@@ -15,7 +16,7 @@ const PaginationDesktop = ({
           if (curPage === 1) return;
 
           setCurPage((cur) => cur - 1);
-          setCurIndex((cur) => cur - 9);
+          setCurIndex((cur) => cur - (type === 'desktop' ? 9 : 3));
         }}
       >
         <i class="bi bi-arrow-left text-4xl  flex items-center"></i>
@@ -33,7 +34,7 @@ const PaginationDesktop = ({
           if (curPage === maxPage) return;
 
           setCurPage((cur) => cur + 1);
-          setCurIndex((cur) => cur + 9);
+          setCurIndex((cur) => cur + (type === "desktop" ? 9 : 3));
         }}
       >
         <i class="bi bi-arrow-right text-4xl  flex items-center"></i>
@@ -42,4 +43,4 @@ const PaginationDesktop = ({
   );
 };
 
-export default PaginationDesktop;
+export default ProjectPagination;

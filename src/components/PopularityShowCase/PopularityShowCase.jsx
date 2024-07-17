@@ -11,7 +11,7 @@ export default function PopularityShowCase() {
         <br />
         EMENTS
       </h2>
-      <div className="flex lg:gap-36 w-[90vw]   lg:w-[80vw] lg:mx-[5vw] flex-wrap gap-5 ">
+      <div className="flex lg:gap-36 w-[90vw]   lg:w-[80vw] lg:ml-[8vw] flex-wrap gap-5 ">
         <Popularity numberText={25} title={'Years'} speed={150} />
         <Popularity numberText={40} strText="K" title={'meters'} speed={50} />
 

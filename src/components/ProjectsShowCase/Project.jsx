@@ -10,20 +10,21 @@ export default function Project({
   hoveredPj,
   setHoveredPj,
   setCurImgIndex,
+  type,
 }) {
   const isHovered = hoveredPj === index;
   return (
     <button
-      class={`flex-1 h-[300px] transition-all ${isHovered ? "scale-105" : !isHovered && hoveredPj !== -1 ? "scale-95 blur-sm" : ""}`}
+      class={`flex-1  transition-all ${isHovered ? "scale-105" : !isHovered && hoveredPj !== -1 ? "scale-95 blur-sm" : ""} ${type === "desktop" ? "lg:flex hidden" : "flex lg:hidden"}`}
       onMouseOver={() => setHoveredPj(index)}
       onMouseLeave={() => setHoveredPj(-1)}
-      onClick={() => setCurImgIndex(index + (curPage - 1) * 9)}
+      onClick={() => setCurImgIndex(index + (curPage - 1) * (type === 'desktop' ? 9 : 3))}
     >
       <img
         loading="lazy"
         src={src}
         alt={mine}
-        class={` object-cover h-full w-full  ${customStyles} transition-all ${forwards ? "opacity-0 blur-xl" : "opacity-1 blur-none"}`}
+        class={` object-cover h-full w-full lg:h-[300px] ${customStyles} transition-all ${forwards ? "opacity-0 blur-xl" : "opacity-1 blur-none"}`}
         style={{
           animation: forwards ? `unBlur .8s forwards` : "inBlur .8s forwards",
           animationDelay: forwards
