@@ -21,8 +21,8 @@ export function GalleryFull() {
             name={'img1'}
             src={img1.src}
             imgIndex={0}
-            title="Innovation | Welding"
-            subTitle="Wire handle"
+            title="Kerman | Sirjan"
+            subTitle="Kooh Sorkh"
             customStyles={{ zIndex: 1 }}
           />
           <Gallery.Image
@@ -30,16 +30,16 @@ export function GalleryFull() {
             src={img2.src}
             imgIndex={1}
             customStyles={{ zIndex: 1 }}
-            title="Innovation | Welding"
-            subTitle="Wire handle"
+            title="Tabriz"
+            subTitle="Heered"
           />
           <Gallery.Image
             name={'img3'}
             src={img3.src}
             imgIndex={2}
             customStyles={{ zIndex: 1 }}
-            title="Innovation | Welding"
-            subTitle="Wire handle"
+            title="Zahedan"
+            subTitle="Lar gold-mine"
           />
         </Gallery.Slider>
       </Gallery.Container>

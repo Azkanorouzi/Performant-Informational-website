@@ -20,11 +20,10 @@ export default function Products() {
   return (
     <>
       <div class="flex gap-11 lg:gap-2 flex-row lg:flex-col lg:w-[1200px] xl:text-left text-center xl:items-start  items-center ">
-        <h2 class=" lg:text-6xl font-oswald text-5xl ">Services</h2>
+        <h2 class=" lg:text-6xl font-oswald text-5xl ">Discovering Tools</h2>
 
         <p class="font-oswaldLight  text-lg  w-96  xl:text-left text-center hidden lg:block">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          reiciendis, aliquid vero blanditiis eos
+          With years of experience, We offer the best quality/unmatched discovering tools in the market
         </p>
         <div class="gap-2 flex lg:hidden z-50">
           <button
