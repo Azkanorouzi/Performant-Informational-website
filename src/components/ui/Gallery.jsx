@@ -1,11 +1,11 @@
 import { createContext } from 'preact'
 import { useContext, useState } from 'preact/hooks'
-import img1 from '../../assets/portfolio-s-10-1170x690.jpg'
-import img2 from '../../assets/portfolio-s-11-1170x690.jpg'
-import img3 from '../../assets/portfolio-s-12-1170x690.jpg'
-import img4 from '../../assets/blog-1.jpg'
-import img5 from '../../assets/blog-2.jpg'
-import img6 from '../../assets/blog-3.jpg'
+import img1 from '../../assets/p3.jpg'
+import img2 from '../../assets/p2.jpg'
+import img3 from '../../assets/lar7.jpg'
+import img4 from '../../assets/p3.jpg'
+import img5 from '../../assets/lar10.jpg'
+import img6 from '../../assets/lar3.jpg'
 const GalleryContext = createContext({})
 
 export function GalleryFull() {
@@ -247,7 +247,7 @@ function Image({
         ...customStyles,
       }}
     >
-      <img loading={'lazy'} src={src} alt={name} class="w-[1000px]" />
+      <img loading={'lazy'} src={src} alt={name} class="h-[500px] w-[800px]" />
       {title && subTitle ? (
         <figcaption class="uppercase absolute bottom-0 left-0 right-0 px-6 backdrop-blur-md py-2 lg:py-7">
           <p class="text-sm">{title}</p>

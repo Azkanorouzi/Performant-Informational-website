@@ -1,3 +1,5 @@
+import { createPortal } from "preact/compat"
+
 const FocusedPagination = ({
   curImgIndex,
   curCategoryPjs,
@@ -5,9 +7,11 @@ const FocusedPagination = ({
   setCurImgIndex,
 }) => {
   return (
+    createPortal(
     <figure
-      class="z-50 fixed bg-black bg-opacity-50 w-screen h-screen top-0 left-0 bottom-0 flex justify-center items-center backdrop-blur flex-col gap-3 font-oswald "
+      class=" fixed bg-black bg-opacity-50 w-screen h-screen top-0 left-0 bottom-0 flex justify-center items-center backdrop-blur flex-col gap-3 font-oswald "
       onClick={() => setCurImgIndex(-1)}
+      style={{zIndex: 5000}}
     >
       <figcaption className={"flex gap-20"}>
         <p className="text-primary text-4xl flex items-center">
@@ -52,7 +56,7 @@ const FocusedPagination = ({
           <i className={`bi bi-arrow-right flex items-center`}></i>
         </button>
       </div>
-    </figure>
+    </figure>, document.body)
   );
 };
 
