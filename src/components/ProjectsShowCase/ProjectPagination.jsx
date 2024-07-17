@@ -8,7 +8,7 @@ const ProjectPagination = ({
   const maxPage = type === "desktop" ? Math.ceil(projectsLength / 9) : Math.ceil(projectsLength / 3);
 
   return (
-    <div class={`h-80 flex justify-center items-center gap-5 ${type === "mobile" ? "lg:hidden flex" : "hidden lg:flex"}`}>
+    <div class={`h-80 flex justify-center items-center gap-5 ${type === "mobile" ? "lg:hidden flex h-52" : "hidden lg:flex"}`}>
       <button
         class={`bg-secondary border-[2px] w-20  grid place-content-center text-center h-20 border-primary transition-colors text-primary ${curPage !== 1 ? "hover:bg-primary hover:text-black" : "opacity-50"} `}
         disabled={curPage === 1}

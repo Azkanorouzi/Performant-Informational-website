@@ -21,7 +21,7 @@ export default function ProjectsImages({
   const curPjs = curCategoryPjs.slice(curIndex, curIndex + max)
 
   return (
-    <article class={` grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  lg:mx-10 text-secondary z-50 p-2 px-5 h-[${300 * curPjs.length}px] lg:h-[900px]  w-[85vw] max-w-[1200px]  justify-center  ${type === "mobile" ? `grid grid-cols-1 grid-flow-col  grid-rows-${curPjs.length} lg:hidden`: "lg:grid hidden"}`}>
+    <article class={`lg:grid-cols-3 gap-5  lg:mx-10 text-secondary z-50 p-2 px-5 h-[${300 * curPjs.length}px] lg:h-[900px]  w-[85vw] max-w-[1200px]  justify-center  ${type === "mobile" ? `grid grid-cols-1 grid-flow-row   grid-rows-${curPjs.length - 1} lg:hidden`: "lg:grid hidden"}`}>
       {curPjs.map((pj, index) => {
         return (
           <>

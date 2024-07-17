@@ -15,7 +15,7 @@ export default function Project({
   const isHovered = hoveredPj === index;
   return (
     <button
-      class={`flex-1  transition-all ${isHovered ? "scale-105" : !isHovered && hoveredPj !== -1 ? "scale-95 blur-sm" : ""} ${type === "desktop" ? "lg:flex hidden" : "flex lg:hidden"}`}
+      class={`flex-1  transition-all ${isHovered ? "scale-105" : !isHovered && hoveredPj !== -1 ? "scale-95 blur-sm" : ""} ${type === "desktop" ? "lg:flex hidden" : "flex lg:hidden h-[250px]"}`}
       onMouseOver={() => setHoveredPj(index)}
       onMouseLeave={() => setHoveredPj(-1)}
       onClick={() => setCurImgIndex(index + (curPage - 1) * (type === 'desktop' ? 9 : 3))}

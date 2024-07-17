@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import ProjectCategories from "./ProjectCategories";
 import ProjectPagination from "./ProjectPagination";
 import { projectsData } from "../../data/projects";
-import ProjectsImages from "./ProjectsDesktop";
+import ProjectsImages from "./ProjectsImages";
 
 export default function ProjectsContent() {
   const [curCategory, setCurCategory] = useState("All");
