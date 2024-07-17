@@ -10,7 +10,7 @@ const GalleryContext = createContext({})
 
 export function GalleryFull() {
   return (
-    <Gallery title="Tabriz" subTitle="Gold Mine" hasPagination={true}>
+    <Gallery title="Discovering" subTitle="Mines" hasPagination={true}>
       <Gallery.Container customStyles={{ fontFamily: 'oswald' }}>
         <Gallery.Header customStyles={{ flexDirection: 'row', gap: '80px' }}>
           <Gallery.Title />
