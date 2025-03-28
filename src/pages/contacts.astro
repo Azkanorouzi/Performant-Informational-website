@@ -3,9 +3,12 @@ import MainLayout from '../layouts/MainLayout.astro'
 import ContactsContent from '../components/Contacts/ContactsContent.astro'
 import ContactForm from '../components/Contacts/ContactForm'
 import Header from '../components/ui/Header.astro'
+import MetaTags from '../metaTags/MetaTags'
 ---
 
 <MainLayout title="Contacts | sav-ghateh">
+
+  <MetaTags pageTitle={"Sav Ghateh -  Contact us"} description={"Let's get in touch, ask any question about our discovering tool products or our company."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"call sav ghateh, text sav ghateh, get in touch sav ghateh, buy drilling tools"} slot="metaTags"/>
   <Header title="contacts" bgUrl="../../assets/cont.png" slot='header'/>
   <ContactsContent slot='contactsContent'/>
   <div class="w-full h-full flex justify-center items-center pb-20 bg-secondary lg:mt-0 pt-20 lg:pt-0" slot="contactsForm">

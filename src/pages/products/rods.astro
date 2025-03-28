@@ -3,10 +3,13 @@ import Header from "../../components/ui/Header.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import rodsImg from '../../assets/RodsImg.jpg'
 import { Image } from "astro:assets";
+import MetaTags from "../../metaTags/MetaTags";
 
 ---
-<MainLayout title="sav-ghateh (Contacts)">
+<MainLayout title="Sav-Ghateh | Rods">
     <Header title="rods & casing" slot='header' subTitle="Sinocoredrill drill and casing tubes are manufactured from the highest quality material, under stringent industry CDMA standards," underLine={true}/>
+
+  <MetaTags pageTitle={"Sav Ghateh -  Rods"} description={"We have rods you need, with unmatched quality in the market."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"rods, buy rods, best reaming shell, sav ghateh rods, get rods"} slot="metaTags"/>
 
     <section class="bg-secondary flex justify-center flex-col items-center pt-20 text-sixth font-oswald" slot="projectsContent">
         <p class="lg:w-[1090px] w-[350px] text-xl pb-8">

@@ -9,10 +9,13 @@ import TextSlider from "../components/ui/TextSlider"
 import { Image } from 'astro:assets'
 import rhinoBg from "../assets/about-rhinoImg.png"
 import aboutMachine from "../assets/about-machine.png"
+import MetaTags from '../metaTags/MetaTags'
 ---
 
 <MainLayout title="About | sav-ghateh">
   <Header title="about us" slot='header'/>
+
+  <MetaTags pageTitle={"Sav Ghateh - we have the discovering tools you need, Learn more about us"} description={"We're a discovering tool company, we guarantee the best quality in the market. and we value our customers more than anything."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"drilling tools products information, sav ghateh products info, what are discovering tools, where to find discovering tools, good quality discovering tool, ساو قطعه, خرید لوازم معدن, gold mining, buy mining tools, mining tools, good quality mining tools, buy discovering tools"} slot="metaTags"/>
 
 <section class=" flex justify-center items-center h-[600px] relative bg-secondary" slot="aboutHeaderContent">
     <article class="absolute top-0 right-0 bottom-0 left-0 grid place-content-center text-center z-10 ">

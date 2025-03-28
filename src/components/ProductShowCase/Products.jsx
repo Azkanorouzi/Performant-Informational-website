@@ -69,7 +69,7 @@ export default function Products() {
             </Product>
             <div class="flex gap-10 flex-row">
               <Product
-                title={<span>CORING RIG</span>}
+                title={<span>Forwards</span>}
                 description={
                   `Forward's C6 coring rig, the first range of coring rigs`
                 }

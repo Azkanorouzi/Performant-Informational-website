@@ -20,15 +20,17 @@ import CoreBitTable3 from "../../components/corebit/CoreBitTable3.astro";
 import CoreBitTable4 from "../../components/corebit/CoreBitTable4.astro";
 import coreBitRhino from "../../assets/corbits-rhino-2 (1).png";
 import { Image } from "astro:assets";
+import MetaTags from "../../metaTags/MetaTags";
 ---
 
-<MainLayout title="sav-ghateh (Contacts)">
+<MainLayout title="Sav-Ghateh | Core Bits">
   <Header
     title="core bits"
     slot="header"
     subTitle="Crown rhino profile"
     underLine={false}
   />
+  <MetaTags pageTitle={"Sav Ghateh -  Core bits"} description={"We have the best core bits you need, with unmatched quality in the market."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"Core bits, sav ghateh core bits, bes core bits, buy core bits, good quality core bits, best quality core bits, what is core bit"} slot="metaTags"/>
   <section
     slot="projectsContent"
     class="bg-secondary lg:px-40 px-4 text-sixth flex flex-col gap-20 font-oswaldLight"

@@ -2,9 +2,12 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import Header from '../components/ui/Header.astro'
 import ProjectsContent from '../components/ProjectsShowCase/ProjectsContent.jsx'
+import MetaTags from '../metaTags/MetaTags'
 
 ---
-<MainLayout title="Projects | sav-ghateh">
+<MainLayout title="Sav Ghateh - Our projects and discoverations">
+  <MetaTags pageTitle={""} description={"We offer the discovering tools you need, have a look at our projects."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"drilling tools, sav ghateh, discovering tools, trusted discovering tools, good quality discovering tool, ساو قطعه, خرید لوازم معدن, gold mining, buy mining tools, mining tools, good quality mining tools, mine, mine gallery, mine photos, discovering tool photos"} slot="metaTags"/>
+
     <Header title="projects" slot='header'/>
     <ProjectsContent slot='projectsContent' client:load/>
 </MainLayout>

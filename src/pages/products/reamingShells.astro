@@ -7,14 +7,17 @@ import ReamingShellTable from "../../components/reamingShell/reamingShellTable.a
 import ReamingShellItem from "../../components/reamingShell/ReamingShellItem.astro";
 import flag from "../../assets/australia-flag.png";
 import { Image } from "astro:assets";
+import MetaTags from "../../metaTags/MetaTags";
 ---
 
-<MainLayout title="sav-ghateh (Contacts)">
+<MainLayout title="Sav-Ghateh | Reaming Shells">
   <Header
     title="reaming shells"
     slot="header"
     subTitle="Lorem ipsum is simply dummy text of the printing and typesetting industry"
   />
+
+  <MetaTags pageTitle={"Sav Ghateh -  Reaming shell"} description={"We have the best reaming shell you need, with unmatched quality in the market."} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"Reaming shell, buy reaming shell, best reaming shell, sav ghateh reaming shell, get reaming shell"} slot="metaTags"/>
   <section
     slot="projectsContent"
     class="relative bg-white px-6 sm:px-20 py-20 text-sixth flex flex-col justify-center items-center"

@@ -7,10 +7,12 @@ import AuthorityShowCaseContents from "../components/AuthorityShowCase/Authority
 import ServicesShowCaseContents from "../components/ServicesShowCase/ServicesShowCaseContents.astro";
 import PopularityShowCaseContents from "../components/PopularityShowCase/PopularityShowCaseContents.astro";
 import Loader from "../components/ui/Loader.astro";
+import MetaTags from "../metaTags/MetaTags";
 ---
 
 <MainLayout title="sav-ghateh">
-  <Loader slot="loader" />
+  <MetaTags pageTitle={"Sav Ghateh"} description={"We offer the discovering tools you need, with unmatched quality, and great performance"} lang={'en'} facebookImg={""} faceBookUrl={''} keywords={"drilling tools, sav ghateh, discovering tools, buy discovering tools, good quality discovering tool, ساو قطعه, خرید لوازم معدن, gold mining, buy mining tools, mining tools, good quality mining tools"} slot="metaTags"/>
+  <Loader slot="loader"/>
   <header class="lg:h-[90vh] h-[50vh] text-xl flex flex-col" slot="header">
     <HeaderContent />
   </header>

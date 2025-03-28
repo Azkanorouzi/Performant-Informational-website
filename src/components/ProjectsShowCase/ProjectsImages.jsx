@@ -35,6 +35,7 @@ export default function ProjectsImages({
             key={pj.img.src}
             forwards={forwards}
             setCurImgIndex={setCurImgIndex}
+            mine={`img${index}`}
           />
              <Project
              type="desktop"
@@ -46,6 +47,7 @@ export default function ProjectsImages({
             key={pj.img.src}
             forwards={forwards}
             setCurImgIndex={setCurImgIndex}
+            mine={`img${index}`}
           />
           </>
         );
